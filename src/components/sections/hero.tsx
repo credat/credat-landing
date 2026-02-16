@@ -24,6 +24,8 @@ export function Hero() {
     if (!titleRef.current || !subtitleRef.current || !ctaRef.current) return;
 
     const split = new SplitText(titleRef.current, { type: "words" });
+    // Make parent visible — individual words handle their own opacity
+    gsap.set(titleRef.current, { opacity: 1 });
 
     const tl = gsap.timeline({ delay: 0.3 });
 
