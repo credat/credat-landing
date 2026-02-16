@@ -65,7 +65,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       <div className="mx-auto max-w-7xl px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left: text content */}
         <div className="relative z-10">
@@ -115,7 +115,7 @@ export function Hero() {
         </div>
 
         {/* Right: 3D credential card */}
-        <div className="relative h-[500px] lg:h-[600px]">
+        <div className="relative h-[350px] sm:h-[450px] lg:h-[600px]">
           <CardScene />
         </div>
       </div>

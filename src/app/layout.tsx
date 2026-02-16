@@ -18,6 +18,25 @@ export const metadata: Metadata = {
   title: "Credat — The Developer SDK for EU Digital Identity",
   description:
     "Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript.",
+  metadataBase: new URL("https://credat.io"),
+  openGraph: {
+    title: "Credat — The Developer SDK for EU Digital Identity",
+    description:
+      "Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript.",
+    url: "https://credat.io",
+    siteName: "Credat",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Credat — The Developer SDK for EU Digital Identity",
+    description:
+      "Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
