@@ -1,7 +1,9 @@
+import { Hero } from "@/components/sections/hero";
+
 export default function Home() {
   return (
     <main>
-      <section id="hero" className="min-h-screen" />
+      <Hero />
       <section id="problem" className="min-h-screen" />
       <section id="features" className="min-h-screen" />
       <section id="code" className="min-h-screen" />
