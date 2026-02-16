@@ -1,22 +1,23 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { gsap, SplitText } from "@/lib/gsap";
 import { HeroFlow } from "@/components/hero-flow";
 
 const MARQUEE_ITEMS = [
-  "eIDAS 2.0",
-  "SD-JWT VC",
-  "mDoc / mDL",
-  "OpenID4VCI",
-  "OpenID4VP",
-  "DIDComm v2",
-  "TypeScript",
-  "W3C VCDM",
-  "ISO 18013-5",
-  "IETF SD-JWT",
+  { name: "eIDAS 2.0", logo: "/logos/eidas.svg" },
+  { name: "SD-JWT VC", logo: "/logos/sd-jwt.svg" },
+  { name: "mDoc / mDL", logo: "/logos/mdoc.svg" },
+  { name: "OpenID4VCI", logo: "/logos/openid.svg" },
+  { name: "OpenID4VP", logo: "/logos/openid.svg" },
+  { name: "DIDComm v2", logo: "/logos/didcomm.svg" },
+  { name: "TypeScript", logo: "/logos/typescript.svg" },
+  { name: "W3C VCDM", logo: "/logos/w3c.svg" },
+  { name: "ISO 18013-5", logo: "/logos/iso.svg" },
+  { name: "IETF SD-JWT", logo: "/logos/ietf.svg" },
 ];
 
 export function SectionHero() {
@@ -145,11 +146,18 @@ export function SectionHero() {
       </div>
 
       {/* Bottom marquee */}
-      <div ref={marqueeRef} className="w-full mt-8 lg:mt-16 pb-8">
+      <div ref={marqueeRef} className="w-full mt-16 lg:mt-24 pb-8">
         <Marquee speed={35} gradient gradientColor="#FFFFFF" gradientWidth={80} autoFill>
           {MARQUEE_ITEMS.map((item) => (
-            <div key={item} className="marquee-pill mx-2">
-              {item}
+            <div key={item.name} className="marquee-pill mx-2">
+              <Image
+                src={item.logo}
+                alt={item.name}
+                width={20}
+                height={20}
+                className="marquee-pill-logo"
+              />
+              {item.name}
             </div>
           ))}
         </Marquee>

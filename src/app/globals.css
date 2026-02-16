@@ -552,6 +552,13 @@
   color: #6B7280;
 }
 
+.marquee-pill-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 /* ===== BENTO GRID ===== */
 
 .bento-grid {
