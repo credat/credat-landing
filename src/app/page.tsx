@@ -2,6 +2,10 @@ import { Hero } from "@/components/sections/hero";
 import { Problem } from "@/components/sections/problem";
 import { Features } from "@/components/sections/features";
 import { CodePreview } from "@/components/sections/code-preview";
+import { Stats } from "@/components/sections/stats";
+import { HowItWorks } from "@/components/sections/how-it-works";
+import { OpenSourceCta } from "@/components/sections/open-source-cta";
+import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
   return (
@@ -10,10 +14,10 @@ export default function Home() {
       <Problem />
       <Features />
       <CodePreview />
-      <section id="stats" className="min-h-screen" />
-      <section id="how-it-works" className="min-h-screen" />
-      <section id="cta" className="min-h-screen" />
-      <footer id="footer" />
+      <Stats />
+      <HowItWorks />
+      <OpenSourceCta />
+      <Footer />
     </main>
   );
 }
