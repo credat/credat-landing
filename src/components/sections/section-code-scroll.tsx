@@ -34,6 +34,9 @@ const STEPS = [
   { start: 18, end: 21, title: "Verify Instantly", desc: "One-line verification with full status checking, signature validation, and revocation support." },
 ];
 
+const kwPattern = new RegExp(`(${["const", "await", "import", "from", "true", "false"].map(k => `\\b${k}\\b`).join("|")})`);
+const KEYWORDS = ["const", "await", "import", "from", "true", "false"];
+
 function syntaxHighlight(line: string, type: string) {
   if (type === "comment") return <span className="code-comment">{line}</span>;
   if (type === "empty") return <br />;
@@ -48,10 +51,6 @@ function syntaxHighlight(line: string, type: string) {
     );
   }
 
-  // Generic code highlighting
-  const keywords = ["const", "await", "import", "from", "true", "false"];
-  const kwPattern = new RegExp(`(${keywords.map(k => `\\b${k}\\b`).join("|")})`);
-
   return line.split(/(".*?"|'.*?')/g).map((part, i) => {
     if (part.startsWith('"') || part.startsWith("'")) {
       return <span key={i} className="code-string">{part}</span>;
@@ -61,9 +60,30 @@ function syntaxHighlight(line: string, type: string) {
     return (
       <span key={i}>
         {segments.map((seg, j) =>
-          keywords.includes(seg) ? <span key={j} className="code-keyword">{seg}</span> : seg
+          KEYWORDS.includes(seg) ? <span key={j} className="code-keyword">{seg}</span> : seg
         )}
       </span>
+    );
+  });
+}
+
+function renderCodeLines(lines: typeof CODE_LINES, activeStep?: number) {
+  return lines.map((line, i) => {
+    const step = activeStep !== undefined ? STEPS[activeStep] : undefined;
+    const isActive = step ? i >= step.start && i <= step.end : true;
+    return (
+      <div
+        key={i}
+        className={`code-line ${isActive ? "active" : ""}`}
+        style={{ minHeight: line.type === "empty" ? "1.7em" : undefined }}
+      >
+        {line.type !== "empty" && (
+          <span className="inline-block w-8 text-right mr-4 text-white/20 select-none text-xs">
+            {i + 1}
+          </span>
+        )}
+        {syntaxHighlight(line.code, line.type)}
+      </div>
     );
   });
 }
@@ -73,6 +93,7 @@ export function SectionCodeScroll() {
   const pillRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
 
+  // Desktop GSAP — exact same setup as original, [] dependency
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (pillRef.current) {
@@ -84,7 +105,9 @@ export function SectionCodeScroll() {
         });
       }
 
-      // Track scroll progress through the section to update activeStep
+      // ScrollTrigger for step tracking — only fires when the desktop
+      // layout is visible (lg:), but creating it unconditionally is safe
+      // because it triggers based on scroll position of the section.
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top top",
@@ -98,7 +121,7 @@ export function SectionCodeScroll() {
         },
       });
 
-      // Animate step descriptions
+      // Animate step description characters on desktop
       const stepEls = sectionRef.current?.querySelectorAll(".step-text");
       if (stepEls) {
         stepEls.forEach((el) => {
@@ -124,20 +147,20 @@ export function SectionCodeScroll() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="how-it-works" className="relative min-h-[300vh]">
+    <section ref={sectionRef} id="how-it-works" className="relative code-scroll-section">
       <div className="px-6 lg:px-[10vw]">
         <div className="mx-auto max-w-7xl">
           {/* Header */}
-          <div className="section-textbox mb-12">
+          <div className="section-textbox mb-10 lg:mb-12">
             <div ref={pillRef} className="pill-badge">
               <span className="w-2 h-2 rounded-full bg-accent" />
               <span className="text-xs font-medium text-foreground-secondary">How It Works</span>
             </div>
           </div>
 
-          {/* Two columns */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Left: Code editor - sticky so it stays visible while right column scrolls */}
+          {/* ========== DESKTOP: scroll-triggered two-column layout ========== */}
+          <div className="desktop-only grid-cols-2 gap-8 items-start">
+            {/* Left: Code editor — sticky */}
             <div className="code-editor lg:sticky lg:top-[15vh]">
               <div className="code-editor-header">
                 <div className="code-editor-dot" />
@@ -146,28 +169,11 @@ export function SectionCodeScroll() {
                 <span className="ml-3 text-xs text-white/30">quickstart.ts</span>
               </div>
               <div className="code-editor-body">
-                {CODE_LINES.map((line, i) => {
-                  const step = STEPS[activeStep];
-                  const isActive = step && i >= step.start && i <= step.end;
-                  return (
-                    <div
-                      key={i}
-                      className={`code-line ${isActive ? "active" : ""}`}
-                      style={{ minHeight: line.type === "empty" ? "1.7em" : undefined }}
-                    >
-                      {line.type !== "empty" && (
-                        <span className="inline-block w-8 text-right mr-4 text-white/20 select-none text-xs">
-                          {i + 1}
-                        </span>
-                      )}
-                      {syntaxHighlight(line.code, line.type)}
-                    </div>
-                  );
-                })}
+                {renderCodeLines(CODE_LINES, activeStep)}
               </div>
             </div>
 
-            {/* Right: Step descriptions - these scroll naturally */}
+            {/* Right: Step descriptions */}
             <div className="flex flex-col gap-[40vh] py-[20vh]">
               {STEPS.map((step, i) => (
                 <div key={step.title} className="step-text">
@@ -181,6 +187,45 @@ export function SectionCodeScroll() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* ========== MOBILE: stacked steps with individual code blocks ========== */}
+          <div className="mobile-only flex-col gap-8">
+            {STEPS.map((step, i) => (
+              <div key={step.title} className="flex flex-col gap-4">
+                <div>
+                  <span className="text-xs font-mono text-accent mb-2 block">
+                    Step {i + 1}
+                  </span>
+                  <h3 className="headline-sm text-foreground mb-2">{step.title}</h3>
+                  <p className="body-md">{step.desc}</p>
+                </div>
+                <div className="code-editor">
+                  <div className="code-editor-header">
+                    <div className="code-editor-dot" />
+                    <div className="code-editor-dot" />
+                    <div className="code-editor-dot" />
+                    <span className="ml-3 text-xs text-white/30">quickstart.ts</span>
+                  </div>
+                  <div className="code-editor-body !text-[13px]">
+                    {CODE_LINES.slice(step.start, step.end + 1).map((line, j) => (
+                      <div
+                        key={j}
+                        className="code-line active"
+                        style={{ minHeight: line.type === "empty" ? "1.7em" : undefined }}
+                      >
+                        {line.type !== "empty" && (
+                          <span className="inline-block w-6 text-right mr-3 text-white/20 select-none text-xs">
+                            {step.start + j + 1}
+                          </span>
+                        )}
+                        {syntaxHighlight(line.code, line.type)}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
