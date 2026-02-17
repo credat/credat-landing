@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger, SplitText } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
 const CODE_LINES = [
   { code: 'import { Credat } from "credat"', type: "import" },
@@ -27,12 +28,12 @@ const CODE_LINES = [
   { code: "console.log(result.valid) // true", type: "code" },
 ];
 
-const STEPS = [
-  { start: 0, end: 1, title: "Import the SDK", desc: "A single import gives you everything — issuance, verification, and credential management." },
-  { start: 2, end: 7, title: "Create a Client", desc: "Configure your credential format and issuer identity. Supports SD-JWT VC and mDoc out of the box." },
-  { start: 8, end: 17, title: "Issue a Credential", desc: "Define the credential type and claims. The SDK handles schema validation, signing, and encoding." },
-  { start: 18, end: 21, title: "Verify Instantly", desc: "One-line verification with full status checking, signature validation, and revocation support." },
-];
+const STEP_META = [
+  { key: "import", start: 0, end: 1 },
+  { key: "create", start: 2, end: 7 },
+  { key: "issue", start: 8, end: 17 },
+  { key: "verify", start: 18, end: 21 },
+] as const;
 
 const kwPattern = new RegExp(`(${["const", "await", "import", "from", "true", "false"].map(k => `\\b${k}\\b`).join("|")})`);
 const KEYWORDS = ["const", "await", "import", "from", "true", "false"];
@@ -69,7 +70,7 @@ function syntaxHighlight(line: string, type: string) {
 
 function renderCodeLines(lines: typeof CODE_LINES, activeStep?: number) {
   return lines.map((line, i) => {
-    const step = activeStep !== undefined ? STEPS[activeStep] : undefined;
+    const step = activeStep !== undefined ? STEP_META[activeStep] : undefined;
     const isActive = step ? i >= step.start && i <= step.end : true;
     return (
       <div
@@ -89,6 +90,7 @@ function renderCodeLines(lines: typeof CODE_LINES, activeStep?: number) {
 }
 
 export function SectionCodeScroll() {
+  const t = useTranslations("CodeScroll");
   const sectionRef = useRef<HTMLElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
@@ -114,8 +116,8 @@ export function SectionCodeScroll() {
         end: "bottom bottom",
         onUpdate: (self) => {
           const step = Math.min(
-            STEPS.length - 1,
-            Math.floor(self.progress * STEPS.length)
+            STEP_META.length - 1,
+            Math.floor(self.progress * STEP_META.length)
           );
           setActiveStep(step);
         },
@@ -154,7 +156,7 @@ export function SectionCodeScroll() {
           <div className="section-textbox mb-10 lg:mb-12">
             <div ref={pillRef} className="pill-badge">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-xs font-medium text-foreground-secondary">How It Works</span>
+              <span className="text-xs font-medium text-foreground-secondary">{t("badge")}</span>
             </div>
           </div>
 
@@ -175,14 +177,14 @@ export function SectionCodeScroll() {
 
             {/* Right: Step descriptions */}
             <div className="flex flex-col gap-[40vh] py-[20vh]">
-              {STEPS.map((step, i) => (
-                <div key={step.title} className="step-text">
+              {STEP_META.map((step, i) => (
+                <div key={step.key} className="step-text">
                   <div className={`transition-opacity duration-500 ${activeStep === i ? "opacity-100" : "opacity-30"}`}>
                     <span className="text-xs font-mono text-accent mb-2 block">
-                      Step {i + 1}
+                      {t(`steps.${step.key}.step`)}
                     </span>
-                    <h3 className="headline-md text-foreground mb-3">{step.title}</h3>
-                    <p className="step-desc body-lg max-w-sm">{step.desc}</p>
+                    <h3 className="headline-md text-foreground mb-3">{t(`steps.${step.key}.title`)}</h3>
+                    <p className="step-desc body-lg max-w-sm">{t(`steps.${step.key}.description`)}</p>
                   </div>
                 </div>
               ))}
@@ -191,14 +193,14 @@ export function SectionCodeScroll() {
 
           {/* ========== MOBILE: stacked steps with individual code blocks ========== */}
           <div className="mobile-only flex-col gap-8">
-            {STEPS.map((step, i) => (
-              <div key={step.title} className="flex flex-col gap-4">
+            {STEP_META.map((step, i) => (
+              <div key={step.key} className="flex flex-col gap-4">
                 <div>
                   <span className="text-xs font-mono text-accent mb-2 block">
-                    Step {i + 1}
+                    {t(`steps.${step.key}.step`)}
                   </span>
-                  <h3 className="headline-sm text-foreground mb-2">{step.title}</h3>
-                  <p className="body-md">{step.desc}</p>
+                  <h3 className="headline-sm text-foreground mb-2">{t(`steps.${step.key}.title`)}</h3>
+                  <p className="body-md">{t(`steps.${step.key}.description`)}</p>
                 </div>
                 <div className="code-editor">
                   <div className="code-editor-header">

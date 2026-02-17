@@ -3,8 +3,10 @@
 import { useEffect, useRef } from "react";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { gsap, SplitText } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
 export function SectionCta() {
+  const t = useTranslations("Cta");
   const sectionRef = useRef<HTMLElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
@@ -70,16 +72,15 @@ export function SectionCta() {
           <div className="section-textbox relative z-10">
             <div ref={pillRef} className="pill-badge">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-xs font-medium text-foreground-secondary">Open Source</span>
+              <span className="text-xs font-medium text-foreground-secondary">{t("badge")}</span>
             </div>
 
             <h2 ref={headlineRef} className="headline-lg text-foreground max-w-3xl">
-              Build the Future of Digital Identity
+              {t("title")}
             </h2>
 
             <p ref={descRef} className="body-lg max-w-2xl">
-              Credat is open source and built for the community. Start issuing eIDAS 2.0 credentials
-              in minutes — or contribute to shape the standard.
+              {t("description")}
             </p>
 
             <div ref={ctaRef} className="flex flex-wrap items-center justify-center gap-4">
@@ -90,8 +91,8 @@ export function SectionCta() {
                 className="btn-scroll btn-scroll-primary"
               >
                 <div className="btn-scroll-content">
-                  <span>View on GitHub</span>
-                  <span>View on GitHub</span>
+                  <span>{t("ctaGithub")}</span>
+                  <span>{t("ctaGithub")}</span>
                 </div>
                 <div className="btn-scroll-circle">
                   <ArrowUpRight className="btn-scroll-icon" />
@@ -105,8 +106,8 @@ export function SectionCta() {
                 className="btn-scroll"
               >
                 <div className="btn-scroll-content">
-                  <span>Read the Docs</span>
-                  <span>Read the Docs</span>
+                  <span>{t("ctaDocs")}</span>
+                  <span>{t("ctaDocs")}</span>
                 </div>
                 <div className="btn-scroll-circle">
                   <BookOpen className="btn-scroll-icon" />
