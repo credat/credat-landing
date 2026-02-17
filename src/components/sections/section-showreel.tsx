@@ -1,16 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
 
-const BADGES = [
-  { title: "eIDAS 2.0 Ready", desc: "Full compliance with the EU Digital Identity framework" },
-  { title: "TypeScript SDK", desc: "Type-safe APIs with complete IntelliSense support" },
-  { title: "SD-JWT VC", desc: "Selective disclosure for privacy-preserving credentials" },
-  { title: "OpenID4VC", desc: "Standard-compliant credential issuance and verification" },
-];
+const BADGE_KEYS = ["eidas", "typescript", "sdjwt", "openid"] as const;
 
 export function SectionShowreel() {
+  const t = useTranslations("Showreel");
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLDivElement>(null);
   const badgesRef = useRef<HTMLDivElement>(null);
@@ -81,7 +78,7 @@ export function SectionShowreel() {
                 <path d="M6 4L16 10L6 16V4Z" fill="#0A0A0A" />
               </svg>
             </div>
-            <span className="text-sm font-medium text-foreground-secondary">Product Demo Coming Soon</span>
+            <span className="text-sm font-medium text-foreground-secondary">{t("demoLabel")}</span>
           </div>
           <div className="grid-overlay" />
         </div>
@@ -89,12 +86,12 @@ export function SectionShowreel() {
 
       {/* Feature badges */}
       <div ref={badgesRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-        {BADGES.map((badge) => (
-          <div key={badge.title} className="badge-card glass-card p-5">
+        {BADGE_KEYS.map((key) => (
+          <div key={key} className="badge-card glass-card p-5">
             <div className="grid-overlay" />
             <div className="relative z-10">
-              <h3 className="text-sm font-semibold text-foreground mb-1">{badge.title}</h3>
-              <p className="text-xs text-foreground-secondary leading-relaxed">{badge.desc}</p>
+              <h3 className="text-sm font-semibold text-foreground mb-1">{t(`badges.${key}.title`)}</h3>
+              <p className="text-xs text-foreground-secondary leading-relaxed">{t(`badges.${key}.description`)}</p>
             </div>
           </div>
         ))}

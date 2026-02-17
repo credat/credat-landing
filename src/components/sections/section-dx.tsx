@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
 import { gsap, SplitText } from "@/lib/gsap";
 
 export function SectionDx() {
+  const t = useTranslations("Dx");
   const sectionRef = useRef<HTMLElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
@@ -84,16 +86,15 @@ export function SectionDx() {
         <div className="section-textbox mb-12">
           <div ref={pillRef} className="pill-badge">
             <span className="w-2 h-2 rounded-full bg-accent" />
-            <span className="text-xs font-medium text-foreground-secondary">Developer Experience</span>
+            <span className="text-xs font-medium text-foreground-secondary">{t("badge")}</span>
           </div>
 
           <h2 ref={headlineRef} className="headline-lg text-foreground max-w-3xl">
-            Your Credential Powerhouse
+            {t("title")}
           </h2>
 
           <p ref={descRef} className="body-lg max-w-2xl">
-            From credential schema design to issuance, verification, and selective disclosure —
-            everything you need in a single, composable SDK.
+            {t("description")}
           </p>
 
           <a
@@ -104,8 +105,8 @@ export function SectionDx() {
             className="btn-scroll btn-scroll-primary"
           >
             <div className="btn-scroll-content">
-              <span>Get Started</span>
-              <span>Get Started</span>
+              <span>{t("cta")}</span>
+              <span>{t("cta")}</span>
             </div>
             <div className="btn-scroll-circle">
               <ArrowUpRight className="btn-scroll-icon" />
