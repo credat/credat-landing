@@ -193,7 +193,7 @@ export function SectionCodeScroll() {
 
           {/* ========== MOBILE: stacked steps with individual code blocks ========== */}
           <div className="mobile-only flex-col gap-8">
-            {STEP_META.map((step, i) => (
+            {STEP_META.map((step) => (
               <div key={step.key} className="flex flex-col gap-4">
                 <div>
                   <span className="text-xs font-mono text-accent mb-2 block">
