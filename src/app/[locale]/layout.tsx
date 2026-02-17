@@ -1,10 +1,13 @@
-import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import Script from "next/script";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { Navbar } from "@/components/navbar";
 import { LoadingScreen } from "@/components/loading-screen";
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +21,8 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
+// Keep static metadata for now — will be replaced by generateMetadata in Task 10
+export const metadata = {
   title: "Credat — The Developer SDK for EU Digital Identity",
   description:
     "Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript. SD-JWT VC & mDoc formats, OpenID4VC protocols, zero vendor lock-in. Open-source TypeScript SDK for eIDAS 2.0.",
@@ -71,7 +75,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Static JSON-LD — safe since it's hardcoded, not user-supplied
 const JSON_LD = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -81,25 +84,27 @@ const JSON_LD = JSON.stringify({
   description:
     "Open-source TypeScript SDK for issuing and verifying eIDAS 2.0 verifiable credentials. Supports SD-JWT VC, mDoc, OpenID4VCI, and OpenID4VP.",
   url: "https://credat.io",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-  author: {
-    "@type": "Organization",
-    name: "Credat",
-    url: "https://credat.io",
-  },
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  author: { "@type": "Organization", name: "Credat", url: "https://credat.io" },
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as typeof routing.locales[number])) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${jetbrains.variable}`}>
       <head>
         <Script
           id="json-ld"
@@ -108,9 +113,11 @@ export default function RootLayout({
         >{JSON_LD}</Script>
       </head>
       <body className="bg-background text-foreground font-sans antialiased">
-        <LoadingScreen />
-        <Navbar />
-        <SmoothScroll>{children}</SmoothScroll>
+        <NextIntlClientProvider messages={messages}>
+          <LoadingScreen />
+          <Navbar />
+          <SmoothScroll>{children}</SmoothScroll>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
