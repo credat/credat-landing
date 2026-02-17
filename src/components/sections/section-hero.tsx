@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { ArrowUpRight, BookOpen } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { gsap, SplitText } from "@/lib/gsap";
 import { HeroFlow } from "@/components/hero-flow";
 
@@ -21,6 +22,7 @@ const MARQUEE_ITEMS = [
 ];
 
 export function SectionHero() {
+  const t = useTranslations("Hero");
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const descRef = useRef<HTMLParagraphElement>(null);
@@ -93,16 +95,15 @@ export function SectionHero() {
           <div className="relative z-10 flex flex-col gap-6">
             <div className="pill-badge opacity-blur">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-xs font-medium text-foreground-secondary">Open Source SDK</span>
+              <span className="text-xs font-medium text-foreground-secondary">{t("badge")}</span>
             </div>
 
             <h1 ref={headlineRef} className="headline-xl text-foreground">
-              The Developer SDK for EU Digital Identity
+              {t("title")}
             </h1>
 
             <p ref={descRef} className="body-lg max-w-lg">
-              Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript.
-              SD-JWT VC &amp; mDoc formats, OpenID4VC protocols, zero vendor lock-in.
+              {t("description")}
             </p>
 
             <div ref={ctaRef} className="flex flex-wrap items-center gap-4">
@@ -113,8 +114,8 @@ export function SectionHero() {
                 className="btn-scroll btn-scroll-primary"
               >
                 <div className="btn-scroll-content">
-                  <span>View on GitHub</span>
-                  <span>View on GitHub</span>
+                  <span>{t("ctaGithub")}</span>
+                  <span>{t("ctaGithub")}</span>
                 </div>
                 <div className="btn-scroll-circle">
                   <ArrowUpRight className="btn-scroll-icon" />
@@ -128,8 +129,8 @@ export function SectionHero() {
                 className="btn-scroll"
               >
                 <div className="btn-scroll-content">
-                  <span>Read the Docs</span>
-                  <span>Read the Docs</span>
+                  <span>{t("ctaDocs")}</span>
+                  <span>{t("ctaDocs")}</span>
                 </div>
                 <div className="btn-scroll-circle">
                   <BookOpen className="btn-scroll-icon" />
