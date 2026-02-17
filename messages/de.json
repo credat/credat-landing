@@ -1,0 +1,253 @@
+{
+  "Metadata": {
+    "title": "Credat — Das Entwickler-SDK für die digitale Identität der EU",
+    "description": "Stellen Sie eIDAS 2.0 Verifiable Credentials in 10 Zeilen TypeScript aus und verifizieren Sie sie. SD-JWT VC- und mDoc-Formate, OpenID4VC-Protokolle, kein Vendor Lock-in. Open-Source TypeScript SDK für eIDAS 2.0.",
+    "ogDescription": "Stellen Sie eIDAS 2.0 Verifiable Credentials in 10 Zeilen TypeScript aus und verifizieren Sie sie. SD-JWT VC- und mDoc-Formate, OpenID4VC-Protokolle.",
+    "twitterDescription": "Stellen Sie eIDAS 2.0 Verifiable Credentials in 10 Zeilen TypeScript aus und verifizieren Sie sie."
+  },
+  "Navbar": {
+    "useCases": "Anwendungsfälle",
+    "integrations": "Integrationen",
+    "howItWorks": "So funktioniert's",
+    "docs": "Docs",
+    "github": "GitHub",
+    "toggleMenu": "Menü öffnen"
+  },
+  "Hero": {
+    "badge": "Open-Source-SDK",
+    "title": "Das Entwickler-SDK für die digitale Identität der EU",
+    "description": "Stellen Sie eIDAS 2.0 Verifiable Credentials in 10 Zeilen TypeScript aus und verifizieren Sie sie. SD-JWT VC- und mDoc-Formate, OpenID4VC-Protokolle, kein Vendor Lock-in.",
+    "ctaGithub": "Auf GitHub ansehen",
+    "ctaDocs": "Dokumentation lesen"
+  },
+  "Showreel": {
+    "demoLabel": "Produktdemo demnächst verfügbar",
+    "badges": {
+      "eidas": {
+        "title": "eIDAS 2.0 Ready",
+        "description": "Vollständige Konformität mit dem EU-Rahmenwerk für digitale Identität"
+      },
+      "typescript": {
+        "title": "TypeScript SDK",
+        "description": "Typsichere APIs mit vollständiger IntelliSense-Unterstützung"
+      },
+      "sdjwt": {
+        "title": "SD-JWT VC",
+        "description": "Selektive Offenlegung für datenschutzfreundliche Credentials"
+      },
+      "openid": {
+        "title": "OpenID4VC",
+        "description": "Standardkonforme Ausstellung und Verifizierung von Credentials"
+      }
+    }
+  },
+  "Dx": {
+    "badge": "Entwicklererfahrung",
+    "title": "Ihre Credential-Zentrale",
+    "description": "Vom Credential-Schema-Design über Ausstellung, Verifizierung bis zur selektiven Offenlegung — alles, was Sie brauchen, in einem einzigen, komponierbaren SDK.",
+    "cta": "Jetzt starten"
+  },
+  "UseCases": {
+    "badge": "Anwendungsfälle",
+    "title": "Was Sie bauen können",
+    "scrollLeft": "Nach links scrollen",
+    "scrollRight": "Nach rechts scrollen",
+    "items": {
+      "nationalId": {
+        "title": "Nationale ID-Wallet",
+        "description": "Stellen Sie staatlich gesicherte digitale Identitäts-Credentials aus, die mit der EU Digital Identity Wallet-Architektur konform sind. Unterstützen Sie selektive Offenlegung, damit Bürger nur das Nötige teilen."
+      },
+      "diploma": {
+        "title": "Digitales Diplom",
+        "description": "Universitäten und Bildungsanbieter können fälschungssichere Bildungs-Credentials ausstellen. Arbeitgeber verifizieren Qualifikationen sofort, ohne die Institution kontaktieren zu müssen."
+      },
+      "banking": {
+        "title": "Banking KYC",
+        "description": "Vereinfachen Sie das Kunden-Onboarding mit wiederverwendbaren Identitäts-Credentials. Reduzieren Sie KYC-Kosten bei gleichzeitiger Einhaltung regulatorischer Anforderungen über Jurisdiktionen hinweg."
+      },
+      "healthcare": {
+        "title": "Gesundheits-Credentials",
+        "description": "Stellen Sie professionelle medizinische Lizenzen, Impfnachweise und Patienteneinwilligungen mit datenschutzfreundlicher selektiver Offenlegung aus und verifizieren Sie diese."
+      },
+      "travel": {
+        "title": "Reisedokumente",
+        "description": "Ermöglichen Sie nahtlose Grenzüberquerungen mit mobilen Führerscheinen und Reise-Credentials basierend auf ISO 18013-5 und mDoc-Formaten."
+      }
+    }
+  },
+  "Integrations": {
+    "badge": "Standards",
+    "title": "Auf offenen Standards aufgebaut",
+    "credentialFormats": {
+      "title": "Credential-Formate",
+      "description": "Erstklassige Unterstützung für beide von der EU vorgeschriebenen Credential-Formate, bereit für das EUDIW-Ökosystem.",
+      "sdjwt": "SD-JWT VC",
+      "sdjwtSub": "Selektive Offenlegung",
+      "mdoc": "mDoc",
+      "mdocSub": "ISO 18013-5"
+    },
+    "protocols": {
+      "title": "Protokolle",
+      "openid4vci": {
+        "name": "OpenID4VCI",
+        "description": "Stellen Sie Credentials über das OpenID for Verifiable Credential Issuance-Protokoll aus."
+      },
+      "openid4vp": {
+        "name": "OpenID4VP",
+        "description": "Fordern und verifizieren Sie Credential-Präsentationen mit OpenID for Verifiable Presentations."
+      },
+      "didcomm": {
+        "name": "DIDComm v2",
+        "description": "Sichere Peer-to-Peer-Kommunikation für den Credential-Austausch zwischen Agents."
+      }
+    },
+    "devTools": {
+      "title": "Entwicklertools",
+      "install": {
+        "label": "npm install credat",
+        "sub": "Konfigurationsfreie Einrichtung"
+      },
+      "typescript": {
+        "label": "100% TypeScript",
+        "sub": "Vollständige Typsicherheit"
+      },
+      "bundle": {
+        "label": "< 50kb gzipped",
+        "sub": "Tree-shakeable"
+      }
+    }
+  },
+  "Testimonials": {
+    "badge": "Erfahrungsberichte",
+    "title": "Von Entwicklern geschätzt",
+    "joinCommunity": "Community beitreten",
+    "starOnGithub": "Star auf GitHub",
+    "items": {
+      "sophie": {
+        "quote": "Credat hat unsere eIDAS 2.0-Integration mühelos gemacht. Wir gingen von null zur Credential-Ausstellung in einem einzigen Sprint.",
+        "name": "Sophie L.",
+        "role": "CTO"
+      },
+      "marcus": {
+        "quote": "Die SD-JWT VC-Implementierung ist grundsolide. Selektive Offenlegung funktioniert sofort mit sauberen APIs.",
+        "name": "Marcus W.",
+        "role": "Lead Engineer"
+      },
+      "elena": {
+        "quote": "Endlich ein SDK, das beide Credential-Formate ernst nimmt. Die mDoc-Unterstützung hat uns Monate an Entwicklungszeit gespart.",
+        "name": "Elena R.",
+        "role": "Head of Digital ID"
+      },
+      "james": {
+        "quote": "TypeScript-first mit unglaublicher DX. Die Typsicherheit bei Credential-Schemas hat Bugs gefunden, die wir sonst ausgeliefert hätten.",
+        "name": "James C.",
+        "role": "Senior Developer"
+      },
+      "anna": {
+        "quote": "Wir haben drei SSI-SDKs evaluiert. Credat war das einzige, das OpenID4VC-Protokolle korrekt und skalierbar implementiert hat.",
+        "name": "Anna K.",
+        "role": "VP Engineering"
+      },
+      "pierre": {
+        "quote": "Open Source, standardkonform und gepflegt von Leuten, die die europäische Identitätslandschaft verstehen. Sehr empfehlenswert.",
+        "name": "Pierre D.",
+        "role": "Founder"
+      }
+    }
+  },
+  "Kpi": {
+    "items": {
+      "eidas": {
+        "number": "eIDAS 2.0",
+        "label": "Vollständige Konformität",
+        "description": "Von Grund auf für das EU-Rahmenwerk für digitale Identität entwickelt. Jede API entspricht einer regulatorischen Anforderung."
+      },
+      "bundle": {
+        "number": "< 50kb",
+        "label": "Gzipped Bundle",
+        "description": "Tree-shakeable ESM-Architektur. Importieren Sie nur, was Sie brauchen — Credential-Ausstellung, Verifizierung oder beides."
+      },
+      "formats": {
+        "number": "2 Formats",
+        "label": "SD-JWT VC & mDoc",
+        "description": "Erstklassige Unterstützung für beide von der EU vorgeschriebenen Credential-Formate. Wechseln Sie mit einer einzigen Konfigurationsänderung."
+      }
+    }
+  },
+  "CodeScroll": {
+    "badge": "So funktioniert's",
+    "steps": {
+      "import": {
+        "step": "Schritt 1",
+        "title": "SDK importieren",
+        "description": "Ein einziger Import gibt Ihnen alles — Ausstellung, Verifizierung und Credential-Verwaltung."
+      },
+      "create": {
+        "step": "Schritt 2",
+        "title": "Client erstellen",
+        "description": "Konfigurieren Sie Ihr Credential-Format und Ihre Aussteller-Identität. Unterstützt SD-JWT VC und mDoc sofort einsatzbereit."
+      },
+      "issue": {
+        "step": "Schritt 3",
+        "title": "Credential ausstellen",
+        "description": "Definieren Sie den Credential-Typ und die Attribute. Das SDK übernimmt Schema-Validierung, Signierung und Kodierung."
+      },
+      "verify": {
+        "step": "Schritt 4",
+        "title": "Sofort verifizieren",
+        "description": "Verifizierung in einer Zeile mit vollständiger Statusprüfung, Signaturvalidierung und Widerrufsunterstützung."
+      }
+    }
+  },
+  "Cta": {
+    "badge": "Open Source",
+    "title": "Gestalten Sie die Zukunft der digitalen Identität",
+    "description": "Credat ist Open Source und für die Community gebaut. Beginnen Sie in Minuten mit der Ausstellung von eIDAS 2.0 Credentials — oder tragen Sie zur Gestaltung des Standards bei.",
+    "ctaGithub": "Auf GitHub ansehen",
+    "ctaDocs": "Dokumentation lesen"
+  },
+  "Footer": {
+    "brand": "Das Open-Source TypeScript SDK für eIDAS 2.0 Verifiable Credentials. Ausstellen, verifizieren und verwalten Sie digitale Identität — in 10 Zeilen Code.",
+    "copyright": "© {year} Credat. Open Source unter Apache-2.0.",
+    "builtWith": "Entwickelt mit",
+    "columns": {
+      "product": {
+        "title": "Produkt",
+        "github": "GitHub",
+        "documentation": "Dokumentation",
+        "npmPackage": "npm-Paket",
+        "changelog": "Änderungsprotokoll"
+      },
+      "resources": {
+        "title": "Ressourcen",
+        "gettingStarted": "Erste Schritte",
+        "apiReference": "API-Referenz",
+        "examples": "Beispiele"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "privacyPolicy": "Datenschutzrichtlinie",
+        "termsOfService": "Nutzungsbedingungen",
+        "license": "Apache-2.0-Lizenz"
+      }
+    }
+  },
+  "HeroFlow": {
+    "ariaLabel": "Verifiable Credentials-Ablauf: Aussteller stellt Credential an Inhaber aus, der es dem Verifizierer präsentiert",
+    "issuer": "Aussteller",
+    "issuerDesc": "Stellt Credentials aus",
+    "holder": "Inhaber",
+    "holderDesc": "Speichert in der Wallet",
+    "verifier": "Verifizierer",
+    "verifierDesc": "Prüft die Gültigkeit",
+    "presentation": "Präsentation",
+    "trustChain": "Vertrauenskette"
+  },
+  "LocaleSwitcher": {
+    "label": "Sprache",
+    "en": "EN",
+    "fr": "FR",
+    "de": "DE",
+    "es": "ES"
+  }
+}

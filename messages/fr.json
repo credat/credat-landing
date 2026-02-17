@@ -1,0 +1,253 @@
+{
+  "Metadata": {
+    "title": "Credat — Le SDK développeur pour l'identité numérique européenne",
+    "description": "Émettez et vérifiez des attestations vérifiables eIDAS 2.0 en 10 lignes de TypeScript. Formats SD-JWT VC et mDoc, protocoles OpenID4VC, aucun verrouillage fournisseur. SDK TypeScript open source pour eIDAS 2.0.",
+    "ogDescription": "Émettez et vérifiez des attestations vérifiables eIDAS 2.0 en 10 lignes de TypeScript. Formats SD-JWT VC et mDoc, protocoles OpenID4VC.",
+    "twitterDescription": "Émettez et vérifiez des attestations vérifiables eIDAS 2.0 en 10 lignes de TypeScript."
+  },
+  "Navbar": {
+    "useCases": "Cas d'usage",
+    "integrations": "Intégrations",
+    "howItWorks": "Fonctionnement",
+    "docs": "Docs",
+    "github": "GitHub",
+    "toggleMenu": "Ouvrir le menu"
+  },
+  "Hero": {
+    "badge": "SDK Open Source",
+    "title": "Le SDK développeur pour l'identité numérique européenne",
+    "description": "Émettez et vérifiez des attestations vérifiables eIDAS 2.0 en 10 lignes de TypeScript. Formats SD-JWT VC et mDoc, protocoles OpenID4VC, aucun verrouillage fournisseur.",
+    "ctaGithub": "Voir sur GitHub",
+    "ctaDocs": "Lire la documentation"
+  },
+  "Showreel": {
+    "demoLabel": "Démo produit bientôt disponible",
+    "badges": {
+      "eidas": {
+        "title": "Prêt pour eIDAS 2.0",
+        "description": "Conformité totale avec le cadre européen d'identité numérique"
+      },
+      "typescript": {
+        "title": "SDK TypeScript",
+        "description": "APIs typées avec support complet d'IntelliSense"
+      },
+      "sdjwt": {
+        "title": "SD-JWT VC",
+        "description": "Divulgation sélective pour des attestations respectueuses de la vie privée"
+      },
+      "openid": {
+        "title": "OpenID4VC",
+        "description": "Émission et vérification d'attestations conformes aux standards"
+      }
+    }
+  },
+  "Dx": {
+    "badge": "Expérience développeur",
+    "title": "Votre centrale d'attestations",
+    "description": "De la conception de schémas d'attestations à l'émission, la vérification et la divulgation sélective — tout ce dont vous avez besoin dans un SDK unique et composable.",
+    "cta": "Commencer"
+  },
+  "UseCases": {
+    "badge": "Cas d'usage",
+    "title": "Ce que vous pouvez construire",
+    "scrollLeft": "Défiler à gauche",
+    "scrollRight": "Défiler à droite",
+    "items": {
+      "nationalId": {
+        "title": "Portefeuille d'identité nationale",
+        "description": "Émettez des attestations d'identité numérique garanties par l'État, conformes à l'architecture du portefeuille d'identité numérique européen. Supportez la divulgation sélective pour que les citoyens ne partagent que le nécessaire."
+      },
+      "diploma": {
+        "title": "Diplôme numérique",
+        "description": "Les universités et organismes de formation peuvent émettre des attestations éducatives infalsifiables. Les employeurs vérifient les qualifications instantanément sans contacter l'établissement."
+      },
+      "banking": {
+        "title": "KYC bancaire",
+        "description": "Simplifiez l'intégration client avec des attestations d'identité réutilisables. Réduisez les coûts KYC tout en maintenant la conformité réglementaire à travers les juridictions."
+      },
+      "healthcare": {
+        "title": "Attestations de santé",
+        "description": "Émettez et vérifiez des licences médicales professionnelles, des certificats de vaccination et des attestations de consentement patient avec divulgation sélective respectueuse de la vie privée."
+      },
+      "travel": {
+        "title": "Documents de voyage",
+        "description": "Facilitez le passage aux frontières avec des permis de conduire mobiles et des attestations de voyage basés sur les formats ISO 18013-5 et mDoc."
+      }
+    }
+  },
+  "Integrations": {
+    "badge": "Standards",
+    "title": "Construit sur des standards ouverts",
+    "credentialFormats": {
+      "title": "Formats d'attestations",
+      "description": "Support natif des deux formats d'attestations imposés par l'UE, prêt pour l'écosystème EUDIW.",
+      "sdjwt": "SD-JWT VC",
+      "sdjwtSub": "Divulgation sélective",
+      "mdoc": "mDoc",
+      "mdocSub": "ISO 18013-5"
+    },
+    "protocols": {
+      "title": "Protocoles",
+      "openid4vci": {
+        "name": "OpenID4VCI",
+        "description": "Émettez des attestations via le protocole OpenID for Verifiable Credential Issuance."
+      },
+      "openid4vp": {
+        "name": "OpenID4VP",
+        "description": "Demandez et vérifiez des présentations d'attestations avec OpenID for Verifiable Presentations."
+      },
+      "didcomm": {
+        "name": "DIDComm v2",
+        "description": "Messagerie sécurisée pair-à-pair pour l'échange d'attestations entre agents."
+      }
+    },
+    "devTools": {
+      "title": "Outils développeur",
+      "install": {
+        "label": "npm install credat",
+        "sub": "Installation sans configuration"
+      },
+      "typescript": {
+        "label": "100% TypeScript",
+        "sub": "Typage complet"
+      },
+      "bundle": {
+        "label": "< 50kb gzipped",
+        "sub": "Tree-shakeable"
+      }
+    }
+  },
+  "Testimonials": {
+    "badge": "Témoignages",
+    "title": "Adopté par les développeurs",
+    "joinCommunity": "Rejoindre la communauté",
+    "starOnGithub": "Star sur GitHub",
+    "items": {
+      "sophie": {
+        "quote": "Credat a rendu notre intégration eIDAS 2.0 simple et rapide. Nous sommes passés de zéro à l'émission d'attestations en un seul sprint.",
+        "name": "Sophie L.",
+        "role": "CTO"
+      },
+      "marcus": {
+        "quote": "L'implémentation SD-JWT VC est robuste. La divulgation sélective fonctionne directement avec des APIs propres.",
+        "name": "Marcus W.",
+        "role": "Lead Engineer"
+      },
+      "elena": {
+        "quote": "Enfin un SDK qui prend les deux formats d'attestations au sérieux. Le support mDoc nous a fait gagner des mois de développement.",
+        "name": "Elena R.",
+        "role": "Head of Digital ID"
+      },
+      "james": {
+        "quote": "TypeScript-first avec une DX incroyable. Le typage des schémas d'attestations a détecté des bugs que nous aurions livrés.",
+        "name": "James C.",
+        "role": "Senior Developer"
+      },
+      "anna": {
+        "quote": "Nous avons évalué trois SDKs SSI. Credat était le seul à gérer les protocoles OpenID4VC correctement et à grande échelle.",
+        "name": "Anna K.",
+        "role": "VP Engineering"
+      },
+      "pierre": {
+        "quote": "Open source, conforme aux standards, et maintenu par des gens qui comprennent le paysage de l'identité européenne. Hautement recommandé.",
+        "name": "Pierre D.",
+        "role": "Founder"
+      }
+    }
+  },
+  "Kpi": {
+    "items": {
+      "eidas": {
+        "number": "eIDAS 2.0",
+        "label": "Conformité totale",
+        "description": "Conçu de A à Z pour le cadre européen d'identité numérique. Chaque API correspond à une exigence réglementaire."
+      },
+      "bundle": {
+        "number": "< 50kb",
+        "label": "Bundle gzippé",
+        "description": "Architecture ESM tree-shakeable. Importez uniquement ce dont vous avez besoin — émission, vérification, ou les deux."
+      },
+      "formats": {
+        "number": "2 Formats",
+        "label": "SD-JWT VC & mDoc",
+        "description": "Support natif des deux formats d'attestations imposés par l'UE. Passez de l'un à l'autre avec un seul changement de configuration."
+      }
+    }
+  },
+  "CodeScroll": {
+    "badge": "Fonctionnement",
+    "steps": {
+      "import": {
+        "step": "Étape 1",
+        "title": "Importez le SDK",
+        "description": "Un seul import vous donne tout — émission, vérification et gestion des attestations."
+      },
+      "create": {
+        "step": "Étape 2",
+        "title": "Créez un client",
+        "description": "Configurez votre format d'attestation et l'identité de l'émetteur. Supporte SD-JWT VC et mDoc nativement."
+      },
+      "issue": {
+        "step": "Étape 3",
+        "title": "Émettez une attestation",
+        "description": "Définissez le type d'attestation et les attributs. Le SDK gère la validation du schéma, la signature et l'encodage."
+      },
+      "verify": {
+        "step": "Étape 4",
+        "title": "Vérifiez instantanément",
+        "description": "Vérification en une ligne avec contrôle de statut complet, validation de signature et support de révocation."
+      }
+    }
+  },
+  "Cta": {
+    "badge": "Open Source",
+    "title": "Construisez le futur de l'identité numérique",
+    "description": "Credat est open source et conçu pour la communauté. Commencez à émettre des attestations eIDAS 2.0 en quelques minutes — ou contribuez à façonner le standard.",
+    "ctaGithub": "Voir sur GitHub",
+    "ctaDocs": "Lire la documentation"
+  },
+  "Footer": {
+    "brand": "Le SDK TypeScript open source pour les attestations vérifiables eIDAS 2.0. Émettez, vérifiez et gérez l'identité numérique — en 10 lignes de code.",
+    "copyright": "© {year} Credat. Open source sous licence Apache-2.0.",
+    "builtWith": "Construit avec",
+    "columns": {
+      "product": {
+        "title": "Produit",
+        "github": "GitHub",
+        "documentation": "Documentation",
+        "npmPackage": "Package npm",
+        "changelog": "Journal des modifications"
+      },
+      "resources": {
+        "title": "Ressources",
+        "gettingStarted": "Premiers pas",
+        "apiReference": "Référence API",
+        "examples": "Exemples"
+      },
+      "legal": {
+        "title": "Mentions légales",
+        "privacyPolicy": "Politique de confidentialité",
+        "termsOfService": "Conditions d'utilisation",
+        "license": "Licence Apache-2.0"
+      }
+    }
+  },
+  "HeroFlow": {
+    "ariaLabel": "Flux d'attestations vérifiables : l'émetteur délivre une attestation au détenteur, qui la présente au vérificateur",
+    "issuer": "Émetteur",
+    "issuerDesc": "Émet les attestations",
+    "holder": "Détenteur",
+    "holderDesc": "Stocke dans le portefeuille",
+    "verifier": "Vérificateur",
+    "verifierDesc": "Vérifie la validité",
+    "presentation": "Présentation",
+    "trustChain": "Chaîne de confiance"
+  },
+  "LocaleSwitcher": {
+    "label": "Langue",
+    "en": "EN",
+    "fr": "FR",
+    "de": "DE",
+    "es": "ES"
+  }
+}
