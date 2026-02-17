@@ -3,11 +3,20 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export function Navbar() {
+  const t = useTranslations("Navbar");
+  const tSwitcher = useTranslations("LocaleSwitcher");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const navBarRef = useRef<HTMLDivElement>(null);
   const centerRef = useRef<HTMLDivElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -65,20 +74,33 @@ export function Navbar() {
 
           <div ref={centerRef} className="hidden md:flex items-center gap-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <a href="#use-cases" onClick={(e) => scrollTo(e, "use-cases")} className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
-              Use Cases
+              {t("useCases")}
             </a>
             <a href="#integrations" onClick={(e) => scrollTo(e, "integrations")} className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
-              Integrations
+              {t("integrations")}
             </a>
             <a href="#how-it-works" onClick={(e) => scrollTo(e, "how-it-works")} className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
-              How it Works
+              {t("howItWorks")}
             </a>
             <a href="https://docs.credat.io" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
-              Docs
+              {t("docs")}
             </a>
           </div>
 
           <div className="flex items-center gap-3">
+            <select
+              value={locale}
+              onChange={(e) => router.replace(pathname, { locale: e.target.value })}
+              className="h-[40px] px-3 text-sm font-medium text-foreground-secondary bg-transparent border border-black/6 rounded-full cursor-pointer hover:text-foreground hover:border-black/10 transition-colors appearance-none text-center"
+              aria-label={tSwitcher("label")}
+            >
+              {routing.locales.map((l) => (
+                <option key={l} value={l}>
+                  {tSwitcher(l)}
+                </option>
+              ))}
+            </select>
+
             <a
               href="https://github.com/credat/credat"
               target="_blank"
@@ -87,8 +109,8 @@ export function Navbar() {
               style={{ height: "40px", padding: "0 16px", paddingRight: "6px" }}
             >
               <div className="btn-scroll-content">
-                <span>GitHub</span>
-                <span>GitHub</span>
+                <span>{t("github")}</span>
+                <span>{t("github")}</span>
               </div>
               <div className="btn-scroll-circle" style={{ width: "28px", height: "28px" }}>
                 <ArrowUpRight className="btn-scroll-icon" style={{ width: "14px", height: "14px" }} />
@@ -98,7 +120,7 @@ export function Navbar() {
             <button
               className="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-black/6 bg-white/80"
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
+              aria-label={t("toggleMenu")}
             >
               {mobileOpen ? <X style={{ width: 16, height: 16 }} /> : <Menu style={{ width: 16, height: 16 }} />}
             </button>
@@ -109,21 +131,33 @@ export function Navbar() {
       {mobileOpen && (
         <div className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl pt-[100px] px-8 flex flex-col gap-6 md:hidden">
           <a href="#use-cases" onClick={(e) => scrollTo(e, "use-cases")} className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-            Use Cases
+            {t("useCases")}
           </a>
           <a href="#integrations" onClick={(e) => scrollTo(e, "integrations")} className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-            Integrations
+            {t("integrations")}
           </a>
           <a href="#how-it-works" onClick={(e) => scrollTo(e, "how-it-works")} className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-            How it Works
+            {t("howItWorks")}
           </a>
           <a href="https://docs.credat.io" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-foreground hover:text-accent transition-colors flex items-center gap-2">
-            Docs <ArrowUpRight style={{ width: 16, height: 16 }} />
+            {t("docs")} <ArrowUpRight style={{ width: 16, height: 16 }} />
           </a>
+          <select
+            value={locale}
+            onChange={(e) => router.replace(pathname, { locale: e.target.value })}
+            className="h-[40px] px-3 text-sm font-medium text-foreground-secondary bg-transparent border border-black/6 rounded-full cursor-pointer hover:text-foreground hover:border-black/10 transition-colors appearance-none text-center w-fit mt-2"
+            aria-label={tSwitcher("label")}
+          >
+            {routing.locales.map((l) => (
+              <option key={l} value={l}>
+                {tSwitcher(l)}
+              </option>
+            ))}
+          </select>
           <a href="https://github.com/credat/credat" target="_blank" rel="noopener noreferrer" className="btn-scroll btn-scroll-primary mt-4 w-fit">
             <div className="btn-scroll-content">
-              <span>GitHub</span>
-              <span>GitHub</span>
+              <span>{t("github")}</span>
+              <span>{t("github")}</span>
             </div>
             <div className="btn-scroll-circle">
               <ArrowUpRight className="btn-scroll-icon" />

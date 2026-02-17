@@ -4,34 +4,35 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { gsap } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
-const NAV_COLUMNS = [
+const FOOTER_COLUMNS = [
   {
-    title: "Product",
+    key: "product",
     links: [
-      { label: "GitHub", href: "https://github.com/credat/credat", external: true },
-      { label: "Documentation", href: "https://docs.credat.io", external: true },
-      { label: "npm Package", href: "https://www.npmjs.com/package/credat", external: true },
-      { label: "Changelog", href: "https://github.com/credat/credat/releases", external: true },
+      { key: "github", href: "https://github.com/credat/credat", external: true },
+      { key: "documentation", href: "https://docs.credat.io", external: true },
+      { key: "npmPackage", href: "https://www.npmjs.com/package/credat", external: true },
+      { key: "changelog", href: "https://github.com/credat/credat/releases", external: true },
     ],
   },
   {
-    title: "Resources",
+    key: "resources",
     links: [
-      { label: "Getting Started", href: "https://docs.credat.io", external: true },
-      { label: "API Reference", href: "https://docs.credat.io/api", external: true },
-      { label: "Examples", href: "https://github.com/credat/credat/tree/main/examples", external: true },
+      { key: "gettingStarted", href: "https://docs.credat.io", external: true },
+      { key: "apiReference", href: "https://docs.credat.io/api", external: true },
+      { key: "examples", href: "https://github.com/credat/credat/tree/main/examples", external: true },
     ],
   },
   {
-    title: "Legal",
+    key: "legal",
     links: [
-      { label: "Privacy Policy", href: "/privacy", external: false },
-      { label: "Terms of Service", href: "/terms", external: false },
-      { label: "Apache-2.0 License", href: "https://github.com/credat/credat/blob/main/LICENSE", external: true },
+      { key: "privacyPolicy", href: "/privacy", external: false },
+      { key: "termsOfService", href: "/terms", external: false },
+      { key: "license", href: "https://github.com/credat/credat/blob/main/LICENSE", external: true },
     ],
   },
-];
+] as const;
 
 const SOCIAL_LINKS = [
   {
@@ -64,6 +65,7 @@ const SOCIAL_LINKS = [
 ];
 
 export function SectionFooter() {
+  const t = useTranslations("Footer");
   const footerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -104,7 +106,7 @@ export function SectionFooter() {
                 <span className="text-base font-bold tracking-tight text-foreground">credat</span>
               </div>
               <p className="body-md max-w-xs !text-sm">
-                The open-source TypeScript SDK for eIDAS 2.0 verifiable credentials. Issue, verify, and manage digital identity — in 10 lines of code.
+                {t("brand")}
               </p>
 
               {/* Social icons */}
@@ -125,21 +127,21 @@ export function SectionFooter() {
             </div>
 
             {/* Nav columns */}
-            {NAV_COLUMNS.map((col) => (
-              <div key={col.title} className="footer-animate">
+            {FOOTER_COLUMNS.map((col) => (
+              <div key={col.key} className="footer-animate">
                 <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
-                  {col.title}
+                  {t(`columns.${col.key}.title`)}
                 </h4>
                 <ul className="flex flex-col gap-2.5">
                   {col.links.map((link) => (
-                    <li key={link.label}>
+                    <li key={link.key}>
                       <a
                         href={link.href}
                         target={link.external ? "_blank" : undefined}
                         rel={link.external ? "noopener noreferrer" : undefined}
                         className="text-sm text-foreground-secondary hover:text-foreground transition-colors inline-flex items-center gap-1 group"
                       >
-                        {link.label}
+                        {t(`columns.${col.key}.${link.key}`)}
                         {link.external && (
                           <ArrowUpRight
                             style={{ width: 12, height: 12 }}
@@ -160,10 +162,10 @@ export function SectionFooter() {
           {/* Bottom row */}
           <div className="footer-animate flex flex-col sm:flex-row items-center justify-between gap-3">
             <span className="text-xs text-foreground-secondary">
-              &copy; {new Date().getFullYear()} Credat. Open source under Apache-2.0.
+              {t("copyright", { year: new Date().getFullYear() })}
             </span>
             <div className="flex items-center gap-1 text-xs text-foreground-secondary">
-              <span>Built with</span>
+              <span>{t("builtWith")}</span>
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/[0.03] font-mono text-[11px]">
                 TypeScript
               </span>

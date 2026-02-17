@@ -10,47 +10,19 @@ import {
   NextButton,
 } from "@/components/carousel/embla-arrow-buttons";
 import { Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const TESTIMONIALS = [
-  {
-    quote: "Credat made our eIDAS 2.0 integration effortless. We went from zero to issuing credentials in a single sprint.",
-    name: "Sophie L.",
-    role: "CTO",
-    avatar: "https://i.pravatar.cc/80?img=5",
-  },
-  {
-    quote: "The SD-JWT VC implementation is rock-solid. Selective disclosure just works out of the box with clean APIs.",
-    name: "Marcus W.",
-    role: "Lead Engineer",
-    avatar: "https://i.pravatar.cc/80?img=12",
-  },
-  {
-    quote: "Finally an SDK that takes both credential formats seriously. The mDoc support saved us months of development.",
-    name: "Elena R.",
-    role: "Head of Digital ID",
-    avatar: "https://i.pravatar.cc/80?img=20",
-  },
-  {
-    quote: "TypeScript-first with incredible DX. The type safety across credential schemas caught bugs we would have shipped.",
-    name: "James C.",
-    role: "Senior Developer",
-    avatar: "https://i.pravatar.cc/80?img=8",
-  },
-  {
-    quote: "We evaluated three SSI SDKs. Credat was the only one that handled OpenID4VC protocols correctly and at scale.",
-    name: "Anna K.",
-    role: "VP Engineering",
-    avatar: "https://i.pravatar.cc/80?img=16",
-  },
-  {
-    quote: "Open source, spec-compliant, and maintained by people who understand the European identity landscape. Highly recommended.",
-    name: "Pierre D.",
-    role: "Founder",
-    avatar: "https://i.pravatar.cc/80?img=11",
-  },
-];
+const TESTIMONIAL_META = [
+  { key: "sophie", avatar: "https://i.pravatar.cc/80?img=5" },
+  { key: "marcus", avatar: "https://i.pravatar.cc/80?img=12" },
+  { key: "elena", avatar: "https://i.pravatar.cc/80?img=20" },
+  { key: "james", avatar: "https://i.pravatar.cc/80?img=8" },
+  { key: "anna", avatar: "https://i.pravatar.cc/80?img=16" },
+  { key: "pierre", avatar: "https://i.pravatar.cc/80?img=11" },
+] as const;
 
 export function SectionTestimonials() {
+  const t = useTranslations("Testimonials");
   const sectionRef = useRef<HTMLElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
@@ -109,10 +81,10 @@ export function SectionTestimonials() {
           <div>
             <div ref={pillRef} className="pill-badge mb-4">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-xs font-medium text-foreground-secondary">Testimonials</span>
+              <span className="text-xs font-medium text-foreground-secondary">{t("badge")}</span>
             </div>
             <h2 ref={headlineRef} className="headline-lg text-foreground">
-              Trusted by Developers
+              {t("title")}
             </h2>
           </div>
           <div className="flex items-center gap-3">
@@ -125,24 +97,24 @@ export function SectionTestimonials() {
       {/* Carousel */}
       <div ref={emblaRef} className="embla px-6 lg:px-[10vw]">
         <div className="embla__container">
-          {TESTIMONIALS.map((t) => (
-            <div key={t.name} className="embla__slide--partial">
+          {TESTIMONIAL_META.map((item) => (
+            <div key={item.key} className="embla__slide--partial">
               <div className="glass-card p-6 md:p-8 h-full flex flex-col justify-between min-h-[220px]">
                 <div className="grid-overlay" />
                 <p className="relative z-10 text-sm leading-relaxed text-foreground mb-6">
-                  &ldquo;{t.quote}&rdquo;
+                  &ldquo;{t(`items.${item.key}.quote`)}&rdquo;
                 </p>
                 <div className="relative z-10 flex items-center gap-3">
                   <img
-                    src={t.avatar}
-                    alt={t.name}
+                    src={item.avatar}
+                    alt={t(`items.${item.key}.name`)}
                     width={36}
                     height={36}
                     className="w-9 h-9 rounded-full object-cover shrink-0"
                   />
                   <div>
-                    <div className="text-sm font-semibold text-foreground">{t.name}</div>
-                    <div className="text-xs text-foreground-secondary">{t.role}</div>
+                    <div className="text-sm font-semibold text-foreground">{t(`items.${item.key}.name`)}</div>
+                    <div className="text-xs text-foreground-secondary">{t(`items.${item.key}.role`)}</div>
                   </div>
                 </div>
               </div>
@@ -154,7 +126,7 @@ export function SectionTestimonials() {
             <div className="glass-card-accent p-6 md:p-8 h-full flex flex-col items-center justify-center min-h-[220px] text-center">
               <div className="grid-overlay" />
               <div className="relative z-10">
-                <p className="headline-sm text-foreground mb-4">Join the Community</p>
+                <p className="headline-sm text-foreground mb-4">{t("joinCommunity")}</p>
                 <a
                   href="https://github.com/credat/credat"
                   target="_blank"
@@ -163,8 +135,8 @@ export function SectionTestimonials() {
                   style={{ height: "40px", padding: "0 16px", paddingRight: "6px" }}
                 >
                   <div className="btn-scroll-content">
-                    <span>Star on GitHub</span>
-                    <span>Star on GitHub</span>
+                    <span>{t("starOnGithub")}</span>
+                    <span>{t("starOnGithub")}</span>
                   </div>
                   <div className="btn-scroll-circle" style={{ width: "28px", height: "28px" }}>
                     <Star className="w-3.5 h-3.5 fill-current" />

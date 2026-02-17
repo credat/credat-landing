@@ -2,47 +2,19 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { gsap } from "@/lib/gsap";
-import { ShieldCheck, GraduationCap, Landmark, HeartPulse, Plane, ChevronLeft, ChevronRight, type LucideIcon } from "lucide-react";
+import { ShieldCheck, GraduationCap, Landmark, HeartPulse, Plane, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const USE_CASES: {
-  title: string;
-  description: string;
-  color: string;
-  icon: LucideIcon;
-}[] = [
-  {
-    title: "National ID Wallet",
-    description: "Issue government-backed digital identity credentials compliant with the EU Digital Identity Wallet architecture. Support selective disclosure so citizens share only what's needed.",
-    color: "#2563EB",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Digital Diploma",
-    description: "Universities and training providers can issue tamper-proof educational credentials. Employers verify qualifications instantly without contacting the institution.",
-    color: "#7C3AED",
-    icon: GraduationCap,
-  },
-  {
-    title: "Banking KYC",
-    description: "Streamline customer onboarding with reusable identity credentials. Reduce KYC costs while maintaining regulatory compliance across jurisdictions.",
-    color: "#059669",
-    icon: Landmark,
-  },
-  {
-    title: "Healthcare Credentials",
-    description: "Issue and verify professional medical licenses, vaccination records, and patient consent credentials with privacy-preserving selective disclosure.",
-    color: "#DC2626",
-    icon: HeartPulse,
-  },
-  {
-    title: "Travel Documents",
-    description: "Enable seamless border crossing with mobile driving licenses and travel credentials based on ISO 18013-5 and mDoc formats.",
-    color: "#D97706",
-    icon: Plane,
-  },
-];
+const USE_CASE_META = [
+  { key: "nationalId", color: "#2563EB", icon: ShieldCheck },
+  { key: "diploma", color: "#7C3AED", icon: GraduationCap },
+  { key: "banking", color: "#059669", icon: Landmark },
+  { key: "healthcare", color: "#DC2626", icon: HeartPulse },
+  { key: "travel", color: "#D97706", icon: Plane },
+] as const;
 
 export function SectionUseCases() {
+  const t = useTranslations("UseCases");
   const sectionRef = useRef<HTMLElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
@@ -122,10 +94,10 @@ export function SectionUseCases() {
           <div className="section-textbox !items-start !text-left">
             <div ref={pillRef} className="pill-badge">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-xs font-medium text-foreground-secondary">Use Cases</span>
+              <span className="text-xs font-medium text-foreground-secondary">{t("badge")}</span>
             </div>
             <h2 ref={headlineRef} className="headline-lg text-foreground">
-              What You Can Build
+              {t("title")}
             </h2>
           </div>
 
@@ -135,7 +107,7 @@ export function SectionUseCases() {
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
               className="embla__arrow"
-              aria-label="Scroll left"
+              aria-label={t("scrollLeft")}
             >
               <ChevronLeft style={{ width: 18, height: 18 }} />
             </button>
@@ -143,7 +115,7 @@ export function SectionUseCases() {
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
               className="embla__arrow"
-              aria-label="Scroll right"
+              aria-label={t("scrollRight")}
             >
               <ChevronRight style={{ width: 18, height: 18 }} />
             </button>
@@ -157,9 +129,9 @@ export function SectionUseCases() {
         className="use-cases-scroll flex gap-4 lg:gap-6 overflow-x-auto px-6 lg:px-[10vw] pb-4 snap-x snap-mandatory"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {USE_CASES.map((uc) => (
+        {USE_CASE_META.map((uc) => (
           <div
-            key={uc.title}
+            key={uc.key}
             className="use-case-card snap-start shrink-0 w-[85vw] sm:w-[65vw] md:w-[45vw] lg:w-[calc((100vw-20vw-48px)/3)]"
           >
             <div className="glass-card p-8 md:p-12 min-h-[320px] h-full flex flex-col justify-between">
@@ -168,8 +140,8 @@ export function SectionUseCases() {
                 <div className="mb-6 w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${uc.color}12` }}>
                   <uc.icon className="w-5 h-5" style={{ color: uc.color }} strokeWidth={1.5} />
                 </div>
-                <h3 className="headline-md text-foreground mb-4">{uc.title}</h3>
-                <p className="body-lg max-w-lg">{uc.description}</p>
+                <h3 className="headline-md text-foreground mb-4">{t(`items.${uc.key}.title`)}</h3>
+                <p className="body-lg max-w-lg">{t(`items.${uc.key}.description`)}</p>
               </div>
               <div className="relative z-10 mt-8">
                 <div className="w-12 h-1 rounded-full" style={{ backgroundColor: uc.color }} />

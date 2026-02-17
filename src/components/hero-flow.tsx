@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
 
 export function HeroFlow() {
+  const t = useTranslations("HeroFlow");
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
@@ -90,7 +92,7 @@ export function HeroFlow() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full"
-      aria-label="Verifiable Credentials flow: Issuer issues credential to Holder, who presents it to Verifier"
+      aria-label={t("ariaLabel")}
       role="img"
     >
       <defs>
@@ -218,8 +220,8 @@ export function HeroFlow() {
           <rect x="10" y="16" width="4" height="4" fill="#2563EB" opacity="0.4" />
         </g>
       </g>
-      <text className="flow-label" x="145" y="125" textAnchor="middle" fontSize="12" fontWeight="600" fill="#1E40AF">Issuer</text>
-      <text className="flow-label" x="145" y="138" textAnchor="middle" fontSize="9" fill="#6B7280">Issues credentials</text>
+      <text className="flow-label" x="145" y="125" textAnchor="middle" fontSize="12" fontWeight="600" fill="#1E40AF">{t("issuer")}</text>
+      <text className="flow-label" x="145" y="138" textAnchor="middle" fontSize="9" fill="#6B7280">{t("issuerDesc")}</text>
 
       {/* ── Holder node ──────────────────────────────── */}
       <g className="flow-node" filter="url(#nodeGlow)">
@@ -231,8 +233,8 @@ export function HeroFlow() {
           <path d="M 3 21 Q 3 14 12 14 Q 21 14 21 21" fill="none" stroke="#7C3AED" strokeWidth="1.5" />
         </g>
       </g>
-      <text className="flow-label" x="200" y="337" textAnchor="middle" fontSize="12" fontWeight="600" fill="#6D28D9">Holder</text>
-      <text className="flow-label" x="200" y="350" textAnchor="middle" fontSize="9" fill="#6B7280">Stores in wallet</text>
+      <text className="flow-label" x="200" y="337" textAnchor="middle" fontSize="12" fontWeight="600" fill="#6D28D9">{t("holder")}</text>
+      <text className="flow-label" x="200" y="350" textAnchor="middle" fontSize="9" fill="#6B7280">{t("holderDesc")}</text>
 
       {/* ── Verifier node ────────────────────────────── */}
       <g className="flow-node" filter="url(#nodeGlow)">
@@ -244,8 +246,8 @@ export function HeroFlow() {
           <polyline points="8,13 11,16 16,11" fill="none" stroke="#059669" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </g>
       </g>
-      <text className="flow-label" x="370" y="165" textAnchor="middle" fontSize="12" fontWeight="600" fill="#047857">Verifier</text>
-      <text className="flow-label" x="370" y="178" textAnchor="middle" fontSize="9" fill="#6B7280">Checks validity</text>
+      <text className="flow-label" x="370" y="165" textAnchor="middle" fontSize="12" fontWeight="600" fill="#047857">{t("verifier")}</text>
+      <text className="flow-label" x="370" y="178" textAnchor="middle" fontSize="9" fill="#6B7280">{t("verifierDesc")}</text>
 
       {/* ── Verification checkmark badge ─────────────── */}
       <g className="flow-check">
@@ -266,13 +268,13 @@ export function HeroFlow() {
       </text>
       <g className="flow-label">
         <rect x="280" y="198" width="68" height="20" rx="10" fill="white" stroke="#E5E7EB" strokeWidth="1" />
-        <text x="314" y="212" textAnchor="middle" fontSize="8" fontWeight="500" fill="#6B7280">Presentation</text>
+        <text x="314" y="212" textAnchor="middle" fontSize="8" fontWeight="500" fill="#6B7280">{t("presentation")}</text>
       </g>
 
       {/* ── Trust line label ─────────────────────────── */}
       <g className="flow-label">
         <rect x="224" y="48" width="60" height="18" rx="9" fill="white" stroke="#E5E7EB" strokeWidth="0.5" opacity="0.8" />
-        <text x="254" y="60" textAnchor="middle" fontSize="7" fill="#9CA3AF">Trust Chain</text>
+        <text x="254" y="60" textAnchor="middle" fontSize="7" fill="#9CA3AF">{t("trustChain")}</text>
       </g>
     </svg>
   );
