@@ -149,7 +149,7 @@ export function SectionDx() {
 									{"\n"}
 									<span className="code-comment">{"// 3. Verify trust"}</span>{"\n"}
 									<span className="code-keyword">const</span> result = <span className="code-keyword">await</span> <span className="code-function">verifyPresentation</span>(presentation){"\n"}
-									console.log(result.trusted) <span className="code-comment">{"// true"}</span>
+									<span className="code-function">console</span>.log(result.<span className="code-property">trusted</span>) <span className="code-comment">{"// true"}</span>
 								</code>
 							</pre>
 						</div>

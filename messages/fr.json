@@ -1,14 +1,14 @@
 {
 	"Metadata": {
 		"title": "Credat — La couche de confiance pour les agents IA",
-		"description": "Donnez une identite a vos agents IA. Deleguez des permissions. Verifiez la confiance. SDK TypeScript open source pour la confiance entre agents et services.",
-		"ogDescription": "Donnez une identite a vos agents IA. Deleguez des permissions. Verifiez la confiance. SDK TypeScript open source.",
-		"twitterDescription": "Votre agent prouve son identite. Les services lui font confiance. C'est tout."
+		"description": "Donnez une identité à vos agents IA. Déléguez des permissions. Vérifiez la confiance. SDK TypeScript open source pour la confiance entre agents et services.",
+		"ogDescription": "Donnez une identité à vos agents IA. Déléguez des permissions. Vérifiez la confiance. SDK TypeScript open source.",
+		"twitterDescription": "Votre agent prouve son identité. Les services lui font confiance. C'est tout."
 	},
 	"Navbar": {
 		"useCases": "Cas d'usage",
 		"howItWorks": "Fonctionnement",
-		"features": "Fonctionnalites",
+		"features": "Fonctionnalités",
 		"docs": "Docs",
 		"github": "GitHub",
 		"toggleMenu": "Ouvrir le menu"
@@ -16,115 +16,94 @@
 	"Hero": {
 		"badge": "SDK Open Source",
 		"title": "La couche de confiance pour les agents IA",
-		"description": "Donnez une identite a vos agents. Deleguez des permissions. Verifiez la confiance. Stoppez la fraude aux agents avant qu'elle ne commence.",
+		"description": "Donnez une identité à vos agents. Déléguez des permissions. Vérifiez la confiance. Stoppez la fraude aux agents avant qu'elle ne commence.",
 		"ctaGithub": "Voir sur GitHub",
 		"ctaDocs": "Commencer"
 	},
-	"Showreel": {
-		"demoLabel": "Voir en action",
-		"badges": {
-			"identity": {
-				"title": "Identite d'agent",
-				"description": "Chaque agent obtient une identite verifiable et portable"
-			},
-			"typescript": {
-				"title": "SDK TypeScript",
-				"description": "APIs typees avec support complet d'IntelliSense"
-			},
-			"delegation": {
-				"title": "Permissions deleguees",
-				"description": "Des droits cadres pour que les agents ne fassent que ce qu'ils doivent"
-			},
-			"verification": {
-				"title": "Verification instantanee",
-				"description": "Les services verifient l'identite et les permissions de l'agent en millisecondes"
-			}
-		}
-	},
 	"Dx": {
-		"badge": "Experience developpeur",
+		"badge": "Expérience développeur",
 		"title": "La confiance agent en 5 lignes de code",
-		"description": "Creez une identite d'agent, deleguez des permissions avec des droits cadres, et verifiez la confiance — le tout depuis un SDK unique et composable.",
+		"description": "Créez une identité d'agent, déléguez des permissions avec des droits cadrés, et vérifiez la confiance — le tout depuis un SDK unique et composable.",
 		"cta": "Commencer"
 	},
 	"Problem": {
-		"badge": "Le probleme",
+		"badge": "Le problème",
 		"title": "Les agents IA sont partout. La confiance nulle part.",
 		"items": {
 			"fraud": {
 				"title": "Fraude aux agents",
-				"description": "N'importe quel processus peut pretendre etre un agent. Il n'existe aucun standard pour verifier son identite."
+				"description": "N'importe quel processus peut prétendre être un agent. Il n'existe aucun standard pour vérifier son identité."
 			},
 			"trust": {
 				"title": "Confiance inter-agents",
-				"description": "Quand deux agents doivent collaborer, aucun ne peut prouver son identite ou ses capacites a l'autre."
+				"description": "Quand deux agents doivent collaborer, aucun ne peut prouver son identité ou ses capacités à l'autre."
 			},
 			"delegation": {
-				"title": "Verification de delegation",
-				"description": "Comment un service sait-il qu'un agent a reellement la permission de son proprietaire ? Aujourd'hui, c'est impossible."
+				"title": "Vérification de délégation",
+				"description": "Comment un service sait-il qu'un agent a réellement la permission de son propriétaire ? Aujourd'hui, c'est impossible."
 			},
 			"scope": {
-				"title": "Controle des droits",
-				"description": "Les agents ont besoin d'autorisations — des permissions bornees qui limitent ce qu'ils peuvent faire. Les cles API ne suffisent pas."
+				"title": "Contrôle des droits",
+				"description": "Les agents ont besoin d'autorisations — des permissions bornées qui limitent ce qu'ils peuvent faire. Les clés API ne suffisent pas."
 			}
 		}
 	},
 	"UseCases": {
 		"badge": "Cas d'usage",
 		"title": "Ce que vous pouvez construire",
-		"scrollLeft": "Defiler a gauche",
-		"scrollRight": "Defiler a droite",
+		"scrollLeft": "Défiler à gauche",
+		"scrollRight": "Défiler à droite",
 		"items": {
 			"travel": {
-				"title": "Agent de reservation de voyage",
-				"description": "Votre agent reserve des vols et hotels en votre nom. Les services verifient qu'il est autorise a depenser jusqu'a votre plafond — sans cles API, sans mots de passe partages."
+				"title": "Agent de réservation de voyage",
+				"description": "Votre agent réserve des vols et hôtels en votre nom. Les services vérifient qu'il est autorisé à dépenser jusqu'à votre plafond — sans clés API, sans mots de passe partagés."
 			},
 			"finance": {
-				"title": "Agent financier avec plafond de depenses",
-				"description": "Deleguez un budget a votre agent. Il peut payer des factures, transferer des fonds ou gerer des abonnements — le tout dans le perimetre que vous avez defini."
+				"title": "Agent financier avec plafond de dépenses",
+				"description": "Déléguez un budget à votre agent. Il peut payer des factures, transférer des fonds ou gérer des abonnements — le tout dans le périmètre que vous avez défini."
 			},
 			"multiAgent": {
 				"title": "Workflows multi-agents",
-				"description": "Chainez des agents ou chacun prouve son identite et ses permissions au suivant. Construisez des pipelines complexes ou la confiance circule automatiquement."
+				"description": "Chaînez des agents où chacun prouve son identité et ses permissions au suivant. Construisez des pipelines complexes où la confiance circule automatiquement."
 			},
 			"devPlatform": {
-				"title": "Securite de plateforme d'agents",
-				"description": "Gerez une marketplace ou des agents tiers interagissent avec vos APIs. Verifiez l'identite et les droits de chaque agent avant de lui donner acces."
+				"title": "Sécurité de plateforme d'agents",
+				"description": "Gérez une marketplace où des agents tiers interagissent avec vos APIs. Vérifiez l'identité et les droits de chaque agent avant de lui donner accès."
 			},
 			"personalAgent": {
 				"title": "Agent assistant personnel",
-				"description": "Votre agent personnel gere votre agenda, vos emails et vos taches. Il prouve a chaque service que vous l'avez autorise — avec exactement les bonnes permissions."
+				"description": "Votre agent personnel gère votre agenda, vos emails et vos tâches. Il prouve à chaque service que vous l'avez autorisé — avec exactement les bonnes permissions."
 			}
 		}
 	},
 	"Integrations": {
-		"badge": "Fonctionnalites",
+		"badge": "Fonctionnalités",
 		"title": "Tout pour faire confiance aux agents",
 		"agentIdentity": {
-			"title": "Identite d'agent",
-			"description": "Creez des identites portables et verifiables pour les agents IA. Chaque agent obtient une identite unique liee au domaine de son proprietaire.",
-			"create": "Creer une identite",
+			"title": "Identité d'agent",
+			"description": "Créez des identités portables et vérifiables pour les agents IA. Chaque agent obtient une identité unique liée au domaine de son propriétaire.",
+			"create": "Créer une identité",
 			"createSub": "Un seul appel",
-			"resolve": "Resoudre une identite",
+			"resolve": "Résoudre une identité",
 			"resolveSub": "Recherche par domaine"
 		},
 		"delegation": {
-			"title": "Delegation",
+			"title": "Délégation",
 			"scoped": {
-				"name": "Permissions cadrees",
-				"description": "Definissez exactement ce qu'un agent peut faire — reserver un voyage, depenser jusqu'a 500$, lire des emails — avec des perimetre types."
+				"name": "Permissions cadrées",
+				"description": "Définissez exactement ce qu'un agent peut faire — réserver un voyage, dépenser jusqu'à 500$, lire des emails — avec des périmètres typés."
 			},
 			"chain": {
-				"name": "Chaines de delegation",
-				"description": "Les agents peuvent re-deleguer des sous-ensembles de leurs permissions a d'autres agents. La chaine est entierement verifiable."
+				"name": "Chaînes de délégation",
+				"description": "Les agents peuvent re-déléguer des sous-ensembles de leurs permissions à d'autres agents. La chaîne est entièrement vérifiable."
 			},
 			"revoke": {
-				"name": "Revocation instantanee",
-				"description": "Revoquez les permissions de n'importe quel agent a tout moment. Les services voient le changement immediatement."
+				"name": "Révocation instantanée",
+				"description": "Révoquez les permissions de n'importe quel agent à tout moment. Les services voient le changement immédiatement."
 			}
 		},
 		"devTools": {
-			"title": "Outils developpeur",
+			"title": "Outils développeur",
 			"install": {
 				"label": "npm install credat",
 				"sub": "Installation sans configuration"
@@ -141,37 +120,37 @@
 	},
 	"Testimonials": {
 		"badge": "Premiers utilisateurs",
-		"title": "Concu pour les developpeurs d'agents",
-		"joinCommunity": "Rejoindre la communaute",
+		"title": "Conçu pour les développeurs d'agents",
+		"joinCommunity": "Rejoindre la communauté",
 		"starOnGithub": "Star sur GitHub",
 		"items": {
 			"sophie": {
-				"quote": "On avait besoin d'un moyen de prouver que nos agents etaient autorises. Credat nous a donne ca en un apres-midi. API ultra simple.",
+				"quote": "On avait besoin d'un moyen de prouver que nos agents étaient autorisés. Credat nous a donné ça en un après-midi. API ultra simple.",
 				"name": "Sophie L.",
 				"role": "CTO, Startup IA"
 			},
 			"marcus": {
-				"quote": "Le modele de delegation est exactement ce qu'il nous fallait. Des permissions cadrees pour les agents qui fonctionnent direct. Pas de suringenierie.",
+				"quote": "Le modèle de délégation est exactement ce qu'il nous fallait. Des permissions cadrées pour les agents qui fonctionnent direct. Pas de suringénierie.",
 				"name": "Marcus W.",
 				"role": "Lead Engineer"
 			},
 			"elena": {
-				"quote": "On gere une plateforme multi-agents. Credat a resolu notre plus gros probleme : savoir quel agent est vraiment autorise a faire quoi.",
+				"quote": "On gère une plateforme multi-agents. Credat a résolu notre plus gros problème : savoir quel agent est vraiment autorisé à faire quoi.",
 				"name": "Elena R.",
 				"role": "Head of Platform"
 			},
 			"james": {
-				"quote": "TypeScript-first, open source, et il gere la partie difficile — la confiance entre agents — pour qu'on n'ait pas a le faire.",
+				"quote": "TypeScript-first, open source, et il gère la partie difficile — la confiance entre agents — pour qu'on n'ait pas à le faire.",
 				"name": "James C.",
 				"role": "Senior Developer"
 			},
 			"anna": {
-				"quote": "On a envisage de construire notre propre systeme d'auth agent. Credat nous a economise des mois et est plus securise que ce qu'on aurait fait.",
+				"quote": "On a envisagé de construire notre propre système d'auth agent. Credat nous a économisé des mois et est plus sécurisé que ce qu'on aurait fait.",
 				"name": "Anna K.",
 				"role": "VP Engineering"
 			},
 			"pierre": {
-				"quote": "Enfin quelqu'un qui resout l'identite des agents correctement. Open source, pour les developpeurs, et construit sur de vrais standards.",
+				"quote": "Enfin quelqu'un qui résout l'identité des agents correctement. Open source, pour les développeurs, et construit sur de vrais standards.",
 				"name": "Pierre D.",
 				"role": "Founder"
 			}
@@ -182,17 +161,17 @@
 			"agents": {
 				"number": "5 lignes",
 				"label": "Pour la confiance totale",
-				"description": "Creez un agent, deleguez des permissions et verifiez la confiance — le flux complet en 5 lignes de TypeScript."
+				"description": "Créez un agent, déléguez des permissions et vérifiez la confiance — le flux complet en 5 lignes de TypeScript."
 			},
 			"bundle": {
 				"number": "< 50kb",
-				"label": "Bundle gzippe",
-				"description": "Architecture ESM tree-shakeable. Importez uniquement ce dont vous avez besoin — identite, delegation ou verification."
+				"label": "Bundle gzippé",
+				"description": "Architecture ESM tree-shakeable. Importez uniquement ce dont vous avez besoin — identité, délégation ou vérification."
 			},
 			"openSource": {
 				"number": "100%",
 				"label": "Open Source",
-				"description": "Sous licence Apache-2.0. Aucun verrouillage fournisseur, aucun frais cache. Le seul SDK d'identite d'agent open source et oriente developpeur."
+				"description": "Sous licence Apache-2.0. Aucun verrouillage fournisseur, aucun frais caché. Le seul SDK d'identité d'agent open source et orienté développeur."
 			}
 		}
 	},
@@ -200,37 +179,37 @@
 		"badge": "Fonctionnement",
 		"steps": {
 			"create": {
-				"step": "Etape 1",
-				"title": "Creer un agent",
-				"description": "Donnez a votre agent une identite verifiable liee a votre domaine. Un seul appel de fonction, aucune configuration."
+				"step": "Étape 1",
+				"title": "Créer un agent",
+				"description": "Donnez à votre agent une identité vérifiable liée à votre domaine. Un seul appel de fonction, aucune configuration."
 			},
 			"delegate": {
-				"step": "Etape 2",
-				"title": "Deleguer des permissions",
-				"description": "Definissez exactement ce que l'agent peut faire avec des autorisations cadrees. Reserver un voyage, depenser 500$, lire des emails — vous decidez."
+				"step": "Étape 2",
+				"title": "Déléguer des permissions",
+				"description": "Définissez exactement ce que l'agent peut faire avec des autorisations cadrées. Réserver un voyage, dépenser 500$, lire des emails — vous décidez."
 			},
 			"challenge": {
-				"step": "Etape 3",
+				"step": "Étape 3",
 				"title": "Challenger l'agent",
-				"description": "Quand votre agent arrive aupres d'un service, celui-ci emet un challenge. L'agent prouve son identite et ses permissions."
+				"description": "Quand votre agent arrive auprès d'un service, celui-ci émet un challenge. L'agent prouve son identité et ses permissions."
 			},
 			"verify": {
-				"step": "Etape 4",
-				"title": "Verifier la confiance",
-				"description": "Le service verifie l'identite de l'agent, la delegation de son proprietaire et les perimetre — le tout en un seul appel."
+				"step": "Étape 4",
+				"title": "Vérifier la confiance",
+				"description": "Le service vérifie l'identité de l'agent, la délégation de son propriétaire et les périmètres — le tout en un seul appel."
 			}
 		}
 	},
 	"Cta": {
 		"badge": "Open Source",
 		"title": "Stoppez la fraude aux agents. Livrez la confiance.",
-		"description": "Credat est la couche de confiance open source pour les agents IA. Donnez une identite a vos agents, deleguez des permissions et verifiez la confiance — en 5 lignes de code.",
+		"description": "Credat est la couche de confiance open source pour les agents IA. Donnez une identité à vos agents, déléguez des permissions et vérifiez la confiance — en 5 lignes de code.",
 		"ctaGithub": "Voir sur GitHub",
 		"ctaDocs": "Commencer"
 	},
 	"Footer": {
-		"brand": "La couche de confiance open source pour les agents IA. Creez des identites, deleguez des permissions, verifiez la confiance — en 5 lignes de TypeScript.",
-		"copyright": "\u00a9 {year} Credat. Open source sous licence Apache-2.0.",
+		"brand": "La couche de confiance open source pour les agents IA. Créez des identités, déléguez des permissions, vérifiez la confiance — en 5 lignes de TypeScript.",
+		"copyright": "© {year} Credat. Open source sous licence Apache-2.0.",
 		"builtWith": "Construit avec",
 		"columns": {
 			"product": {
@@ -243,27 +222,27 @@
 			"resources": {
 				"title": "Ressources",
 				"gettingStarted": "Premiers pas",
-				"apiReference": "Reference API",
+				"apiReference": "Référence API",
 				"examples": "Exemples"
 			},
 			"legal": {
-				"title": "Mentions legales",
-				"privacyPolicy": "Politique de confidentialite",
+				"title": "Mentions légales",
+				"privacyPolicy": "Politique de confidentialité",
 				"termsOfService": "Conditions d'utilisation",
 				"license": "Licence Apache-2.0"
 			}
 		}
 	},
 	"HeroFlow": {
-		"ariaLabel": "Flux de confiance agent : le proprietaire delegue des permissions a l'agent, l'agent presente ses justificatifs au service pour verification",
-		"owner": "Proprietaire",
-		"ownerDesc": "Delegue des permissions",
+		"ariaLabel": "Flux de confiance agent : le propriétaire délègue des permissions à l'agent, l'agent présente ses justificatifs au service pour vérification",
+		"owner": "Propriétaire",
+		"ownerDesc": "Délègue des permissions",
 		"agent": "Agent",
-		"agentDesc": "Prouve son identite",
+		"agentDesc": "Prouve son identité",
 		"service": "Service",
-		"serviceDesc": "Verifie la confiance",
-		"delegation": "Delegation",
-		"trustChain": "Chaine de confiance"
+		"serviceDesc": "Vérifie la confiance",
+		"delegation": "Délégation",
+		"trustChain": "Chaîne de confiance"
 	},
 	"LocaleSwitcher": {
 		"label": "Langue",

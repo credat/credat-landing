@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { gsap } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
 
@@ -135,20 +136,27 @@ export function SectionFooter() {
                 <ul className="flex flex-col gap-2.5">
                   {col.links.map((link) => (
                     <li key={link.key}>
-                      <a
-                        href={link.href}
-                        target={link.external ? "_blank" : undefined}
-                        rel={link.external ? "noopener noreferrer" : undefined}
-                        className="text-sm text-foreground-secondary hover:text-foreground transition-colors inline-flex items-center gap-1 group"
-                      >
-                        {t(`columns.${col.key}.${link.key}`)}
-                        {link.external && (
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-foreground-secondary hover:text-foreground transition-colors inline-flex items-center gap-1 group"
+                        >
+                          {t(`columns.${col.key}.${link.key}`)}
                           <ArrowUpRight
                             style={{ width: 12, height: 12 }}
                             className="opacity-0 group-hover:opacity-100 transition-opacity -translate-y-px"
                           />
-                        )}
-                      </a>
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-sm text-foreground-secondary hover:text-foreground transition-colors"
+                        >
+                          {t(`columns.${col.key}.${link.key}`)}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

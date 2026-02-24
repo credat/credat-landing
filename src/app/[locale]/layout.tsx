@@ -3,7 +3,6 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
-import Script from "next/script";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { Navbar } from "@/components/navbar";
@@ -74,10 +73,11 @@ export async function generateMetadata({
     },
     alternates: {
       languages: {
-        en: "/",
-        fr: "/fr",
-        de: "/de",
-        es: "/es",
+        "x-default": "https://credat.io",
+        en: "https://credat.io",
+        fr: "https://credat.io/fr",
+        de: "https://credat.io/de",
+        es: "https://credat.io/es",
       },
     },
     other: {
@@ -119,11 +119,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${jetbrains.variable}`}>
       <head>
-        <Script
+        <script
           id="json-ld"
           type="application/ld+json"
-          strategy="beforeInteractive"
-        >{jsonLd}</Script>
+          dangerouslySetInnerHTML={{ __html: jsonLd }}
+        />
       </head>
       <body className="bg-background text-foreground font-sans antialiased">
         <NextIntlClientProvider messages={messages}>

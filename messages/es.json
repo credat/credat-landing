@@ -3,15 +3,15 @@
 		"title": "Credat — La capa de confianza para agentes IA",
 		"description": "Dale a tus agentes IA una identidad. Delega permisos. Verifica la confianza. SDK TypeScript open source para confianza entre agentes y servicios.",
 		"ogDescription": "Dale a tus agentes IA una identidad. Delega permisos. Verifica la confianza. SDK TypeScript open source.",
-		"twitterDescription": "Tu agente demuestra quien es. Los servicios confian en el. Listo."
+		"twitterDescription": "Tu agente demuestra quién es. Los servicios confían en él. Listo."
 	},
 	"Navbar": {
 		"useCases": "Casos de uso",
-		"howItWorks": "Como funciona",
+		"howItWorks": "Cómo funciona",
 		"features": "Funcionalidades",
 		"docs": "Docs",
 		"github": "GitHub",
-		"toggleMenu": "Abrir menu"
+		"toggleMenu": "Abrir menú"
 	},
 	"Hero": {
 		"badge": "SDK Open Source",
@@ -20,48 +20,27 @@
 		"ctaGithub": "Ver en GitHub",
 		"ctaDocs": "Comenzar"
 	},
-	"Showreel": {
-		"demoLabel": "Verlo en accion",
-		"badges": {
-			"identity": {
-				"title": "Identidad de agente",
-				"description": "Cada agente obtiene una identidad verificable y portable"
-			},
-			"typescript": {
-				"title": "SDK TypeScript",
-				"description": "APIs tipadas con soporte completo de IntelliSense"
-			},
-			"delegation": {
-				"title": "Permisos delegados",
-				"description": "Derechos delimitados para que los agentes solo hagan lo que deben"
-			},
-			"verification": {
-				"title": "Verificacion instantanea",
-				"description": "Los servicios verifican la identidad y permisos del agente en milisegundos"
-			}
-		}
-	},
 	"Dx": {
 		"badge": "Experiencia de desarrollo",
-		"title": "Confianza de agentes en 5 lineas de codigo",
-		"description": "Crea una identidad de agente, delega permisos con derechos delimitados y verifica la confianza — todo desde un unico SDK componible.",
+		"title": "Confianza de agentes en 5 líneas de código",
+		"description": "Crea una identidad de agente, delega permisos con derechos delimitados y verifica la confianza — todo desde un único SDK componible.",
 		"cta": "Comenzar"
 	},
 	"Problem": {
 		"badge": "El problema",
-		"title": "Los agentes IA estan en todas partes. La confianza en ninguna.",
+		"title": "Los agentes IA están en todas partes. La confianza en ninguna.",
 		"items": {
 			"fraud": {
 				"title": "Fraude de agentes",
-				"description": "Cualquier proceso puede afirmar ser un agente. No existe un estandar para verificar que es quien dice ser."
+				"description": "Cualquier proceso puede afirmar ser un agente. No existe un estándar para verificar que es quien dice ser."
 			},
 			"trust": {
 				"title": "Confianza entre agentes",
 				"description": "Cuando dos agentes necesitan colaborar, ninguno puede demostrar su identidad o capacidades al otro."
 			},
 			"delegation": {
-				"title": "Verificacion de delegacion",
-				"description": "Como sabe un servicio que un agente realmente tiene permiso de su propietario? Hoy, no puede."
+				"title": "Verificación de delegación",
+				"description": "¿Cómo sabe un servicio que un agente realmente tiene permiso de su propietario? Hoy, no puede."
 			},
 			"scope": {
 				"title": "Control de alcance",
@@ -77,19 +56,19 @@
 		"items": {
 			"travel": {
 				"title": "Agente de reservas de viaje",
-				"description": "Tu agente reserva vuelos y hoteles en tu nombre. Los servicios verifican que esta autorizado a gastar hasta tu limite — sin claves API, sin contrasenas compartidas."
+				"description": "Tu agente reserva vuelos y hoteles en tu nombre. Los servicios verifican que está autorizado a gastar hasta tu límite — sin claves API, sin contraseñas compartidas."
 			},
 			"finance": {
-				"title": "Agente financiero con limite de gasto",
+				"title": "Agente financiero con límite de gasto",
 				"description": "Delega un presupuesto de gasto a tu agente. Puede pagar facturas, transferir fondos o gestionar suscripciones — todo dentro del alcance que definiste."
 			},
 			"multiAgent": {
 				"title": "Flujos de trabajo multi-agente",
-				"description": "Encadena agentes donde cada uno demuestra su identidad y permisos al siguiente. Construye pipelines complejos donde la confianza fluye automaticamente."
+				"description": "Encadena agentes donde cada uno demuestra su identidad y permisos al siguiente. Construye pipelines complejos donde la confianza fluye automáticamente."
 			},
 			"devPlatform": {
 				"title": "Seguridad de plataforma de agentes",
-				"description": "Administra un marketplace donde agentes de terceros interactuan con tus APIs. Verifica la identidad y alcance de cada agente antes de dar acceso."
+				"description": "Administra un marketplace donde agentes de terceros interactúan con tus APIs. Verifica la identidad y alcance de cada agente antes de dar acceso."
 			},
 			"personalAgent": {
 				"title": "Agente asistente personal",
@@ -102,24 +81,24 @@
 		"title": "Todo lo que necesitas para confiar en agentes",
 		"agentIdentity": {
 			"title": "Identidad de agente",
-			"description": "Crea identidades portables y verificables para agentes IA. Cada agente obtiene una identidad unica vinculada al dominio de su propietario.",
+			"description": "Crea identidades portables y verificables para agentes IA. Cada agente obtiene una identidad única vinculada al dominio de su propietario.",
 			"create": "Crear identidad",
-			"createSub": "Una llamada de funcion",
+			"createSub": "Una llamada de función",
 			"resolve": "Resolver identidad",
-			"resolveSub": "Busqueda por dominio"
+			"resolveSub": "Búsqueda por dominio"
 		},
 		"delegation": {
-			"title": "Delegacion",
+			"title": "Delegación",
 			"scoped": {
 				"name": "Permisos delimitados",
 				"description": "Define exactamente lo que un agente puede hacer — reservar viajes, gastar hasta $500, leer correos — con alcances tipados."
 			},
 			"chain": {
-				"name": "Cadenas de delegacion",
+				"name": "Cadenas de delegación",
 				"description": "Los agentes pueden re-delegar subconjuntos de sus permisos a otros agentes. La cadena es completamente verificable."
 			},
 			"revoke": {
-				"name": "Revocacion instantanea",
+				"name": "Revocación instantánea",
 				"description": "Revoca los permisos de cualquier agente en cualquier momento. Los servicios ven el cambio inmediatamente."
 			}
 		},
@@ -127,7 +106,7 @@
 			"title": "Herramientas de desarrollo",
 			"install": {
 				"label": "npm install credat",
-				"sub": "Instalacion sin configuracion"
+				"sub": "Instalación sin configuración"
 			},
 			"typescript": {
 				"label": "100% TypeScript",
@@ -146,32 +125,32 @@
 		"starOnGithub": "Star en GitHub",
 		"items": {
 			"sophie": {
-				"quote": "Necesitabamos una forma de demostrar que nuestros agentes estaban autorizados. Credat nos lo dio en una tarde. API super simple.",
+				"quote": "Necesitábamos una forma de demostrar que nuestros agentes estaban autorizados. Credat nos lo dio en una tarde. API super simple.",
 				"name": "Sophie L.",
 				"role": "CTO, Startup IA"
 			},
 			"marcus": {
-				"quote": "El modelo de delegacion es exactamente lo que necesitabamos. Permisos delimitados para agentes que simplemente funcionan. Sin sobreingenieria.",
+				"quote": "El modelo de delegación es exactamente lo que necesitábamos. Permisos delimitados para agentes que simplemente funcionan. Sin sobreingeniería.",
 				"name": "Marcus W.",
 				"role": "Lead Engineer"
 			},
 			"elena": {
-				"quote": "Gestionamos una plataforma multi-agente. Credat resolvio nuestro mayor problema: saber que agente esta realmente autorizado para que.",
+				"quote": "Gestionamos una plataforma multi-agente. Credat resolvió nuestro mayor problema: saber qué agente está realmente autorizado para qué.",
 				"name": "Elena R.",
 				"role": "Head of Platform"
 			},
 			"james": {
-				"quote": "TypeScript-first, open source, y gestiona la parte dificil — confianza entre agentes — para que no tengamos que hacerlo nosotros.",
+				"quote": "TypeScript-first, open source, y gestiona la parte difícil — confianza entre agentes — para que no tengamos que hacerlo nosotros.",
 				"name": "James C.",
 				"role": "Senior Developer"
 			},
 			"anna": {
-				"quote": "Evaluamos construir nuestro propio sistema de auth de agentes. Credat nos ahorro meses y es mas seguro que lo que habriamos construido.",
+				"quote": "Evaluamos construir nuestro propio sistema de auth de agentes. Credat nos ahorró meses y es más seguro que lo que habríamos construido.",
 				"name": "Anna K.",
 				"role": "VP Engineering"
 			},
 			"pierre": {
-				"quote": "Por fin alguien resuelve la identidad de agentes correctamente. Open source, para desarrolladores, y construido sobre estandares reales.",
+				"quote": "Por fin alguien resuelve la identidad de agentes correctamente. Open source, para desarrolladores, y construido sobre estándares reales.",
 				"name": "Pierre D.",
 				"role": "Founder"
 			}
@@ -180,63 +159,63 @@
 	"Kpi": {
 		"items": {
 			"agents": {
-				"number": "5 lineas",
+				"number": "5 líneas",
 				"label": "Para confianza total de agentes",
-				"description": "Crea un agente, delega permisos y verifica la confianza — el flujo completo en 5 lineas de TypeScript."
+				"description": "Crea un agente, delega permisos y verifica la confianza — el flujo completo en 5 líneas de TypeScript."
 			},
 			"bundle": {
 				"number": "< 50kb",
 				"label": "Bundle gzipped",
-				"description": "Arquitectura ESM tree-shakeable. Importa solo lo que necesitas — identidad, delegacion o verificacion."
+				"description": "Arquitectura ESM tree-shakeable. Importa solo lo que necesitas — identidad, delegación o verificación."
 			},
 			"openSource": {
 				"number": "100%",
 				"label": "Open Source",
-				"description": "Licencia Apache-2.0. Sin dependencia de proveedor, sin costos ocultos. El unico SDK de identidad de agentes open source y orientado a desarrolladores."
+				"description": "Licencia Apache-2.0. Sin dependencia de proveedor, sin costos ocultos. El único SDK de identidad de agentes open source y orientado a desarrolladores."
 			}
 		}
 	},
 	"CodeScroll": {
-		"badge": "Como funciona",
+		"badge": "Cómo funciona",
 		"steps": {
 			"create": {
 				"step": "Paso 1",
 				"title": "Crear un agente",
-				"description": "Dale a tu agente una identidad verificable vinculada a tu dominio. Una llamada de funcion, sin configuracion."
+				"description": "Dale a tu agente una identidad verificable vinculada a tu dominio. Una llamada de función, sin configuración."
 			},
 			"delegate": {
 				"step": "Paso 2",
 				"title": "Delegar permisos",
-				"description": "Define exactamente lo que el agente puede hacer con derechos delimitados. Reservar viajes, gastar $500, leer correos — tu decides."
+				"description": "Define exactamente lo que el agente puede hacer con derechos delimitados. Reservar viajes, gastar $500, leer correos — tú decides."
 			},
 			"challenge": {
 				"step": "Paso 3",
 				"title": "Desafiar al agente",
-				"description": "Cuando tu agente llega a un servicio, este emite un desafio. El agente demuestra su identidad y permisos."
+				"description": "Cuando tu agente llega a un servicio, este emite un desafío. El agente demuestra su identidad y permisos."
 			},
 			"verify": {
 				"step": "Paso 4",
 				"title": "Verificar la confianza",
-				"description": "El servicio verifica la identidad del agente, la delegacion de su propietario y los alcances — todo en una llamada."
+				"description": "El servicio verifica la identidad del agente, la delegación de su propietario y los alcances — todo en una llamada."
 			}
 		}
 	},
 	"Cta": {
 		"badge": "Open Source",
 		"title": "Detiene el fraude de agentes. Empieza a enviar confianza.",
-		"description": "Credat es la capa de confianza open source para agentes IA. Dale a tus agentes una identidad, delega permisos y verifica la confianza — en 5 lineas de codigo.",
+		"description": "Credat es la capa de confianza open source para agentes IA. Dale a tus agentes una identidad, delega permisos y verifica la confianza — en 5 líneas de código.",
 		"ctaGithub": "Ver en GitHub",
 		"ctaDocs": "Comenzar"
 	},
 	"Footer": {
-		"brand": "La capa de confianza open source para agentes IA. Crea identidades, delega permisos, verifica la confianza — en 5 lineas de TypeScript.",
-		"copyright": "\u00a9 {year} Credat. Open source bajo licencia Apache-2.0.",
+		"brand": "La capa de confianza open source para agentes IA. Crea identidades, delega permisos, verifica la confianza — en 5 líneas de TypeScript.",
+		"copyright": "© {year} Credat. Open source bajo licencia Apache-2.0.",
 		"builtWith": "Desarrollado con",
 		"columns": {
 			"product": {
 				"title": "Producto",
 				"github": "GitHub",
-				"documentation": "Documentacion",
+				"documentation": "Documentación",
 				"npmPackage": "Paquete npm",
 				"changelog": "Registro de cambios"
 			},
@@ -248,21 +227,21 @@
 			},
 			"legal": {
 				"title": "Legal",
-				"privacyPolicy": "Politica de privacidad",
-				"termsOfService": "Terminos de servicio",
+				"privacyPolicy": "Política de privacidad",
+				"termsOfService": "Términos de servicio",
 				"license": "Licencia Apache-2.0"
 			}
 		}
 	},
 	"HeroFlow": {
-		"ariaLabel": "Flujo de confianza de agentes: el propietario delega permisos al agente, el agente presenta credenciales al servicio para verificacion",
+		"ariaLabel": "Flujo de confianza de agentes: el propietario delega permisos al agente, el agente presenta credenciales al servicio para verificación",
 		"owner": "Propietario",
 		"ownerDesc": "Delega permisos",
 		"agent": "Agente",
 		"agentDesc": "Demuestra identidad",
 		"service": "Servicio",
 		"serviceDesc": "Verifica confianza",
-		"delegation": "Delegacion",
+		"delegation": "Delegación",
 		"trustChain": "Cadena de confianza"
 	},
 	"LocaleSwitcher": {

@@ -378,11 +378,7 @@
 
 /* ===== HERO FLOW SVG ===== */
 
-@media (prefers-reduced-motion: reduce) {
-  .flow-dot animateMotion {
-    animation: none !important;
-  }
-}
+/* prefers-reduced-motion handled in hero-flow.tsx via JS */
 
 /* ===== RESPONSIVE LAYOUT SWITCH ===== */
 

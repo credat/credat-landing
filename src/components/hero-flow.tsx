@@ -1,12 +1,26 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
+
+const motionQuery = "(prefers-reduced-motion: reduce)";
+function subscribeMotion(cb: () => void) {
+	const mql = window.matchMedia(motionQuery);
+	mql.addEventListener("change", cb);
+	return () => mql.removeEventListener("change", cb);
+}
+function getMotionSnapshot() {
+	return window.matchMedia(motionQuery).matches;
+}
+function getMotionServerSnapshot() {
+	return false;
+}
 
 export function HeroFlow() {
 	const t = useTranslations("HeroFlow");
 	const svgRef = useRef<SVGSVGElement>(null);
+	const reducedMotion = useSyncExternalStore(subscribeMotion, getMotionSnapshot, getMotionServerSnapshot);
 
 	useEffect(() => {
 		if (!svgRef.current) return;
@@ -159,6 +173,7 @@ export function HeroFlow() {
 			/>
 
 			{/* -- Flowing dots (animated) -- */}
+			{!reducedMotion && (<>
 			{/* Owner -> Agent dots */}
 			<circle className="flow-dot flow-dot-oa" r="3" fill="#2563EB">
 				<animateMotion
@@ -193,6 +208,7 @@ export function HeroFlow() {
 					path="M 225 270 Q 310 210 350 150"
 				/>
 			</circle>
+			</>)}
 
 			{/* -- Delegation card (between Owner and Agent) -- */}
 			<g className="flow-card" filter="url(#cardShadow)">

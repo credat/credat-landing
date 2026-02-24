@@ -9,14 +9,15 @@ import { gsap, SplitText } from "@/lib/gsap";
 import { HeroFlow } from "@/components/hero-flow";
 
 const MARQUEE_ITEMS = [
-	{ name: "Agent Identity", logo: "/logos/typescript.svg" },
-	{ name: "Delegated Permissions", logo: "/logos/typescript.svg" },
-	{ name: "Scoped Allowances", logo: "/logos/typescript.svg" },
-	{ name: "Trust Verification", logo: "/logos/typescript.svg" },
 	{ name: "TypeScript", logo: "/logos/typescript.svg" },
-	{ name: "Open Source", logo: "/logos/typescript.svg" },
-	{ name: "Zero Config", logo: "/logos/typescript.svg" },
-	{ name: "< 50kb", logo: "/logos/typescript.svg" },
+	{ name: "DIDComm", logo: "/logos/didcomm.svg" },
+	{ name: "W3C VCs", logo: "/logos/w3c.svg" },
+	{ name: "SD-JWT", logo: "/logos/sd-jwt.svg" },
+	{ name: "OpenID", logo: "/logos/openid.svg" },
+	{ name: "eIDAS", logo: "/logos/eidas.svg" },
+	{ name: "ISO 18013", logo: "/logos/iso.svg" },
+	{ name: "mDOC", logo: "/logos/mdoc.svg" },
+	{ name: "IETF", logo: "/logos/ietf.svg" },
 ];
 
 export function SectionHero() {

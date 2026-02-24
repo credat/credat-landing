@@ -1,111 +1,90 @@
 {
 	"Metadata": {
-		"title": "Credat — Die Vertrauensschicht fuer KI-Agenten",
-		"description": "Geben Sie Ihren KI-Agenten eine Identitaet. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Open-Source TypeScript SDK fuer Vertrauen zwischen Agenten und Services.",
-		"ogDescription": "Geben Sie Ihren KI-Agenten eine Identitaet. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Open-Source TypeScript SDK.",
+		"title": "Credat — Die Vertrauensschicht für KI-Agenten",
+		"description": "Geben Sie Ihren KI-Agenten eine Identität. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Open-Source TypeScript SDK für Vertrauen zwischen Agenten und Services.",
+		"ogDescription": "Geben Sie Ihren KI-Agenten eine Identität. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Open-Source TypeScript SDK.",
 		"twitterDescription": "Ihr Agent beweist, wer er ist. Services vertrauen ihm. Fertig."
 	},
 	"Navbar": {
-		"useCases": "Anwendungsfaelle",
+		"useCases": "Anwendungsfälle",
 		"howItWorks": "So funktioniert's",
 		"features": "Funktionen",
 		"docs": "Docs",
 		"github": "GitHub",
-		"toggleMenu": "Menu oeffnen"
+		"toggleMenu": "Menü öffnen"
 	},
 	"Hero": {
 		"badge": "Open-Source-SDK",
-		"title": "Die Vertrauensschicht fuer KI-Agenten",
-		"description": "Geben Sie Ihren Agenten eine Identitaet. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Stoppen Sie Agenten-Betrug, bevor er beginnt.",
+		"title": "Die Vertrauensschicht für KI-Agenten",
+		"description": "Geben Sie Ihren Agenten eine Identität. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Stoppen Sie Agenten-Betrug, bevor er beginnt.",
 		"ctaGithub": "Auf GitHub ansehen",
 		"ctaDocs": "Jetzt starten"
-	},
-	"Showreel": {
-		"demoLabel": "In Aktion sehen",
-		"badges": {
-			"identity": {
-				"title": "Agenten-Identitaet",
-				"description": "Jeder Agent erhaelt eine verifizierbare, portable Identitaet"
-			},
-			"typescript": {
-				"title": "TypeScript SDK",
-				"description": "Typsichere APIs mit vollstaendiger IntelliSense-Unterstuetzung"
-			},
-			"delegation": {
-				"title": "Delegierte Berechtigungen",
-				"description": "Begrenzte Rechte, damit Agenten nur tun, was sie sollen"
-			},
-			"verification": {
-				"title": "Sofortige Verifizierung",
-				"description": "Services verifizieren Agenten-Identitaet und Berechtigungen in Millisekunden"
-			}
-		}
 	},
 	"Dx": {
 		"badge": "Entwicklererfahrung",
 		"title": "Agenten-Vertrauen in 5 Zeilen Code",
-		"description": "Erstellen Sie eine Agenten-Identitaet, delegieren Sie Berechtigungen mit begrenzten Rechten und verifizieren Sie Vertrauen — alles aus einem einzigen, komponierbaren SDK.",
+		"description": "Erstellen Sie eine Agenten-Identität, delegieren Sie Berechtigungen mit begrenzten Rechten und verifizieren Sie Vertrauen — alles aus einem einzigen, komponierbaren SDK.",
 		"cta": "Jetzt starten"
 	},
 	"Problem": {
 		"badge": "Das Problem",
-		"title": "KI-Agenten sind ueberall. Vertrauen nirgends.",
+		"title": "KI-Agenten sind überall. Vertrauen nirgends.",
 		"items": {
 			"fraud": {
 				"title": "Agenten-Betrug",
-				"description": "Jeder Prozess kann behaupten, ein Agent zu sein. Es gibt keinen Standard, um zu ueberpruefen, ob er ist, wer er vorgibt zu sein."
+				"description": "Jeder Prozess kann behaupten, ein Agent zu sein. Es gibt keinen Standard, um zu überprüfen, ob er ist, wer er vorgibt zu sein."
 			},
 			"trust": {
 				"title": "Agent-zu-Agent-Vertrauen",
-				"description": "Wenn zwei Agenten zusammenarbeiten muessen, kann keiner seine Identitaet oder Faehigkeiten dem anderen beweisen."
+				"description": "Wenn zwei Agenten zusammenarbeiten müssen, kann keiner seine Identität oder Fähigkeiten dem anderen beweisen."
 			},
 			"delegation": {
 				"title": "Delegations-Verifizierung",
-				"description": "Woher weiss ein Service, dass ein Agent tatsaechlich die Erlaubnis seines Eigentuemers hat? Heute ist das unmoeglich."
+				"description": "Woher weiß ein Service, dass ein Agent tatsächlich die Erlaubnis seines Eigentümers hat? Heute ist das unmöglich."
 			},
 			"scope": {
 				"title": "Rechtekontrolle",
-				"description": "Agenten brauchen Budgets — begrenzte Berechtigungen, die einschraenken, was sie tun koennen. API-Keys reichen nicht aus."
+				"description": "Agenten brauchen Budgets — begrenzte Berechtigungen, die einschränken, was sie tun können. API-Keys reichen nicht aus."
 			}
 		}
 	},
 	"UseCases": {
-		"badge": "Anwendungsfaelle",
-		"title": "Was Sie bauen koennen",
+		"badge": "Anwendungsfälle",
+		"title": "Was Sie bauen können",
 		"scrollLeft": "Nach links scrollen",
 		"scrollRight": "Nach rechts scrollen",
 		"items": {
 			"travel": {
 				"title": "Reisebuchungs-Agent",
-				"description": "Ihr Agent bucht Fluege und Hotels in Ihrem Namen. Services verifizieren, dass er berechtigt ist, bis zu Ihrem Limit auszugeben — keine API-Keys, keine geteilten Passwoerter."
+				"description": "Ihr Agent bucht Flüge und Hotels in Ihrem Namen. Services verifizieren, dass er berechtigt ist, bis zu Ihrem Limit auszugeben — keine API-Keys, keine geteilten Passwörter."
 			},
 			"finance": {
 				"title": "Finanz-Agent mit Ausgabenlimit",
-				"description": "Delegieren Sie ein Ausgabenbudget an Ihren Agenten. Er kann Rechnungen bezahlen, Ueberweisungen taetigen oder Abonnements verwalten — alles im definierten Rahmen."
+				"description": "Delegieren Sie ein Ausgabenbudget an Ihren Agenten. Er kann Rechnungen bezahlen, Überweisungen tätigen oder Abonnements verwalten — alles im definierten Rahmen."
 			},
 			"multiAgent": {
 				"title": "Multi-Agenten-Workflows",
-				"description": "Verketten Sie Agenten, bei denen jeder seine Identitaet und Berechtigungen dem naechsten beweist. Bauen Sie komplexe Pipelines, in denen Vertrauen automatisch fliesst."
+				"description": "Verketten Sie Agenten, bei denen jeder seine Identität und Berechtigungen dem nächsten beweist. Bauen Sie komplexe Pipelines, in denen Vertrauen automatisch fließt."
 			},
 			"devPlatform": {
 				"title": "Agenten-Plattform-Sicherheit",
-				"description": "Betreiben Sie einen Marktplatz, auf dem Drittanbieter-Agenten mit Ihren APIs interagieren. Verifizieren Sie die Identitaet und Rechte jedes Agenten vor der Zugangsgewaehrung."
+				"description": "Betreiben Sie einen Marktplatz, auf dem Drittanbieter-Agenten mit Ihren APIs interagieren. Verifizieren Sie die Identität und Rechte jedes Agenten vor der Zugangsgewährung."
 			},
 			"personalAgent": {
-				"title": "Persoenlicher Assistenz-Agent",
-				"description": "Ihr persoenlicher Agent verwaltet Ihren Kalender, E-Mails und Aufgaben. Er beweist jedem Service, dass Sie ihn autorisiert haben — mit genau den richtigen Berechtigungen."
+				"title": "Persönlicher Assistenz-Agent",
+				"description": "Ihr persönlicher Agent verwaltet Ihren Kalender, E-Mails und Aufgaben. Er beweist jedem Service, dass Sie ihn autorisiert haben — mit genau den richtigen Berechtigungen."
 			}
 		}
 	},
 	"Integrations": {
 		"badge": "Funktionen",
-		"title": "Alles, was Sie fuer Agenten-Vertrauen brauchen",
+		"title": "Alles, was Sie für Agenten-Vertrauen brauchen",
 		"agentIdentity": {
-			"title": "Agenten-Identitaet",
-			"description": "Erstellen Sie portable, verifizierbare Identitaeten fuer KI-Agenten. Jeder Agent erhaelt eine eindeutige Identitaet, die an die Domain seines Eigentuemers gebunden ist.",
-			"create": "Identitaet erstellen",
+			"title": "Agenten-Identität",
+			"description": "Erstellen Sie portable, verifizierbare Identitäten für KI-Agenten. Jeder Agent erhält eine eindeutige Identität, die an die Domain seines Eigentümers gebunden ist.",
+			"create": "Identität erstellen",
 			"createSub": "Ein Funktionsaufruf",
-			"resolve": "Identitaet aufloesen",
+			"resolve": "Identität auflösen",
 			"resolveSub": "Domain-basierte Suche"
 		},
 		"delegation": {
@@ -116,11 +95,11 @@
 			},
 			"chain": {
 				"name": "Delegationsketten",
-				"description": "Agenten koennen Teilmengen ihrer Berechtigungen an andere Agenten weiterdelegieren. Die Kette ist vollstaendig verifizierbar."
+				"description": "Agenten können Teilmengen ihrer Berechtigungen an andere Agenten weiterdelegieren. Die Kette ist vollständig verifizierbar."
 			},
 			"revoke": {
 				"name": "Sofortige Widerrufung",
-				"description": "Widerrufen Sie die Berechtigungen jedes Agenten jederzeit. Services sehen die Aenderung sofort."
+				"description": "Widerrufen Sie die Berechtigungen jedes Agenten jederzeit. Services sehen die Änderung sofort."
 			}
 		},
 		"devTools": {
@@ -131,7 +110,7 @@
 			},
 			"typescript": {
 				"label": "100% TypeScript",
-				"sub": "Vollstaendige Typsicherheit"
+				"sub": "Vollständige Typsicherheit"
 			},
 			"bundle": {
 				"label": "< 50kb gzipped",
@@ -141,7 +120,7 @@
 	},
 	"Testimonials": {
 		"badge": "Erste Nutzer",
-		"title": "Gebaut fuer Agenten-Entwickler",
+		"title": "Gebaut für Agenten-Entwickler",
 		"joinCommunity": "Community beitreten",
 		"starOnGithub": "Star auf GitHub",
 		"items": {
@@ -151,27 +130,27 @@
 				"role": "CTO, KI-Startup"
 			},
 			"marcus": {
-				"quote": "Das Delegationsmodell ist genau das, was wir brauchten. Begrenzte Berechtigungen fuer Agenten, die einfach funktionieren. Kein Over-Engineering.",
+				"quote": "Das Delegationsmodell ist genau das, was wir brauchten. Begrenzte Berechtigungen für Agenten, die einfach funktionieren. Kein Over-Engineering.",
 				"name": "Marcus W.",
 				"role": "Lead Engineer"
 			},
 			"elena": {
-				"quote": "Wir betreiben eine Multi-Agenten-Plattform. Credat hat unser groesstes Problem geloest: zu wissen, welcher Agent wirklich wozu berechtigt ist.",
+				"quote": "Wir betreiben eine Multi-Agenten-Plattform. Credat hat unser größtes Problem gelöst: zu wissen, welcher Agent wirklich wozu berechtigt ist.",
 				"name": "Elena R.",
 				"role": "Head of Platform"
 			},
 			"james": {
-				"quote": "TypeScript-first, Open Source, und es uebernimmt den schwierigen Teil — Vertrauen zwischen Agenten — damit wir es nicht muessen.",
+				"quote": "TypeScript-first, Open Source, und es übernimmt den schwierigen Teil — Vertrauen zwischen Agenten — damit wir es nicht müssen.",
 				"name": "James C.",
 				"role": "Senior Developer"
 			},
 			"anna": {
-				"quote": "Wir haben erwaegt, unser eigenes Agent-Auth-System zu bauen. Credat hat uns Monate gespart und ist sicherer als das, was wir gebaut haetten.",
+				"quote": "Wir haben erwägt, unser eigenes Agent-Auth-System zu bauen. Credat hat uns Monate gespart und ist sicherer als das, was wir gebaut hätten.",
 				"name": "Anna K.",
 				"role": "VP Engineering"
 			},
 			"pierre": {
-				"quote": "Endlich loest jemand Agenten-Identitaet richtig. Open Source, entwicklerorientiert und auf echten Standards aufgebaut.",
+				"quote": "Endlich löst jemand Agenten-Identität richtig. Open Source, entwicklerorientiert und auf echten Standards aufgebaut.",
 				"name": "Pierre D.",
 				"role": "Founder"
 			}
@@ -181,18 +160,18 @@
 		"items": {
 			"agents": {
 				"number": "5 Zeilen",
-				"label": "Fuer volles Agenten-Vertrauen",
+				"label": "Für volles Agenten-Vertrauen",
 				"description": "Erstellen Sie einen Agenten, delegieren Sie Berechtigungen und verifizieren Sie Vertrauen — der gesamte Ablauf in 5 Zeilen TypeScript."
 			},
 			"bundle": {
 				"number": "< 50kb",
 				"label": "Gzipped Bundle",
-				"description": "Tree-shakeable ESM-Architektur. Importieren Sie nur, was Sie brauchen — Identitaet, Delegation oder Verifizierung."
+				"description": "Tree-shakeable ESM-Architektur. Importieren Sie nur, was Sie brauchen — Identität, Delegation oder Verifizierung."
 			},
 			"openSource": {
 				"number": "100%",
 				"label": "Open Source",
-				"description": "Apache-2.0 lizenziert. Kein Vendor Lock-in, keine versteckten Gebuehren. Das einzige open-source, entwicklerorientierte Agenten-Identitaets-SDK."
+				"description": "Apache-2.0 lizenziert. Kein Vendor Lock-in, keine versteckten Gebühren. Das einzige open-source, entwicklerorientierte Agenten-Identitäts-SDK."
 			}
 		}
 	},
@@ -202,7 +181,7 @@
 			"create": {
 				"step": "Schritt 1",
 				"title": "Agenten erstellen",
-				"description": "Geben Sie Ihrem Agenten eine verifizierbare Identitaet, die an Ihre Domain gebunden ist. Ein Funktionsaufruf, keine Konfiguration."
+				"description": "Geben Sie Ihrem Agenten eine verifizierbare Identität, die an Ihre Domain gebunden ist. Ein Funktionsaufruf, keine Konfiguration."
 			},
 			"delegate": {
 				"step": "Schritt 2",
@@ -212,25 +191,25 @@
 			"challenge": {
 				"step": "Schritt 3",
 				"title": "Agenten herausfordern",
-				"description": "Wenn Ihr Agent bei einem Service ankommt, stellt dieser eine Herausforderung. Der Agent beweist seine Identitaet und Berechtigungen."
+				"description": "Wenn Ihr Agent bei einem Service ankommt, stellt dieser eine Herausforderung. Der Agent beweist seine Identität und Berechtigungen."
 			},
 			"verify": {
 				"step": "Schritt 4",
 				"title": "Vertrauen verifizieren",
-				"description": "Der Service verifiziert die Identitaet des Agenten, die Delegation seines Eigentuemers und die Bereiche — alles in einem Aufruf."
+				"description": "Der Service verifiziert die Identität des Agenten, die Delegation seines Eigentümers und die Bereiche — alles in einem Aufruf."
 			}
 		}
 	},
 	"Cta": {
 		"badge": "Open Source",
 		"title": "Stoppen Sie Agenten-Betrug. Liefern Sie Vertrauen.",
-		"description": "Credat ist die Open-Source-Vertrauensschicht fuer KI-Agenten. Geben Sie Ihren Agenten eine Identitaet, delegieren Sie Berechtigungen und verifizieren Sie Vertrauen — in 5 Zeilen Code.",
+		"description": "Credat ist die Open-Source-Vertrauensschicht für KI-Agenten. Geben Sie Ihren Agenten eine Identität, delegieren Sie Berechtigungen und verifizieren Sie Vertrauen — in 5 Zeilen Code.",
 		"ctaGithub": "Auf GitHub ansehen",
 		"ctaDocs": "Jetzt starten"
 	},
 	"Footer": {
-		"brand": "Die Open-Source-Vertrauensschicht fuer KI-Agenten. Identitaeten erstellen, Berechtigungen delegieren, Vertrauen verifizieren — in 5 Zeilen TypeScript.",
-		"copyright": "\u00a9 {year} Credat. Open Source unter Apache-2.0.",
+		"brand": "Die Open-Source-Vertrauensschicht für KI-Agenten. Identitäten erstellen, Berechtigungen delegieren, Vertrauen verifizieren — in 5 Zeilen TypeScript.",
+		"copyright": "© {year} Credat. Open Source unter Apache-2.0.",
 		"builtWith": "Entwickelt mit",
 		"columns": {
 			"product": {
@@ -238,7 +217,7 @@
 				"github": "GitHub",
 				"documentation": "Dokumentation",
 				"npmPackage": "npm-Paket",
-				"changelog": "Aenderungsprotokoll"
+				"changelog": "Änderungsprotokoll"
 			},
 			"resources": {
 				"title": "Ressourcen",
@@ -255,11 +234,11 @@
 		}
 	},
 	"HeroFlow": {
-		"ariaLabel": "Agenten-Vertrauensfluss: Eigentuemer delegiert Berechtigungen an Agent, Agent praesentiert Nachweise an Service zur Verifizierung",
-		"owner": "Eigentuemer",
+		"ariaLabel": "Agenten-Vertrauensfluss: Eigentümer delegiert Berechtigungen an Agent, Agent präsentiert Nachweise an Service zur Verifizierung",
+		"owner": "Eigentümer",
 		"ownerDesc": "Delegiert Berechtigungen",
 		"agent": "Agent",
-		"agentDesc": "Beweist Identitaet",
+		"agentDesc": "Beweist Identität",
 		"service": "Service",
 		"serviceDesc": "Verifiziert Vertrauen",
 		"delegation": "Delegation",

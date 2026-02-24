@@ -30,6 +30,14 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  useEffect(() => {
     if (!navBarRef.current) return;
 
     gsap.fromTo(
@@ -121,6 +129,7 @@ export function Navbar() {
               className="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-black/6 bg-white/80"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={t("toggleMenu")}
+              aria-expanded={mobileOpen}
             >
               {mobileOpen ? <X style={{ width: 16, height: 16 }} /> : <Menu style={{ width: 16, height: 16 }} />}
             </button>
@@ -133,8 +142,8 @@ export function Navbar() {
           <a href="#use-cases" onClick={(e) => scrollTo(e, "use-cases")} className="text-lg font-medium text-foreground hover:text-accent transition-colors">
             {t("useCases")}
           </a>
-          <a href="#integrations" onClick={(e) => scrollTo(e, "integrations")} className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-            {t("integrations")}
+          <a href="#features" onClick={(e) => scrollTo(e, "features")} className="text-lg font-medium text-foreground hover:text-accent transition-colors">
+            {t("features")}
           </a>
           <a href="#how-it-works" onClick={(e) => scrollTo(e, "how-it-works")} className="text-lg font-medium text-foreground hover:text-accent transition-colors">
             {t("howItWorks")}

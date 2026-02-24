@@ -20,27 +20,6 @@
 		"ctaGithub": "View on GitHub",
 		"ctaDocs": "Get Started"
 	},
-	"Showreel": {
-		"demoLabel": "See It In Action",
-		"badges": {
-			"identity": {
-				"title": "Agent Identity",
-				"description": "Every agent gets a verifiable, portable identity"
-			},
-			"typescript": {
-				"title": "TypeScript SDK",
-				"description": "Type-safe APIs with complete IntelliSense support"
-			},
-			"delegation": {
-				"title": "Delegated Permissions",
-				"description": "Scoped allowances so agents only do what they should"
-			},
-			"verification": {
-				"title": "Instant Verification",
-				"description": "Services verify agent identity and permissions in milliseconds"
-			}
-		}
-	},
 	"Dx": {
 		"badge": "Developer Experience",
 		"title": "Agent Trust in 5 Lines of Code",

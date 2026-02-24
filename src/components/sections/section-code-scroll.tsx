@@ -36,7 +36,7 @@ const STEP_META = [
 	{ key: "create", start: 0, end: 6 },
 	{ key: "delegate", start: 7, end: 13 },
 	{ key: "challenge", start: 14, end: 19 },
-	{ key: "verify", start: 20, end: 25 },
+	{ key: "verify", start: 20, end: 24 },
 ] as const;
 
 const KEYWORDS = ["const", "await", "import", "from", "true", "false"];

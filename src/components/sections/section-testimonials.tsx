@@ -9,16 +9,17 @@ import {
   PrevButton,
   NextButton,
 } from "@/components/carousel/embla-arrow-buttons";
+import Image from "next/image";
 import { Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const TESTIMONIAL_META = [
-  { key: "sophie", avatar: "https://i.pravatar.cc/80?img=5" },
-  { key: "marcus", avatar: "https://i.pravatar.cc/80?img=12" },
-  { key: "elena", avatar: "https://i.pravatar.cc/80?img=20" },
-  { key: "james", avatar: "https://i.pravatar.cc/80?img=8" },
-  { key: "anna", avatar: "https://i.pravatar.cc/80?img=16" },
-  { key: "pierre", avatar: "https://i.pravatar.cc/80?img=11" },
+  { key: "sophie", avatar: "/avatars/sophie.jpg" },
+  { key: "marcus", avatar: "/avatars/marcus.jpg" },
+  { key: "elena", avatar: "/avatars/elena.jpg" },
+  { key: "james", avatar: "/avatars/james.jpg" },
+  { key: "anna", avatar: "/avatars/anna.jpg" },
+  { key: "pierre", avatar: "/avatars/pierre.jpg" },
 ] as const;
 
 export function SectionTestimonials() {
@@ -105,7 +106,7 @@ export function SectionTestimonials() {
                   &ldquo;{t(`items.${item.key}.quote`)}&rdquo;
                 </p>
                 <div className="relative z-10 flex items-center gap-3">
-                  <img
+                  <Image
                     src={item.avatar}
                     alt={t(`items.${item.key}.name`)}
                     width={36}
