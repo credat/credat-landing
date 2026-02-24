@@ -1,23 +1,34 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { gsap, SplitText } from "@/lib/gsap";
 import { HeroFlow } from "@/components/hero-flow";
 
-const MARQUEE_ITEMS = [
-	{ name: "TypeScript", logo: "/logos/typescript.svg" },
-	{ name: "DIDComm", logo: "/logos/didcomm.svg" },
+const MARQUEE_STANDARDS = [
 	{ name: "W3C VCs", logo: "/logos/w3c.svg" },
-	{ name: "SD-JWT", logo: "/logos/sd-jwt.svg" },
+	{ name: "DIDComm", logo: "/logos/didcomm.svg" },
 	{ name: "OpenID", logo: "/logos/openid.svg" },
+	{ name: "IETF", logo: "/logos/ietf.svg" },
+	{ name: "SD-JWT", logo: "/logos/sd-jwt.svg" },
 	{ name: "eIDAS", logo: "/logos/eidas.svg" },
 	{ name: "ISO 18013", logo: "/logos/iso.svg" },
 	{ name: "mDOC", logo: "/logos/mdoc.svg" },
-	{ name: "IETF", logo: "/logos/ietf.svg" },
+	{ name: "TypeScript", logo: "/logos/typescript.svg" },
+	{ name: "DIF", logo: "/logos/dif.svg" },
+];
+
+const MARQUEE_ECOSYSTEM = [
+	{ name: "LangChain", logo: "/logos/langchain.svg" },
+	{ name: "CrewAI", logo: "/logos/crewai.svg" },
+	{ name: "OpenAI", logo: "/logos/openai.svg" },
+	{ name: "Anthropic", logo: "/logos/anthropic.svg" },
+	{ name: "Vercel AI SDK", logo: "/logos/vercel.svg" },
+	{ name: "Google A2A", logo: "/logos/a2a.svg" },
+	{ name: "OpenClaw", logo: "/logos/openclaw.svg" },
+	{ name: "MCP", logo: "/logos/mcp.svg" },
 ];
 
 export function SectionHero() {
@@ -145,17 +156,33 @@ export function SectionHero() {
 				</div>
 			</div>
 
-			{/* Bottom marquee */}
-			<div ref={marqueeRef} className="w-full mt-16 lg:mt-24 pb-8">
+			{/* Bottom marquee — dual row */}
+			<div ref={marqueeRef} className="w-full mt-16 lg:mt-24 pb-8 flex flex-col gap-3">
 				<Marquee speed={35} gradient gradientColor="#FFFFFF" gradientWidth={80} autoFill>
-					{MARQUEE_ITEMS.map((item) => (
+					{MARQUEE_STANDARDS.map((item) => (
 						<div key={item.name} className="marquee-pill mx-2">
-							<Image
+							<img
 								src={item.logo}
 								alt={item.name}
 								width={20}
 								height={20}
 								className="marquee-pill-logo"
+								loading="eager"
+							/>
+							{item.name}
+						</div>
+					))}
+				</Marquee>
+				<Marquee speed={30} gradient gradientColor="#FFFFFF" gradientWidth={80} autoFill direction="right">
+					{MARQUEE_ECOSYSTEM.map((item) => (
+						<div key={item.name} className="marquee-pill mx-2">
+							<img
+								src={item.logo}
+								alt={item.name}
+								width={20}
+								height={20}
+								className="marquee-pill-logo"
+								loading="eager"
 							/>
 							{item.name}
 						</div>
