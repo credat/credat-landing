@@ -41,11 +41,11 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     keywords: [
-      "eIDAS 2.0", "verifiable credentials", "SD-JWT VC", "mDoc",
-      "OpenID4VCI", "OpenID4VP", "digital identity", "SSI",
-      "self-sovereign identity", "TypeScript SDK", "EUDIW",
-      "EU Digital Identity Wallet", "DIDComm",
-      "credential issuance", "credential verification",
+      "AI agent identity", "agent trust", "agent authentication",
+      "agent delegation", "agent permissions", "agent fraud prevention",
+      "agent-to-agent trust", "TypeScript SDK", "open source",
+      "agent allowances", "scoped permissions", "agent verification",
+      "multi-agent trust", "AI security", "agent infrastructure",
     ],
     metadataBase: new URL("https://credat.io"),
     openGraph: {

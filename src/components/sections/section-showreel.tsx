@@ -2,100 +2,97 @@
 
 import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { gsap } from "@/lib/gsap";
+import { gsap, SplitText } from "@/lib/gsap";
+import { AlertTriangle, Users, KeyRound, ScanEye } from "lucide-react";
 
-const BADGE_KEYS = ["eidas", "typescript", "sdjwt", "openid"] as const;
+const PROBLEM_META = [
+	{ key: "fraud", icon: AlertTriangle, color: "#DC2626" },
+	{ key: "trust", icon: Users, color: "#D97706" },
+	{ key: "delegation", icon: KeyRound, color: "#7C3AED" },
+	{ key: "scope", icon: ScanEye, color: "#2563EB" },
+] as const;
 
 export function SectionShowreel() {
-  const t = useTranslations("Showreel");
-  const sectionRef = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLDivElement>(null);
-  const badgesRef = useRef<HTMLDivElement>(null);
+	const t = useTranslations("Problem");
+	const sectionRef = useRef<HTMLElement>(null);
+	const pillRef = useRef<HTMLDivElement>(null);
+	const headlineRef = useRef<HTMLHeadingElement>(null);
+	const cardsRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Scroll-unwrap 3D effect on video container
-      if (videoRef.current) {
-        gsap.fromTo(
-          videoRef.current,
-          {
-            rotateY: 30,
-            scale: 0.6,
-            rotateX: 2.5,
-            y: "10vh",
-            opacity: 0.5,
-          },
-          {
-            rotateY: 0,
-            scale: 1,
-            rotateX: 0,
-            y: 0,
-            opacity: 1,
-            ease: "none",
-            scrollTrigger: {
-              trigger: videoRef.current,
-              start: "top 90%",
-              end: "top 20%",
-              scrub: 1,
-            },
-          }
-        );
-      }
+	useEffect(() => {
+		const ctx = gsap.context(() => {
+			if (pillRef.current) {
+				gsap.from(pillRef.current, {
+					opacity: 0,
+					filter: "blur(8px)",
+					duration: 0.6,
+					scrollTrigger: { trigger: pillRef.current, start: "top 95%" },
+				});
+			}
 
-      // Badges stagger blur-in
-      if (badgesRef.current) {
-        const cards = badgesRef.current.querySelectorAll(".badge-card");
-        gsap.from(cards, {
-          opacity: 0,
-          filter: "blur(8px)",
-          y: 30,
-          stagger: 0.1,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: badgesRef.current,
-            start: "top 85%",
-          },
-        });
-      }
-    }, sectionRef);
+			if (headlineRef.current) {
+				const split = new SplitText(headlineRef.current, { type: "words" });
+				gsap.from(split.words, {
+					opacity: 0,
+					filter: "blur(8px)",
+					yPercent: 50,
+					stagger: 0.05,
+					duration: 0.8,
+					ease: "power2.out",
+					scrollTrigger: { trigger: headlineRef.current, start: "top 85%" },
+				});
+			}
 
-    return () => ctx.revert();
-  }, []);
+			// Cards stagger blur-in
+			if (cardsRef.current) {
+				const cards = cardsRef.current.querySelectorAll(".problem-card");
+				gsap.from(cards, {
+					opacity: 0,
+					filter: "blur(8px)",
+					y: 30,
+					stagger: 0.1,
+					duration: 0.8,
+					ease: "power2.out",
+					scrollTrigger: {
+						trigger: cardsRef.current,
+						start: "top 85%",
+					},
+				});
+			}
+		}, sectionRef);
 
-  return (
-    <section ref={sectionRef} className="relative px-6 lg:px-[10vw]">
-      {/* Video placeholder with 3D unwrap */}
-      <div style={{ perspective: "1200px" }}>
-        <div
-          ref={videoRef}
-          className="relative w-full rounded-[20px] bg-background-alt border border-black/6 overflow-hidden"
-          style={{ aspectRatio: "16/9", maxHeight: "80vh" }}
-        >
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-            <div className="w-16 h-16 rounded-full border border-black/8 bg-white/80 backdrop-blur-md flex items-center justify-center">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M6 4L16 10L6 16V4Z" fill="#0A0A0A" />
-              </svg>
-            </div>
-            <span className="text-sm font-medium text-foreground-secondary">{t("demoLabel")}</span>
-          </div>
-          <div className="grid-overlay" />
-        </div>
-      </div>
+		return () => ctx.revert();
+	}, []);
 
-      {/* Feature badges */}
-      <div ref={badgesRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-        {BADGE_KEYS.map((key) => (
-          <div key={key} className="badge-card glass-card p-5">
-            <div className="grid-overlay" />
-            <div className="relative z-10">
-              <h3 className="text-sm font-semibold text-foreground mb-1">{t(`badges.${key}.title`)}</h3>
-              <p className="text-xs text-foreground-secondary leading-relaxed">{t(`badges.${key}.description`)}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+	return (
+		<section ref={sectionRef} className="relative px-6 lg:px-[10vw]">
+			<div className="mx-auto max-w-7xl">
+				<div className="section-textbox mb-12">
+					<div ref={pillRef} className="pill-badge">
+						<span className="w-2 h-2 rounded-full bg-accent" />
+						<span className="text-xs font-medium text-foreground-secondary">{t("badge")}</span>
+					</div>
+					<h2 ref={headlineRef} className="headline-lg text-foreground max-w-3xl">
+						{t("title")}
+					</h2>
+				</div>
+
+				{/* Problem cards */}
+				<div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+					{PROBLEM_META.map((item) => (
+						<div key={item.key} className="problem-card glass-card p-6 md:p-8">
+							<div className="grid-overlay" />
+							<div className="relative z-10">
+								<div className="mb-4 w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${item.color}12` }}>
+									<item.icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
+								</div>
+								<h3 className="text-base font-semibold text-foreground mb-2">{t(`items.${item.key}.title`)}</h3>
+								<p className="text-sm text-foreground-secondary leading-relaxed">{t(`items.${item.key}.description`)}</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+	);
 }

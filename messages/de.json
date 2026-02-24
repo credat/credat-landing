@@ -1,253 +1,275 @@
 {
-  "Metadata": {
-    "title": "Credat — Das Entwickler-SDK für die digitale Identität der EU",
-    "description": "Stellen Sie eIDAS 2.0 Verifiable Credentials in 10 Zeilen TypeScript aus und verifizieren Sie sie. SD-JWT VC- und mDoc-Formate, OpenID4VC-Protokolle, kein Vendor Lock-in. Open-Source TypeScript SDK für eIDAS 2.0.",
-    "ogDescription": "Stellen Sie eIDAS 2.0 Verifiable Credentials in 10 Zeilen TypeScript aus und verifizieren Sie sie. SD-JWT VC- und mDoc-Formate, OpenID4VC-Protokolle.",
-    "twitterDescription": "Stellen Sie eIDAS 2.0 Verifiable Credentials in 10 Zeilen TypeScript aus und verifizieren Sie sie."
-  },
-  "Navbar": {
-    "useCases": "Anwendungsfälle",
-    "integrations": "Integrationen",
-    "howItWorks": "So funktioniert's",
-    "docs": "Docs",
-    "github": "GitHub",
-    "toggleMenu": "Menü öffnen"
-  },
-  "Hero": {
-    "badge": "Open-Source-SDK",
-    "title": "Das Entwickler-SDK für die digitale Identität der EU",
-    "description": "Stellen Sie eIDAS 2.0 Verifiable Credentials in 10 Zeilen TypeScript aus und verifizieren Sie sie. SD-JWT VC- und mDoc-Formate, OpenID4VC-Protokolle, kein Vendor Lock-in.",
-    "ctaGithub": "Auf GitHub ansehen",
-    "ctaDocs": "Dokumentation lesen"
-  },
-  "Showreel": {
-    "demoLabel": "Produktdemo demnächst verfügbar",
-    "badges": {
-      "eidas": {
-        "title": "eIDAS 2.0 Ready",
-        "description": "Vollständige Konformität mit dem EU-Rahmenwerk für digitale Identität"
-      },
-      "typescript": {
-        "title": "TypeScript SDK",
-        "description": "Typsichere APIs mit vollständiger IntelliSense-Unterstützung"
-      },
-      "sdjwt": {
-        "title": "SD-JWT VC",
-        "description": "Selektive Offenlegung für datenschutzfreundliche Credentials"
-      },
-      "openid": {
-        "title": "OpenID4VC",
-        "description": "Standardkonforme Ausstellung und Verifizierung von Credentials"
-      }
-    }
-  },
-  "Dx": {
-    "badge": "Entwicklererfahrung",
-    "title": "Ihre Credential-Zentrale",
-    "description": "Vom Credential-Schema-Design über Ausstellung, Verifizierung bis zur selektiven Offenlegung — alles, was Sie brauchen, in einem einzigen, komponierbaren SDK.",
-    "cta": "Jetzt starten"
-  },
-  "UseCases": {
-    "badge": "Anwendungsfälle",
-    "title": "Was Sie bauen können",
-    "scrollLeft": "Nach links scrollen",
-    "scrollRight": "Nach rechts scrollen",
-    "items": {
-      "nationalId": {
-        "title": "Nationale ID-Wallet",
-        "description": "Stellen Sie staatlich gesicherte digitale Identitäts-Credentials aus, die mit der EU Digital Identity Wallet-Architektur konform sind. Unterstützen Sie selektive Offenlegung, damit Bürger nur das Nötige teilen."
-      },
-      "diploma": {
-        "title": "Digitales Diplom",
-        "description": "Universitäten und Bildungsanbieter können fälschungssichere Bildungs-Credentials ausstellen. Arbeitgeber verifizieren Qualifikationen sofort, ohne die Institution kontaktieren zu müssen."
-      },
-      "banking": {
-        "title": "Banking KYC",
-        "description": "Vereinfachen Sie das Kunden-Onboarding mit wiederverwendbaren Identitäts-Credentials. Reduzieren Sie KYC-Kosten bei gleichzeitiger Einhaltung regulatorischer Anforderungen über Jurisdiktionen hinweg."
-      },
-      "healthcare": {
-        "title": "Gesundheits-Credentials",
-        "description": "Stellen Sie professionelle medizinische Lizenzen, Impfnachweise und Patienteneinwilligungen mit datenschutzfreundlicher selektiver Offenlegung aus und verifizieren Sie diese."
-      },
-      "travel": {
-        "title": "Reisedokumente",
-        "description": "Ermöglichen Sie nahtlose Grenzüberquerungen mit mobilen Führerscheinen und Reise-Credentials basierend auf ISO 18013-5 und mDoc-Formaten."
-      }
-    }
-  },
-  "Integrations": {
-    "badge": "Standards",
-    "title": "Auf offenen Standards aufgebaut",
-    "credentialFormats": {
-      "title": "Credential-Formate",
-      "description": "Erstklassige Unterstützung für beide von der EU vorgeschriebenen Credential-Formate, bereit für das EUDIW-Ökosystem.",
-      "sdjwt": "SD-JWT VC",
-      "sdjwtSub": "Selektive Offenlegung",
-      "mdoc": "mDoc",
-      "mdocSub": "ISO 18013-5"
-    },
-    "protocols": {
-      "title": "Protokolle",
-      "openid4vci": {
-        "name": "OpenID4VCI",
-        "description": "Stellen Sie Credentials über das OpenID for Verifiable Credential Issuance-Protokoll aus."
-      },
-      "openid4vp": {
-        "name": "OpenID4VP",
-        "description": "Fordern und verifizieren Sie Credential-Präsentationen mit OpenID for Verifiable Presentations."
-      },
-      "didcomm": {
-        "name": "DIDComm v2",
-        "description": "Sichere Peer-to-Peer-Kommunikation für den Credential-Austausch zwischen Agents."
-      }
-    },
-    "devTools": {
-      "title": "Entwicklertools",
-      "install": {
-        "label": "npm install credat",
-        "sub": "Konfigurationsfreie Einrichtung"
-      },
-      "typescript": {
-        "label": "100% TypeScript",
-        "sub": "Vollständige Typsicherheit"
-      },
-      "bundle": {
-        "label": "< 50kb gzipped",
-        "sub": "Tree-shakeable"
-      }
-    }
-  },
-  "Testimonials": {
-    "badge": "Erfahrungsberichte",
-    "title": "Von Entwicklern geschätzt",
-    "joinCommunity": "Community beitreten",
-    "starOnGithub": "Star auf GitHub",
-    "items": {
-      "sophie": {
-        "quote": "Credat hat unsere eIDAS 2.0-Integration mühelos gemacht. Wir gingen von null zur Credential-Ausstellung in einem einzigen Sprint.",
-        "name": "Sophie L.",
-        "role": "CTO"
-      },
-      "marcus": {
-        "quote": "Die SD-JWT VC-Implementierung ist grundsolide. Selektive Offenlegung funktioniert sofort mit sauberen APIs.",
-        "name": "Marcus W.",
-        "role": "Lead Engineer"
-      },
-      "elena": {
-        "quote": "Endlich ein SDK, das beide Credential-Formate ernst nimmt. Die mDoc-Unterstützung hat uns Monate an Entwicklungszeit gespart.",
-        "name": "Elena R.",
-        "role": "Head of Digital ID"
-      },
-      "james": {
-        "quote": "TypeScript-first mit unglaublicher DX. Die Typsicherheit bei Credential-Schemas hat Bugs gefunden, die wir sonst ausgeliefert hätten.",
-        "name": "James C.",
-        "role": "Senior Developer"
-      },
-      "anna": {
-        "quote": "Wir haben drei SSI-SDKs evaluiert. Credat war das einzige, das OpenID4VC-Protokolle korrekt und skalierbar implementiert hat.",
-        "name": "Anna K.",
-        "role": "VP Engineering"
-      },
-      "pierre": {
-        "quote": "Open Source, standardkonform und gepflegt von Leuten, die die europäische Identitätslandschaft verstehen. Sehr empfehlenswert.",
-        "name": "Pierre D.",
-        "role": "Founder"
-      }
-    }
-  },
-  "Kpi": {
-    "items": {
-      "eidas": {
-        "number": "eIDAS 2.0",
-        "label": "Vollständige Konformität",
-        "description": "Von Grund auf für das EU-Rahmenwerk für digitale Identität entwickelt. Jede API entspricht einer regulatorischen Anforderung."
-      },
-      "bundle": {
-        "number": "< 50kb",
-        "label": "Gzipped Bundle",
-        "description": "Tree-shakeable ESM-Architektur. Importieren Sie nur, was Sie brauchen — Credential-Ausstellung, Verifizierung oder beides."
-      },
-      "formats": {
-        "number": "2 Formats",
-        "label": "SD-JWT VC & mDoc",
-        "description": "Erstklassige Unterstützung für beide von der EU vorgeschriebenen Credential-Formate. Wechseln Sie mit einer einzigen Konfigurationsänderung."
-      }
-    }
-  },
-  "CodeScroll": {
-    "badge": "So funktioniert's",
-    "steps": {
-      "import": {
-        "step": "Schritt 1",
-        "title": "SDK importieren",
-        "description": "Ein einziger Import gibt Ihnen alles — Ausstellung, Verifizierung und Credential-Verwaltung."
-      },
-      "create": {
-        "step": "Schritt 2",
-        "title": "Client erstellen",
-        "description": "Konfigurieren Sie Ihr Credential-Format und Ihre Aussteller-Identität. Unterstützt SD-JWT VC und mDoc sofort einsatzbereit."
-      },
-      "issue": {
-        "step": "Schritt 3",
-        "title": "Credential ausstellen",
-        "description": "Definieren Sie den Credential-Typ und die Attribute. Das SDK übernimmt Schema-Validierung, Signierung und Kodierung."
-      },
-      "verify": {
-        "step": "Schritt 4",
-        "title": "Sofort verifizieren",
-        "description": "Verifizierung in einer Zeile mit vollständiger Statusprüfung, Signaturvalidierung und Widerrufsunterstützung."
-      }
-    }
-  },
-  "Cta": {
-    "badge": "Open Source",
-    "title": "Gestalten Sie die Zukunft der digitalen Identität",
-    "description": "Credat ist Open Source und für die Community gebaut. Beginnen Sie in Minuten mit der Ausstellung von eIDAS 2.0 Credentials — oder tragen Sie zur Gestaltung des Standards bei.",
-    "ctaGithub": "Auf GitHub ansehen",
-    "ctaDocs": "Dokumentation lesen"
-  },
-  "Footer": {
-    "brand": "Das Open-Source TypeScript SDK für eIDAS 2.0 Verifiable Credentials. Ausstellen, verifizieren und verwalten Sie digitale Identität — in 10 Zeilen Code.",
-    "copyright": "© {year} Credat. Open Source unter Apache-2.0.",
-    "builtWith": "Entwickelt mit",
-    "columns": {
-      "product": {
-        "title": "Produkt",
-        "github": "GitHub",
-        "documentation": "Dokumentation",
-        "npmPackage": "npm-Paket",
-        "changelog": "Änderungsprotokoll"
-      },
-      "resources": {
-        "title": "Ressourcen",
-        "gettingStarted": "Erste Schritte",
-        "apiReference": "API-Referenz",
-        "examples": "Beispiele"
-      },
-      "legal": {
-        "title": "Rechtliches",
-        "privacyPolicy": "Datenschutzrichtlinie",
-        "termsOfService": "Nutzungsbedingungen",
-        "license": "Apache-2.0-Lizenz"
-      }
-    }
-  },
-  "HeroFlow": {
-    "ariaLabel": "Verifiable Credentials-Ablauf: Aussteller stellt Credential an Inhaber aus, der es dem Verifizierer präsentiert",
-    "issuer": "Aussteller",
-    "issuerDesc": "Stellt Credentials aus",
-    "holder": "Inhaber",
-    "holderDesc": "Speichert in der Wallet",
-    "verifier": "Verifizierer",
-    "verifierDesc": "Prüft die Gültigkeit",
-    "presentation": "Präsentation",
-    "trustChain": "Vertrauenskette"
-  },
-  "LocaleSwitcher": {
-    "label": "Sprache",
-    "en": "EN",
-    "fr": "FR",
-    "de": "DE",
-    "es": "ES"
-  }
+	"Metadata": {
+		"title": "Credat — Die Vertrauensschicht fuer KI-Agenten",
+		"description": "Geben Sie Ihren KI-Agenten eine Identitaet. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Open-Source TypeScript SDK fuer Vertrauen zwischen Agenten und Services.",
+		"ogDescription": "Geben Sie Ihren KI-Agenten eine Identitaet. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Open-Source TypeScript SDK.",
+		"twitterDescription": "Ihr Agent beweist, wer er ist. Services vertrauen ihm. Fertig."
+	},
+	"Navbar": {
+		"useCases": "Anwendungsfaelle",
+		"howItWorks": "So funktioniert's",
+		"features": "Funktionen",
+		"docs": "Docs",
+		"github": "GitHub",
+		"toggleMenu": "Menu oeffnen"
+	},
+	"Hero": {
+		"badge": "Open-Source-SDK",
+		"title": "Die Vertrauensschicht fuer KI-Agenten",
+		"description": "Geben Sie Ihren Agenten eine Identitaet. Delegieren Sie Berechtigungen. Verifizieren Sie Vertrauen. Stoppen Sie Agenten-Betrug, bevor er beginnt.",
+		"ctaGithub": "Auf GitHub ansehen",
+		"ctaDocs": "Jetzt starten"
+	},
+	"Showreel": {
+		"demoLabel": "In Aktion sehen",
+		"badges": {
+			"identity": {
+				"title": "Agenten-Identitaet",
+				"description": "Jeder Agent erhaelt eine verifizierbare, portable Identitaet"
+			},
+			"typescript": {
+				"title": "TypeScript SDK",
+				"description": "Typsichere APIs mit vollstaendiger IntelliSense-Unterstuetzung"
+			},
+			"delegation": {
+				"title": "Delegierte Berechtigungen",
+				"description": "Begrenzte Rechte, damit Agenten nur tun, was sie sollen"
+			},
+			"verification": {
+				"title": "Sofortige Verifizierung",
+				"description": "Services verifizieren Agenten-Identitaet und Berechtigungen in Millisekunden"
+			}
+		}
+	},
+	"Dx": {
+		"badge": "Entwicklererfahrung",
+		"title": "Agenten-Vertrauen in 5 Zeilen Code",
+		"description": "Erstellen Sie eine Agenten-Identitaet, delegieren Sie Berechtigungen mit begrenzten Rechten und verifizieren Sie Vertrauen — alles aus einem einzigen, komponierbaren SDK.",
+		"cta": "Jetzt starten"
+	},
+	"Problem": {
+		"badge": "Das Problem",
+		"title": "KI-Agenten sind ueberall. Vertrauen nirgends.",
+		"items": {
+			"fraud": {
+				"title": "Agenten-Betrug",
+				"description": "Jeder Prozess kann behaupten, ein Agent zu sein. Es gibt keinen Standard, um zu ueberpruefen, ob er ist, wer er vorgibt zu sein."
+			},
+			"trust": {
+				"title": "Agent-zu-Agent-Vertrauen",
+				"description": "Wenn zwei Agenten zusammenarbeiten muessen, kann keiner seine Identitaet oder Faehigkeiten dem anderen beweisen."
+			},
+			"delegation": {
+				"title": "Delegations-Verifizierung",
+				"description": "Woher weiss ein Service, dass ein Agent tatsaechlich die Erlaubnis seines Eigentuemers hat? Heute ist das unmoeglich."
+			},
+			"scope": {
+				"title": "Rechtekontrolle",
+				"description": "Agenten brauchen Budgets — begrenzte Berechtigungen, die einschraenken, was sie tun koennen. API-Keys reichen nicht aus."
+			}
+		}
+	},
+	"UseCases": {
+		"badge": "Anwendungsfaelle",
+		"title": "Was Sie bauen koennen",
+		"scrollLeft": "Nach links scrollen",
+		"scrollRight": "Nach rechts scrollen",
+		"items": {
+			"travel": {
+				"title": "Reisebuchungs-Agent",
+				"description": "Ihr Agent bucht Fluege und Hotels in Ihrem Namen. Services verifizieren, dass er berechtigt ist, bis zu Ihrem Limit auszugeben — keine API-Keys, keine geteilten Passwoerter."
+			},
+			"finance": {
+				"title": "Finanz-Agent mit Ausgabenlimit",
+				"description": "Delegieren Sie ein Ausgabenbudget an Ihren Agenten. Er kann Rechnungen bezahlen, Ueberweisungen taetigen oder Abonnements verwalten — alles im definierten Rahmen."
+			},
+			"multiAgent": {
+				"title": "Multi-Agenten-Workflows",
+				"description": "Verketten Sie Agenten, bei denen jeder seine Identitaet und Berechtigungen dem naechsten beweist. Bauen Sie komplexe Pipelines, in denen Vertrauen automatisch fliesst."
+			},
+			"devPlatform": {
+				"title": "Agenten-Plattform-Sicherheit",
+				"description": "Betreiben Sie einen Marktplatz, auf dem Drittanbieter-Agenten mit Ihren APIs interagieren. Verifizieren Sie die Identitaet und Rechte jedes Agenten vor der Zugangsgewaehrung."
+			},
+			"personalAgent": {
+				"title": "Persoenlicher Assistenz-Agent",
+				"description": "Ihr persoenlicher Agent verwaltet Ihren Kalender, E-Mails und Aufgaben. Er beweist jedem Service, dass Sie ihn autorisiert haben — mit genau den richtigen Berechtigungen."
+			}
+		}
+	},
+	"Integrations": {
+		"badge": "Funktionen",
+		"title": "Alles, was Sie fuer Agenten-Vertrauen brauchen",
+		"agentIdentity": {
+			"title": "Agenten-Identitaet",
+			"description": "Erstellen Sie portable, verifizierbare Identitaeten fuer KI-Agenten. Jeder Agent erhaelt eine eindeutige Identitaet, die an die Domain seines Eigentuemers gebunden ist.",
+			"create": "Identitaet erstellen",
+			"createSub": "Ein Funktionsaufruf",
+			"resolve": "Identitaet aufloesen",
+			"resolveSub": "Domain-basierte Suche"
+		},
+		"delegation": {
+			"title": "Delegation",
+			"scoped": {
+				"name": "Begrenzte Berechtigungen",
+				"description": "Definieren Sie genau, was ein Agent tun kann — Reisen buchen, bis zu 500$ ausgeben, E-Mails lesen — mit typisierten Bereichen."
+			},
+			"chain": {
+				"name": "Delegationsketten",
+				"description": "Agenten koennen Teilmengen ihrer Berechtigungen an andere Agenten weiterdelegieren. Die Kette ist vollstaendig verifizierbar."
+			},
+			"revoke": {
+				"name": "Sofortige Widerrufung",
+				"description": "Widerrufen Sie die Berechtigungen jedes Agenten jederzeit. Services sehen die Aenderung sofort."
+			}
+		},
+		"devTools": {
+			"title": "Entwicklertools",
+			"install": {
+				"label": "npm install credat",
+				"sub": "Konfigurationsfreie Einrichtung"
+			},
+			"typescript": {
+				"label": "100% TypeScript",
+				"sub": "Vollstaendige Typsicherheit"
+			},
+			"bundle": {
+				"label": "< 50kb gzipped",
+				"sub": "Tree-shakeable"
+			}
+		}
+	},
+	"Testimonials": {
+		"badge": "Erste Nutzer",
+		"title": "Gebaut fuer Agenten-Entwickler",
+		"joinCommunity": "Community beitreten",
+		"starOnGithub": "Star auf GitHub",
+		"items": {
+			"sophie": {
+				"quote": "Wir brauchten einen Weg zu beweisen, dass unsere Agenten autorisiert sind. Credat hat uns das an einem Nachmittag gegeben. Extrem einfache API.",
+				"name": "Sophie L.",
+				"role": "CTO, KI-Startup"
+			},
+			"marcus": {
+				"quote": "Das Delegationsmodell ist genau das, was wir brauchten. Begrenzte Berechtigungen fuer Agenten, die einfach funktionieren. Kein Over-Engineering.",
+				"name": "Marcus W.",
+				"role": "Lead Engineer"
+			},
+			"elena": {
+				"quote": "Wir betreiben eine Multi-Agenten-Plattform. Credat hat unser groesstes Problem geloest: zu wissen, welcher Agent wirklich wozu berechtigt ist.",
+				"name": "Elena R.",
+				"role": "Head of Platform"
+			},
+			"james": {
+				"quote": "TypeScript-first, Open Source, und es uebernimmt den schwierigen Teil — Vertrauen zwischen Agenten — damit wir es nicht muessen.",
+				"name": "James C.",
+				"role": "Senior Developer"
+			},
+			"anna": {
+				"quote": "Wir haben erwaegt, unser eigenes Agent-Auth-System zu bauen. Credat hat uns Monate gespart und ist sicherer als das, was wir gebaut haetten.",
+				"name": "Anna K.",
+				"role": "VP Engineering"
+			},
+			"pierre": {
+				"quote": "Endlich loest jemand Agenten-Identitaet richtig. Open Source, entwicklerorientiert und auf echten Standards aufgebaut.",
+				"name": "Pierre D.",
+				"role": "Founder"
+			}
+		}
+	},
+	"Kpi": {
+		"items": {
+			"agents": {
+				"number": "5 Zeilen",
+				"label": "Fuer volles Agenten-Vertrauen",
+				"description": "Erstellen Sie einen Agenten, delegieren Sie Berechtigungen und verifizieren Sie Vertrauen — der gesamte Ablauf in 5 Zeilen TypeScript."
+			},
+			"bundle": {
+				"number": "< 50kb",
+				"label": "Gzipped Bundle",
+				"description": "Tree-shakeable ESM-Architektur. Importieren Sie nur, was Sie brauchen — Identitaet, Delegation oder Verifizierung."
+			},
+			"openSource": {
+				"number": "100%",
+				"label": "Open Source",
+				"description": "Apache-2.0 lizenziert. Kein Vendor Lock-in, keine versteckten Gebuehren. Das einzige open-source, entwicklerorientierte Agenten-Identitaets-SDK."
+			}
+		}
+	},
+	"CodeScroll": {
+		"badge": "So funktioniert's",
+		"steps": {
+			"create": {
+				"step": "Schritt 1",
+				"title": "Agenten erstellen",
+				"description": "Geben Sie Ihrem Agenten eine verifizierbare Identitaet, die an Ihre Domain gebunden ist. Ein Funktionsaufruf, keine Konfiguration."
+			},
+			"delegate": {
+				"step": "Schritt 2",
+				"title": "Berechtigungen delegieren",
+				"description": "Definieren Sie genau, was der Agent tun kann, mit begrenzten Rechten. Reisen buchen, 500$ ausgeben, E-Mails lesen — Sie entscheiden."
+			},
+			"challenge": {
+				"step": "Schritt 3",
+				"title": "Agenten herausfordern",
+				"description": "Wenn Ihr Agent bei einem Service ankommt, stellt dieser eine Herausforderung. Der Agent beweist seine Identitaet und Berechtigungen."
+			},
+			"verify": {
+				"step": "Schritt 4",
+				"title": "Vertrauen verifizieren",
+				"description": "Der Service verifiziert die Identitaet des Agenten, die Delegation seines Eigentuemers und die Bereiche — alles in einem Aufruf."
+			}
+		}
+	},
+	"Cta": {
+		"badge": "Open Source",
+		"title": "Stoppen Sie Agenten-Betrug. Liefern Sie Vertrauen.",
+		"description": "Credat ist die Open-Source-Vertrauensschicht fuer KI-Agenten. Geben Sie Ihren Agenten eine Identitaet, delegieren Sie Berechtigungen und verifizieren Sie Vertrauen — in 5 Zeilen Code.",
+		"ctaGithub": "Auf GitHub ansehen",
+		"ctaDocs": "Jetzt starten"
+	},
+	"Footer": {
+		"brand": "Die Open-Source-Vertrauensschicht fuer KI-Agenten. Identitaeten erstellen, Berechtigungen delegieren, Vertrauen verifizieren — in 5 Zeilen TypeScript.",
+		"copyright": "\u00a9 {year} Credat. Open Source unter Apache-2.0.",
+		"builtWith": "Entwickelt mit",
+		"columns": {
+			"product": {
+				"title": "Produkt",
+				"github": "GitHub",
+				"documentation": "Dokumentation",
+				"npmPackage": "npm-Paket",
+				"changelog": "Aenderungsprotokoll"
+			},
+			"resources": {
+				"title": "Ressourcen",
+				"gettingStarted": "Erste Schritte",
+				"apiReference": "API-Referenz",
+				"examples": "Beispiele"
+			},
+			"legal": {
+				"title": "Rechtliches",
+				"privacyPolicy": "Datenschutzrichtlinie",
+				"termsOfService": "Nutzungsbedingungen",
+				"license": "Apache-2.0-Lizenz"
+			}
+		}
+	},
+	"HeroFlow": {
+		"ariaLabel": "Agenten-Vertrauensfluss: Eigentuemer delegiert Berechtigungen an Agent, Agent praesentiert Nachweise an Service zur Verifizierung",
+		"owner": "Eigentuemer",
+		"ownerDesc": "Delegiert Berechtigungen",
+		"agent": "Agent",
+		"agentDesc": "Beweist Identitaet",
+		"service": "Service",
+		"serviceDesc": "Verifiziert Vertrauen",
+		"delegation": "Delegation",
+		"trustChain": "Vertrauenskette"
+	},
+	"LocaleSwitcher": {
+		"label": "Sprache",
+		"en": "EN",
+		"fr": "FR",
+		"de": "DE",
+		"es": "ES"
+	}
 }

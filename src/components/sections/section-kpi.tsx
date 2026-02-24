@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
 
-const KPI_KEYS = ["eidas", "bundle", "formats"] as const;
+const KPI_KEYS = ["agents", "bundle", "openSource"] as const;
 
 export function SectionKpi() {
   const t = useTranslations("Kpi");

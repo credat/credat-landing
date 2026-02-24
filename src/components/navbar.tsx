@@ -76,8 +76,8 @@ export function Navbar() {
             <a href="#use-cases" onClick={(e) => scrollTo(e, "use-cases")} className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
               {t("useCases")}
             </a>
-            <a href="#integrations" onClick={(e) => scrollTo(e, "integrations")} className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
-              {t("integrations")}
+            <a href="#features" onClick={(e) => scrollTo(e, "features")} className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
+              {t("features")}
             </a>
             <a href="#how-it-works" onClick={(e) => scrollTo(e, "how-it-works")} className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
               {t("howItWorks")}

@@ -1,253 +1,275 @@
 {
-  "Metadata": {
-    "title": "Credat — The Developer SDK for EU Digital Identity",
-    "description": "Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript. SD-JWT VC & mDoc formats, OpenID4VC protocols, zero vendor lock-in. Open-source TypeScript SDK for eIDAS 2.0.",
-    "ogDescription": "Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript. SD-JWT VC & mDoc formats, OpenID4VC protocols.",
-    "twitterDescription": "Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript."
-  },
-  "Navbar": {
-    "useCases": "Use Cases",
-    "integrations": "Integrations",
-    "howItWorks": "How it Works",
-    "docs": "Docs",
-    "github": "GitHub",
-    "toggleMenu": "Toggle menu"
-  },
-  "Hero": {
-    "badge": "Open Source SDK",
-    "title": "The Developer SDK for EU Digital Identity",
-    "description": "Issue and verify eIDAS 2.0 verifiable credentials in 10 lines of TypeScript. SD-JWT VC & mDoc formats, OpenID4VC protocols, zero vendor lock-in.",
-    "ctaGithub": "View on GitHub",
-    "ctaDocs": "Read the Docs"
-  },
-  "Showreel": {
-    "demoLabel": "Product Demo Coming Soon",
-    "badges": {
-      "eidas": {
-        "title": "eIDAS 2.0 Ready",
-        "description": "Full compliance with the EU Digital Identity framework"
-      },
-      "typescript": {
-        "title": "TypeScript SDK",
-        "description": "Type-safe APIs with complete IntelliSense support"
-      },
-      "sdjwt": {
-        "title": "SD-JWT VC",
-        "description": "Selective disclosure for privacy-preserving credentials"
-      },
-      "openid": {
-        "title": "OpenID4VC",
-        "description": "Standard-compliant credential issuance and verification"
-      }
-    }
-  },
-  "Dx": {
-    "badge": "Developer Experience",
-    "title": "Your Credential Powerhouse",
-    "description": "From credential schema design to issuance, verification, and selective disclosure — everything you need in a single, composable SDK.",
-    "cta": "Get Started"
-  },
-  "UseCases": {
-    "badge": "Use Cases",
-    "title": "What You Can Build",
-    "scrollLeft": "Scroll left",
-    "scrollRight": "Scroll right",
-    "items": {
-      "nationalId": {
-        "title": "National ID Wallet",
-        "description": "Issue government-backed digital identity credentials compliant with the EU Digital Identity Wallet architecture. Support selective disclosure so citizens share only what's needed."
-      },
-      "diploma": {
-        "title": "Digital Diploma",
-        "description": "Universities and training providers can issue tamper-proof educational credentials. Employers verify qualifications instantly without contacting the institution."
-      },
-      "banking": {
-        "title": "Banking KYC",
-        "description": "Streamline customer onboarding with reusable identity credentials. Reduce KYC costs while maintaining regulatory compliance across jurisdictions."
-      },
-      "healthcare": {
-        "title": "Healthcare Credentials",
-        "description": "Issue and verify professional medical licenses, vaccination records, and patient consent credentials with privacy-preserving selective disclosure."
-      },
-      "travel": {
-        "title": "Travel Documents",
-        "description": "Enable seamless border crossing with mobile driving licenses and travel credentials based on ISO 18013-5 and mDoc formats."
-      }
-    }
-  },
-  "Integrations": {
-    "badge": "Standards",
-    "title": "Built On Open Standards",
-    "credentialFormats": {
-      "title": "Credential Formats",
-      "description": "First-class support for both EU-mandated credential formats, ready for the EUDIW ecosystem.",
-      "sdjwt": "SD-JWT VC",
-      "sdjwtSub": "Selective Disclosure",
-      "mdoc": "mDoc",
-      "mdocSub": "ISO 18013-5"
-    },
-    "protocols": {
-      "title": "Protocols",
-      "openid4vci": {
-        "name": "OpenID4VCI",
-        "description": "Issue credentials using the OpenID for Verifiable Credential Issuance protocol."
-      },
-      "openid4vp": {
-        "name": "OpenID4VP",
-        "description": "Request and verify credential presentations with OpenID for Verifiable Presentations."
-      },
-      "didcomm": {
-        "name": "DIDComm v2",
-        "description": "Secure, peer-to-peer messaging for credential exchange between agents."
-      }
-    },
-    "devTools": {
-      "title": "Developer Tools",
-      "install": {
-        "label": "npm install credat",
-        "sub": "Zero-config setup"
-      },
-      "typescript": {
-        "label": "100% TypeScript",
-        "sub": "Full type safety"
-      },
-      "bundle": {
-        "label": "< 50kb gzipped",
-        "sub": "Tree-shakeable"
-      }
-    }
-  },
-  "Testimonials": {
-    "badge": "Testimonials",
-    "title": "Trusted by Developers",
-    "joinCommunity": "Join the Community",
-    "starOnGithub": "Star on GitHub",
-    "items": {
-      "sophie": {
-        "quote": "Credat made our eIDAS 2.0 integration effortless. We went from zero to issuing credentials in a single sprint.",
-        "name": "Sophie L.",
-        "role": "CTO"
-      },
-      "marcus": {
-        "quote": "The SD-JWT VC implementation is rock-solid. Selective disclosure just works out of the box with clean APIs.",
-        "name": "Marcus W.",
-        "role": "Lead Engineer"
-      },
-      "elena": {
-        "quote": "Finally an SDK that takes both credential formats seriously. The mDoc support saved us months of development.",
-        "name": "Elena R.",
-        "role": "Head of Digital ID"
-      },
-      "james": {
-        "quote": "TypeScript-first with incredible DX. The type safety across credential schemas caught bugs we would have shipped.",
-        "name": "James C.",
-        "role": "Senior Developer"
-      },
-      "anna": {
-        "quote": "We evaluated three SSI SDKs. Credat was the only one that handled OpenID4VC protocols correctly and at scale.",
-        "name": "Anna K.",
-        "role": "VP Engineering"
-      },
-      "pierre": {
-        "quote": "Open source, spec-compliant, and maintained by people who understand the European identity landscape. Highly recommended.",
-        "name": "Pierre D.",
-        "role": "Founder"
-      }
-    }
-  },
-  "Kpi": {
-    "items": {
-      "eidas": {
-        "number": "eIDAS 2.0",
-        "label": "Full Compliance",
-        "description": "Built from the ground up for the EU Digital Identity framework. Every API maps to a regulation requirement."
-      },
-      "bundle": {
-        "number": "< 50kb",
-        "label": "Gzipped Bundle",
-        "description": "Tree-shakeable ESM architecture. Import only what you need — credential issuance, verification, or both."
-      },
-      "formats": {
-        "number": "2 Formats",
-        "label": "SD-JWT VC & mDoc",
-        "description": "First-class support for both EU-mandated credential formats. Switch between them with a single config change."
-      }
-    }
-  },
-  "CodeScroll": {
-    "badge": "How It Works",
-    "steps": {
-      "import": {
-        "step": "Step 1",
-        "title": "Import the SDK",
-        "description": "A single import gives you everything — issuance, verification, and credential management."
-      },
-      "create": {
-        "step": "Step 2",
-        "title": "Create a Client",
-        "description": "Configure your credential format and issuer identity. Supports SD-JWT VC and mDoc out of the box."
-      },
-      "issue": {
-        "step": "Step 3",
-        "title": "Issue a Credential",
-        "description": "Define the credential type and claims. The SDK handles schema validation, signing, and encoding."
-      },
-      "verify": {
-        "step": "Step 4",
-        "title": "Verify Instantly",
-        "description": "One-line verification with full status checking, signature validation, and revocation support."
-      }
-    }
-  },
-  "Cta": {
-    "badge": "Open Source",
-    "title": "Build the Future of Digital Identity",
-    "description": "Credat is open source and built for the community. Start issuing eIDAS 2.0 credentials in minutes — or contribute to shape the standard.",
-    "ctaGithub": "View on GitHub",
-    "ctaDocs": "Read the Docs"
-  },
-  "Footer": {
-    "brand": "The open-source TypeScript SDK for eIDAS 2.0 verifiable credentials. Issue, verify, and manage digital identity — in 10 lines of code.",
-    "copyright": "© {year} Credat. Open source under Apache-2.0.",
-    "builtWith": "Built with",
-    "columns": {
-      "product": {
-        "title": "Product",
-        "github": "GitHub",
-        "documentation": "Documentation",
-        "npmPackage": "npm Package",
-        "changelog": "Changelog"
-      },
-      "resources": {
-        "title": "Resources",
-        "gettingStarted": "Getting Started",
-        "apiReference": "API Reference",
-        "examples": "Examples"
-      },
-      "legal": {
-        "title": "Legal",
-        "privacyPolicy": "Privacy Policy",
-        "termsOfService": "Terms of Service",
-        "license": "Apache-2.0 License"
-      }
-    }
-  },
-  "HeroFlow": {
-    "ariaLabel": "Verifiable Credentials flow: Issuer issues credential to Holder, who presents it to Verifier",
-    "issuer": "Issuer",
-    "issuerDesc": "Issues credentials",
-    "holder": "Holder",
-    "holderDesc": "Stores in wallet",
-    "verifier": "Verifier",
-    "verifierDesc": "Checks validity",
-    "presentation": "Presentation",
-    "trustChain": "Trust Chain"
-  },
-  "LocaleSwitcher": {
-    "label": "Language",
-    "en": "EN",
-    "fr": "FR",
-    "de": "DE",
-    "es": "ES"
-  }
+	"Metadata": {
+		"title": "Credat — The Trust Layer for AI Agents",
+		"description": "Give your AI agents an identity. Delegate permissions. Verify trust. Open-source TypeScript SDK for agent-to-agent and agent-to-service trust.",
+		"ogDescription": "Give your AI agents an identity. Delegate permissions. Verify trust. Open-source TypeScript SDK.",
+		"twitterDescription": "Your agent proves who it is. Services trust it. Done."
+	},
+	"Navbar": {
+		"useCases": "Use Cases",
+		"howItWorks": "How it Works",
+		"features": "Features",
+		"docs": "Docs",
+		"github": "GitHub",
+		"toggleMenu": "Toggle menu"
+	},
+	"Hero": {
+		"badge": "Open Source SDK",
+		"title": "The Trust Layer for AI Agents",
+		"description": "Give your agents an identity. Delegate permissions. Verify trust. Stop agent fraud before it starts.",
+		"ctaGithub": "View on GitHub",
+		"ctaDocs": "Get Started"
+	},
+	"Showreel": {
+		"demoLabel": "See It In Action",
+		"badges": {
+			"identity": {
+				"title": "Agent Identity",
+				"description": "Every agent gets a verifiable, portable identity"
+			},
+			"typescript": {
+				"title": "TypeScript SDK",
+				"description": "Type-safe APIs with complete IntelliSense support"
+			},
+			"delegation": {
+				"title": "Delegated Permissions",
+				"description": "Scoped allowances so agents only do what they should"
+			},
+			"verification": {
+				"title": "Instant Verification",
+				"description": "Services verify agent identity and permissions in milliseconds"
+			}
+		}
+	},
+	"Dx": {
+		"badge": "Developer Experience",
+		"title": "Agent Trust in 5 Lines of Code",
+		"description": "Create an agent identity, delegate permissions with scoped allowances, and verify trust — all from a single, composable SDK.",
+		"cta": "Get Started"
+	},
+	"Problem": {
+		"badge": "The Problem",
+		"title": "AI Agents Are Everywhere. Trust Is Nowhere.",
+		"items": {
+			"fraud": {
+				"title": "Agent Fraud",
+				"description": "Any process can claim to be an agent. There's no standard way to verify it's who it says it is."
+			},
+			"trust": {
+				"title": "Agent-to-Agent Trust",
+				"description": "When two agents need to collaborate, neither can prove its identity or capabilities to the other."
+			},
+			"delegation": {
+				"title": "Delegation Verification",
+				"description": "How does a service know an agent actually has permission from its owner? Today, it can't."
+			},
+			"scope": {
+				"title": "Scope Control",
+				"description": "Agents need allowances — bounded permissions that limit what they can do. API keys don't cut it."
+			}
+		}
+	},
+	"UseCases": {
+		"badge": "Use Cases",
+		"title": "What You Can Build",
+		"scrollLeft": "Scroll left",
+		"scrollRight": "Scroll right",
+		"items": {
+			"travel": {
+				"title": "Travel Booking Agent",
+				"description": "Your agent books flights and hotels on your behalf. Services verify it's authorized to spend up to your set limit — no API keys, no shared passwords."
+			},
+			"finance": {
+				"title": "Financial Agent with Spending Limits",
+				"description": "Delegate a spending allowance to your agent. It can pay invoices, transfer funds, or manage subscriptions — all within the scope you defined."
+			},
+			"multiAgent": {
+				"title": "Multi-Agent Workflows",
+				"description": "Chain agents together where each one proves its identity and permissions to the next. Build complex pipelines where trust flows automatically."
+			},
+			"devPlatform": {
+				"title": "Agent Platform Security",
+				"description": "Run a marketplace where third-party agents interact with your APIs. Verify every agent's identity and scope before granting access."
+			},
+			"personalAgent": {
+				"title": "Personal Assistant Agent",
+				"description": "Your personal agent manages your calendar, emails, and tasks. It proves to every service that you authorized it — with exactly the right permissions."
+			}
+		}
+	},
+	"Integrations": {
+		"badge": "Features",
+		"title": "Everything You Need to Trust Agents",
+		"agentIdentity": {
+			"title": "Agent Identity",
+			"description": "Create portable, verifiable identities for AI agents. Each agent gets a unique identity tied to its owner's domain.",
+			"create": "Create Identity",
+			"createSub": "One function call",
+			"resolve": "Resolve Identity",
+			"resolveSub": "Domain-based lookup"
+		},
+		"delegation": {
+			"title": "Delegation",
+			"scoped": {
+				"name": "Scoped Permissions",
+				"description": "Define exactly what an agent can do — book travel, spend up to $500, read emails — with typed scopes."
+			},
+			"chain": {
+				"name": "Delegation Chains",
+				"description": "Agents can re-delegate subsets of their permissions to other agents. The chain is fully verifiable."
+			},
+			"revoke": {
+				"name": "Instant Revocation",
+				"description": "Revoke any agent's permissions at any time. Services see the change immediately."
+			}
+		},
+		"devTools": {
+			"title": "Developer Tools",
+			"install": {
+				"label": "npm install credat",
+				"sub": "Zero-config setup"
+			},
+			"typescript": {
+				"label": "100% TypeScript",
+				"sub": "Full type safety"
+			},
+			"bundle": {
+				"label": "< 50kb gzipped",
+				"sub": "Tree-shakeable"
+			}
+		}
+	},
+	"Testimonials": {
+		"badge": "Early Adopters",
+		"title": "Built for Agent Developers",
+		"joinCommunity": "Join the Community",
+		"starOnGithub": "Star on GitHub",
+		"items": {
+			"sophie": {
+				"quote": "We needed a way to prove our agents were authorized. Credat gave us that in an afternoon. Dead simple API.",
+				"name": "Sophie L.",
+				"role": "CTO, AI Startup"
+			},
+			"marcus": {
+				"quote": "The delegation model is exactly what we needed. Scoped permissions for agents that just work. No overengineering.",
+				"name": "Marcus W.",
+				"role": "Lead Engineer"
+			},
+			"elena": {
+				"quote": "We run a multi-agent platform. Credat solved our biggest problem: knowing which agent is actually authorized to do what.",
+				"name": "Elena R.",
+				"role": "Head of Platform"
+			},
+			"james": {
+				"quote": "TypeScript-first, open source, and it handles the hard part — trust between agents — so we don't have to.",
+				"name": "James C.",
+				"role": "Senior Developer"
+			},
+			"anna": {
+				"quote": "We evaluated building our own agent auth system. Credat saved us months and is more secure than what we would have built.",
+				"name": "Anna K.",
+				"role": "VP Engineering"
+			},
+			"pierre": {
+				"quote": "Finally someone is solving agent identity properly. Open source, developer-first, and built on real standards under the hood.",
+				"name": "Pierre D.",
+				"role": "Founder"
+			}
+		}
+	},
+	"Kpi": {
+		"items": {
+			"agents": {
+				"number": "5 Lines",
+				"label": "To Full Agent Trust",
+				"description": "Create an agent, delegate permissions, and verify trust — the entire flow in 5 lines of TypeScript."
+			},
+			"bundle": {
+				"number": "< 50kb",
+				"label": "Gzipped Bundle",
+				"description": "Tree-shakeable ESM architecture. Import only what you need — identity, delegation, or verification."
+			},
+			"openSource": {
+				"number": "100%",
+				"label": "Open Source",
+				"description": "Apache-2.0 licensed. No vendor lock-in, no hidden fees. The only open-source, developer-first agent identity SDK."
+			}
+		}
+	},
+	"CodeScroll": {
+		"badge": "How It Works",
+		"steps": {
+			"create": {
+				"step": "Step 1",
+				"title": "Create an Agent",
+				"description": "Give your agent a verifiable identity tied to your domain. One function call, no configuration."
+			},
+			"delegate": {
+				"step": "Step 2",
+				"title": "Delegate Permissions",
+				"description": "Define exactly what the agent can do with scoped allowances. Book travel, spend $500, read emails — you decide."
+			},
+			"challenge": {
+				"step": "Step 3",
+				"title": "Challenge the Agent",
+				"description": "When your agent arrives at a service, the service issues a challenge. The agent proves its identity and permissions."
+			},
+			"verify": {
+				"step": "Step 4",
+				"title": "Verify Trust",
+				"description": "The service verifies the agent's identity, its owner's delegation, and the scopes — all in one call."
+			}
+		}
+	},
+	"Cta": {
+		"badge": "Open Source",
+		"title": "Stop Agent Fraud. Start Shipping Trust.",
+		"description": "Credat is the open-source trust layer for AI agents. Give your agents an identity, delegate permissions, and verify trust — in 5 lines of code.",
+		"ctaGithub": "View on GitHub",
+		"ctaDocs": "Get Started"
+	},
+	"Footer": {
+		"brand": "The open-source trust layer for AI agents. Create identities, delegate permissions, verify trust — in 5 lines of TypeScript.",
+		"copyright": "© {year} Credat. Open source under Apache-2.0.",
+		"builtWith": "Built with",
+		"columns": {
+			"product": {
+				"title": "Product",
+				"github": "GitHub",
+				"documentation": "Documentation",
+				"npmPackage": "npm Package",
+				"changelog": "Changelog"
+			},
+			"resources": {
+				"title": "Resources",
+				"gettingStarted": "Getting Started",
+				"apiReference": "API Reference",
+				"examples": "Examples"
+			},
+			"legal": {
+				"title": "Legal",
+				"privacyPolicy": "Privacy Policy",
+				"termsOfService": "Terms of Service",
+				"license": "Apache-2.0 License"
+			}
+		}
+	},
+	"HeroFlow": {
+		"ariaLabel": "Agent trust flow: Owner delegates permissions to Agent, Agent presents credentials to Service for verification",
+		"owner": "Owner",
+		"ownerDesc": "Delegates permissions",
+		"agent": "Agent",
+		"agentDesc": "Proves identity",
+		"service": "Service",
+		"serviceDesc": "Verifies trust",
+		"delegation": "Delegation",
+		"trustChain": "Trust Chain"
+	},
+	"LocaleSwitcher": {
+		"label": "Language",
+		"en": "EN",
+		"fr": "FR",
+		"de": "DE",
+		"es": "ES"
+	}
 }
