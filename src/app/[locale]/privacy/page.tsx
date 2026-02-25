@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <p>
             For questions, open an issue on GitHub or reach out via{" "}
             <a
-              href="https://x.com/credat_io"
+              href="https://x.com/credat_dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:underline"
