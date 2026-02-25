@@ -156,7 +156,9 @@ export function SectionHero() {
 				</div>
 			</div>
 
-			{/* Bottom marquee — dual row */}
+			{/* Bottom marquee — dual row. Uses native <img> instead of next/image
+				 because react-fast-marquee clones children with autoFill, and next/image
+				 adds unnecessary JS overhead for tiny SVGs that don't need optimization. */}
 			<div ref={marqueeRef} className="w-full mt-16 lg:mt-24 pb-8 flex flex-col gap-3">
 				<Marquee speed={35} gradient gradientColor="#FFFFFF" gradientWidth={80} autoFill>
 					{MARQUEE_STANDARDS.map((item) => (
