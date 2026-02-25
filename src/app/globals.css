@@ -232,18 +232,6 @@
   position: relative;
 }
 
-.titlebox-gradient {
-  width: 200px;
-  height: 160px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  filter: blur(40px);
-  opacity: 0.9;
-  position: absolute;
-  right: -60px;
-  bottom: -100px;
-  z-index: 1;
-}
 
 /* ===== BUTTON WITH TEXT SCROLL ===== */
 
@@ -695,4 +683,21 @@
 .stacked-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rfm-marquee-container .rfm-marquee {
+    animation-play-state: paused !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
