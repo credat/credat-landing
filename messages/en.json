@@ -251,6 +251,12 @@
 		"de": "DE",
 		"es": "ES"
 	},
+	"Changelog": {
+		"title": "Changelog",
+		"description": "Latest releases and updates for the Credat SDK.",
+		"viewOnGithub": "View on GitHub",
+		"noReleases": "No releases yet. Check back soon!"
+	},
 	"Legal": {
 		"lastUpdatedLabel": "Last updated:",
 		"backToHome": "Back to home"

@@ -14,7 +14,7 @@ const FOOTER_COLUMNS = [
       { key: "github", href: "https://github.com/credat/credat", external: true },
       { key: "documentation", href: "https://docs.credat.io", external: true },
       { key: "npmPackage", href: "https://www.npmjs.com/package/credat", external: true },
-      { key: "changelog", href: "https://github.com/credat/credat/releases", external: true },
+      { key: "changelog", href: "/changelog", external: false },
     ],
   },
   {
