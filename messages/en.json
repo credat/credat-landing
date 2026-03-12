@@ -250,5 +250,40 @@
 		"fr": "FR",
 		"de": "DE",
 		"es": "ES"
+	},
+	"Legal": {
+		"lastUpdatedLabel": "Last updated:",
+		"backToHome": "Back to home"
+	},
+	"Terms": {
+		"title": "Terms of Service",
+		"lastUpdated": "March 2026",
+		"s1Title": "1. Introduction",
+		"s1P1": "These Terms of Service (\u201cTerms\u201d) govern your use of the Credat website at <siteLink>credat.io</siteLink> (\u201cWebsite\u201d) and the Credat SDK (\u201cSoftware\u201d), created by Maxime Mansiet. By accessing the Website or using the Software, you agree to these Terms.",
+		"s2Title": "2. The Software",
+		"s2P1": "Credat is an open-source AI agent identity and trust SDK. The Software is distributed under the <licenseLink>Apache License, Version 2.0</licenseLink> (\u201cApache-2.0\u201d). Your use of the Software is governed by the terms of that license.",
+		"s3Title": "3. Website Use",
+		"s3P1": "The Website is provided for informational purposes. You agree to:",
+		"s3Item1": "Use the Website in compliance with applicable laws",
+		"s3Item2": "Not attempt to disrupt or compromise the Website\u2019s infrastructure",
+		"s3Item3": "Not scrape, crawl, or harvest content from the Website in an automated manner beyond what is permitted by our robots.txt",
+		"s4Title": "4. Intellectual Property",
+		"s4P1": "The Credat SDK source code is licensed under Apache-2.0 and may be used, modified, and distributed in accordance with that license.",
+		"s4P2": "The Website content \u2014 including text, design, graphics, and the Credat name and logo \u2014 is the property of Credat and its creator. You may not reproduce, distribute, or create derivative works from the Website content without prior written permission, except as permitted by applicable law.",
+		"s5Title": "5. Documentation",
+		"s5P1": "SDK documentation is available at <docsLink>docs.credat.io</docsLink>. While we strive to keep documentation accurate and up to date, it is provided for reference only and may not reflect the latest state of the Software.",
+		"s6Title": "6. Disclaimer of Warranties",
+		"s6P1": "THE SOFTWARE AND WEBSITE ARE PROVIDED \u201cAS IS\u201d AND \u201cAS AVAILABLE\u201d, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.",
+		"s6P2": "We do not warrant that the Software will be error-free, secure, or uninterrupted, or that it will meet your specific requirements.",
+		"s7Title": "7. Limitation of Liability",
+		"s7P1": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, CREDAT AND ITS CREATOR SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, ARISING FROM YOUR USE OF THE SOFTWARE OR WEBSITE.",
+		"s8Title": "8. Contributions",
+		"s8P1": "Contributions to the Credat SDK are welcome and governed by the Apache-2.0 license. By submitting a contribution (pull request, issue, or other), you agree that your contribution will be licensed under the same Apache-2.0 license.",
+		"s9Title": "9. Changes to These Terms",
+		"s9P1": "We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated revision date. Continued use of the Website or Software after changes constitutes acceptance of the updated Terms.",
+		"s10Title": "10. Governing Law",
+		"s10P1": "These Terms are governed by and construed in accordance with the laws of France. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of Bordeaux, France.",
+		"s11Title": "11. Contact",
+		"s11P1": "For any questions about these Terms, please contact us at <emailLink>maxime.mansiet@gmail.com</emailLink>."
 	}
 }

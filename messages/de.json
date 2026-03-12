@@ -250,5 +250,40 @@
 		"fr": "FR",
 		"de": "DE",
 		"es": "ES"
+	},
+	"Legal": {
+		"lastUpdatedLabel": "Zuletzt aktualisiert:",
+		"backToHome": "Zurück zur Startseite"
+	},
+	"Terms": {
+		"title": "Nutzungsbedingungen",
+		"lastUpdated": "März 2026",
+		"s1Title": "1. Einleitung",
+		"s1P1": "Diese Nutzungsbedingungen (\u201eBedingungen\u201c) regeln Ihre Nutzung der Credat-Website unter <siteLink>credat.io</siteLink> (\u201eWebsite\u201c) und des Credat SDK (\u201eSoftware\u201c), erstellt von Maxime Mansiet. Durch den Zugriff auf die Website oder die Nutzung der Software stimmen Sie diesen Bedingungen zu.",
+		"s2Title": "2. Die Software",
+		"s2P1": "Credat ist ein Open-Source-SDK für KI-Agenten-Identität und -Vertrauen. Die Software wird unter der <licenseLink>Apache-Lizenz, Version 2.0</licenseLink> (\u201eApache-2.0\u201c) verteilt. Ihre Nutzung der Software unterliegt den Bedingungen dieser Lizenz.",
+		"s3Title": "3. Nutzung der Website",
+		"s3P1": "Die Website dient Informationszwecken. Sie verpflichten sich:",
+		"s3Item1": "Die Website in Übereinstimmung mit geltendem Recht zu nutzen",
+		"s3Item2": "Nicht zu versuchen, die Infrastruktur der Website zu stören oder zu kompromittieren",
+		"s3Item3": "Inhalte der Website nicht automatisiert zu extrahieren, zu crawlen oder zu sammeln, über das hinaus, was durch unsere robots.txt erlaubt ist",
+		"s4Title": "4. Geistiges Eigentum",
+		"s4P1": "Der Quellcode des Credat SDK ist unter Apache-2.0 lizenziert und darf gemäß dieser Lizenz verwendet, verändert und verteilt werden.",
+		"s4P2": "Der Inhalt der Website \u2014 einschließlich Texte, Design, Grafiken sowie der Name und das Logo von Credat \u2014 ist Eigentum von Credat und seinem Ersteller. Sie dürfen den Inhalt der Website ohne vorherige schriftliche Genehmigung nicht vervielfältigen, verbreiten oder abgeleitete Werke erstellen, es sei denn, dies ist nach geltendem Recht zulässig.",
+		"s5Title": "5. Dokumentation",
+		"s5P1": "Die SDK-Dokumentation ist unter <docsLink>docs.credat.io</docsLink> verfügbar. Obwohl wir uns bemühen, die Dokumentation genau und aktuell zu halten, wird sie nur als Referenz bereitgestellt und spiegelt möglicherweise nicht den aktuellen Stand der Software wider.",
+		"s6Title": "6. Gewährleistungsausschluss",
+		"s6P1": "DIE SOFTWARE UND DIE WEBSITE WERDEN \u201eWIE BESEHEN\u201c UND \u201eWIE VERFÜGBAR\u201c BEREITGESTELLT, OHNE JEGLICHE AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GEWÄHRLEISTUNG, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF GEWÄHRLEISTUNGEN DER MARKTGÄNGIGKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG.",
+		"s6P2": "Wir garantieren nicht, dass die Software fehlerfrei, sicher oder ununterbrochen funktioniert oder dass sie Ihren spezifischen Anforderungen entspricht.",
+		"s7Title": "7. Haftungsbeschränkung",
+		"s7P1": "IM GRÖSSTMÖGLICHEN GESETZLICH ZULÄSSIGEN UMFANG HAFTEN CREDAT UND SEIN ERSTELLER NICHT FÜR INDIREKTE, ZUFÄLLIGE, BESONDERE, FOLGE- ODER STRAFSCHÄDEN ODER FÜR ENTGANGENE GEWINNE ODER EINNAHMEN, UNABHÄNGIG DAVON, OB DIESE DIREKT ODER INDIREKT ENTSTANDEN SIND, DIE SICH AUS IHRER NUTZUNG DER SOFTWARE ODER WEBSITE ERGEBEN.",
+		"s8Title": "8. Beiträge",
+		"s8P1": "Beiträge zum Credat SDK sind willkommen und unterliegen der Apache-2.0-Lizenz. Durch die Einreichung eines Beitrags (Pull Request, Issue oder anderes) erklären Sie sich damit einverstanden, dass Ihr Beitrag unter derselben Apache-2.0-Lizenz lizenziert wird.",
+		"s9Title": "9. Änderungen dieser Bedingungen",
+		"s9P1": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen werden auf dieser Seite mit einem aktualisierten Revisionsdatum veröffentlicht. Die fortgesetzte Nutzung der Website oder Software nach Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen.",
+		"s10Title": "10. Anwendbares Recht",
+		"s10P1": "Diese Bedingungen unterliegen den Gesetzen Frankreichs und werden in Übereinstimmung mit diesen ausgelegt. Alle Streitigkeiten aus diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte von Bordeaux, Frankreich.",
+		"s11Title": "11. Kontakt",
+		"s11P1": "Bei Fragen zu diesen Bedingungen kontaktieren Sie uns bitte unter <emailLink>maxime.mansiet@gmail.com</emailLink>."
 	}
 }

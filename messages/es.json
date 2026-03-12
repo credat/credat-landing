@@ -250,5 +250,40 @@
 		"fr": "FR",
 		"de": "DE",
 		"es": "ES"
+	},
+	"Legal": {
+		"lastUpdatedLabel": "Última actualización:",
+		"backToHome": "Volver al inicio"
+	},
+	"Terms": {
+		"title": "Términos de servicio",
+		"lastUpdated": "Marzo 2026",
+		"s1Title": "1. Introducción",
+		"s1P1": "Estos Términos de servicio (\u201cTérminos\u201d) rigen el uso del sitio web de Credat en <siteLink>credat.io</siteLink> (\u201cSitio web\u201d) y del SDK Credat (\u201cSoftware\u201d), creado por Maxime Mansiet. Al acceder al Sitio web o usar el Software, usted acepta estos Términos.",
+		"s2Title": "2. El Software",
+		"s2P1": "Credat es un SDK open source de identidad y confianza para agentes IA. El Software se distribuye bajo la <licenseLink>Licencia Apache, Versión 2.0</licenseLink> (\u201cApache-2.0\u201d). Su uso del Software se rige por los términos de dicha licencia.",
+		"s3Title": "3. Uso del Sitio web",
+		"s3P1": "El Sitio web se proporciona con fines informativos. Usted se compromete a:",
+		"s3Item1": "Usar el Sitio web de conformidad con las leyes aplicables",
+		"s3Item2": "No intentar interrumpir ni comprometer la infraestructura del Sitio web",
+		"s3Item3": "No extraer, rastrear ni recolectar contenido del Sitio web de forma automatizada más allá de lo permitido por nuestro archivo robots.txt",
+		"s4Title": "4. Propiedad intelectual",
+		"s4P1": "El código fuente del SDK Credat está licenciado bajo Apache-2.0 y puede ser utilizado, modificado y distribuido de acuerdo con dicha licencia.",
+		"s4P2": "El contenido del Sitio web \u2014 incluyendo texto, diseño, gráficos, y el nombre y logotipo de Credat \u2014 es propiedad de Credat y su creador. No puede reproducir, distribuir ni crear obras derivadas del contenido del Sitio web sin autorización previa por escrito, excepto en los casos permitidos por la ley aplicable.",
+		"s5Title": "5. Documentación",
+		"s5P1": "La documentación del SDK está disponible en <docsLink>docs.credat.io</docsLink>. Aunque nos esforzamos por mantener la documentación precisa y actualizada, se proporciona solo como referencia y puede no reflejar el estado más reciente del Software.",
+		"s6Title": "6. Exclusión de garantías",
+		"s6P1": "EL SOFTWARE Y EL SITIO WEB SE PROPORCIONAN \u201cTAL CUAL\u201d Y \u201cSEGÚN DISPONIBILIDAD\u201d, SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO, ENTRE OTRAS, LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN PARTICULAR Y NO INFRACCIÓN.",
+		"s6P2": "No garantizamos que el Software esté libre de errores, sea seguro o funcione de forma ininterrumpida, ni que cumpla con sus requisitos específicos.",
+		"s7Title": "7. Limitación de responsabilidad",
+		"s7P1": "EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY, CREDAT Y SU CREADOR NO SERÁN RESPONSABLES DE NINGÚN DAÑO INDIRECTO, INCIDENTAL, ESPECIAL, CONSECUENTE O PUNITIVO, NI DE NINGUNA PÉRDIDA DE BENEFICIOS O INGRESOS, YA SEA DIRECTA O INDIRECTAMENTE, DERIVADOS DEL USO DEL SOFTWARE O DEL SITIO WEB.",
+		"s8Title": "8. Contribuciones",
+		"s8P1": "Las contribuciones al SDK Credat son bienvenidas y están sujetas a la licencia Apache-2.0. Al enviar una contribución (pull request, issue u otro), usted acepta que su contribución se licenciará bajo la misma licencia Apache-2.0.",
+		"s9Title": "9. Cambios en estos Términos",
+		"s9P1": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Los cambios se publicarán en esta página con una fecha de revisión actualizada. El uso continuado del Sitio web o del Software después de los cambios constituye la aceptación de los Términos actualizados.",
+		"s10Title": "10. Ley aplicable",
+		"s10P1": "Estos Términos se rigen e interpretan de acuerdo con las leyes de Francia. Cualquier disputa derivada de estos Términos estará sujeta a la jurisdicción exclusiva de los tribunales de Burdeos, Francia.",
+		"s11Title": "11. Contacto",
+		"s11P1": "Para cualquier pregunta sobre estos Términos, contáctenos en <emailLink>maxime.mansiet@gmail.com</emailLink>."
 	}
 }

@@ -1,131 +1,111 @@
+import { getTranslations } from "next-intl/server";
 import { LegalLayout } from "@/components/legal-layout";
+import { ReactNode } from "react";
 
-export default function TermsPage() {
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Terms" });
+  const tLegal = await getTranslations({ locale, namespace: "Legal" });
+
+  function richLink(href: string, external = false) {
+    return function RichLinkTag(chunks: ReactNode) {
+      return (
+        <a
+          href={href}
+          className="text-accent hover:underline"
+          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
+          {chunks}
+        </a>
+      );
+    };
+  }
+
   return (
-    <LegalLayout title="Terms of Service" lastUpdated="February 2026">
+    <LegalLayout
+      title={t("title")}
+      lastUpdated={t("lastUpdated")}
+      lastUpdatedLabel={tLegal("lastUpdatedLabel")}
+      backLabel={tLegal("backToHome")}
+    >
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">1. Introduction</h2>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s1Title")}</h2>
+        <p>{t.rich("s1P1", { siteLink: richLink("https://credat.io") })}</p>
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s2Title")}</h2>
         <p>
-          These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the Credat website at{" "}
-          <a href="https://credat.io" className="text-accent hover:underline">credat.io</a>{" "}
-          (&ldquo;Website&rdquo;) and the Credat SDK (&ldquo;Software&rdquo;), created by Maxime Mansiet.
-          By accessing the Website or using the Software, you agree to these Terms.
+          {t.rich("s2P1", {
+            licenseLink: richLink(
+              "https://github.com/credat/credat/blob/main/LICENSE",
+              true
+            ),
+          })}
         </p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">2. The Software</h2>
-        <p>
-          Credat is an open-source AI agent identity and trust SDK. The Software is distributed under the{" "}
-          <a
-            href="https://github.com/credat/credat/blob/main/LICENSE"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline"
-          >
-            Apache License, Version 2.0
-          </a>{" "}
-          (&ldquo;Apache-2.0&rdquo;). Your use of the Software is governed by the terms of that license.
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">3. Website Use</h2>
-        <p>The Website is provided for informational purposes. You agree to:</p>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s3Title")}</h2>
+        <p>{t("s3P1")}</p>
         <ul className="list-disc pl-6 mt-3 space-y-2">
-          <li>Use the Website in compliance with applicable laws</li>
-          <li>Not attempt to disrupt or compromise the Website&apos;s infrastructure</li>
-          <li>Not scrape, crawl, or harvest content from the Website in an automated manner beyond what is permitted by our robots.txt</li>
+          <li>{t("s3Item1")}</li>
+          <li>{t("s3Item2")}</li>
+          <li>{t("s3Item3")}</li>
         </ul>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">4. Intellectual Property</h2>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s4Title")}</h2>
+        <p>{t("s4P1")}</p>
+        <p className="mt-3">{t("s4P2")}</p>
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s5Title")}</h2>
         <p>
-          The Credat SDK source code is licensed under Apache-2.0 and may be used, modified, and distributed
-          in accordance with that license.
-        </p>
-        <p className="mt-3">
-          The Website content — including text, design, graphics, and the Credat name and logo — is the
-          property of Credat and its creator. You may not reproduce, distribute, or create derivative works
-          from the Website content without prior written permission, except as permitted by applicable law.
+          {t.rich("s5P1", {
+            docsLink: richLink("https://docs.credat.io", true),
+          })}
         </p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">5. Documentation</h2>
-        <p>
-          SDK documentation is available at{" "}
-          <a
-            href="https://docs.credat.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline"
-          >
-            docs.credat.io
-          </a>.
-          While we strive to keep documentation accurate and up to date, it is provided for reference only
-          and may not reflect the latest state of the Software.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s6Title")}</h2>
+        <p>{t("s6P1")}</p>
+        <p className="mt-3">{t("s6P2")}</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">6. Disclaimer of Warranties</h2>
-        <p>
-          THE SOFTWARE AND WEBSITE ARE PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo;,
-          WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-          OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
-        </p>
-        <p className="mt-3">
-          We do not warrant that the Software will be error-free, secure, or uninterrupted, or that
-          it will meet your specific requirements.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s7Title")}</h2>
+        <p>{t("s7P1")}</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">7. Limitation of Liability</h2>
-        <p>
-          TO THE MAXIMUM EXTENT PERMITTED BY LAW, CREDAT AND ITS CREATOR SHALL NOT BE LIABLE FOR ANY
-          INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS
-          OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, ARISING FROM YOUR USE OF THE SOFTWARE
-          OR WEBSITE.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s8Title")}</h2>
+        <p>{t("s8P1")}</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">8. Contributions</h2>
-        <p>
-          Contributions to the Credat SDK are welcome and governed by the Apache-2.0 license.
-          By submitting a contribution (pull request, issue, or other), you agree that your contribution
-          will be licensed under the same Apache-2.0 license.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s9Title")}</h2>
+        <p>{t("s9P1")}</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">9. Changes to These Terms</h2>
-        <p>
-          We reserve the right to modify these Terms at any time. Changes will be posted on this page
-          with an updated revision date. Continued use of the Website or Software after changes constitutes
-          acceptance of the updated Terms.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s10Title")}</h2>
+        <p>{t("s10P1")}</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">10. Governing Law</h2>
+        <h2 className="text-xl font-semibold text-foreground mb-3">{t("s11Title")}</h2>
         <p>
-          These Terms are governed by and construed in accordance with the laws of France.
-          Any disputes arising from these Terms shall be subject to the exclusive jurisdiction
-          of the courts of Bordeaux, France.
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-xl font-semibold text-foreground mb-3">11. Contact</h2>
-        <p>
-          For any questions about these Terms, please contact us at{" "}
-          <a href="mailto:maxime.mansiet@gmail.com" className="text-accent hover:underline">
-            maxime.mansiet@gmail.com
-          </a>.
+          {t.rich("s11P1", {
+            emailLink: richLink("mailto:maxime.mansiet@gmail.com"),
+          })}
         </p>
       </section>
     </LegalLayout>
