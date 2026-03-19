@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger, SplitText } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
 
 const CODE_LINES = [
-	{ code: 'import { createAgent, delegate, createChallenge, presentCredentials, verifyPresentation } from "credat"', type: "import" },
+	{ code: 'import { createAgent, delegate, createChallenge, presentCredentials, verifyPresentation } from "@credat/sdk"', type: "import" },
 	{ code: "", type: "empty" },
 	{ code: "// 1. Create an agent identity", type: "comment" },
 	{ code: 'const agent = await createAgent({', type: "code" },
@@ -57,7 +57,7 @@ function syntaxHighlight(line: string, type: string) {
 				<span className="code-function">verifyPresentation</span>
 				{" } "}
 				<span className="code-keyword">from</span>{" "}
-				<span className="code-string">&quot;credat&quot;</span>
+				<span className="code-string">&quot;@credat/sdk&quot;</span>
 			</>
 		);
 	}

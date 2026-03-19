@@ -105,7 +105,7 @@
 		"devTools": {
 			"title": "Outils développeur",
 			"install": {
-				"label": "npm install credat",
+				"label": "npm install @credat/sdk",
 				"sub": "Installation sans configuration"
 			},
 			"typescript": {

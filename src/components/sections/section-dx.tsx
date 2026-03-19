@@ -133,7 +133,7 @@ export function SectionDx() {
 									<span className="code-function">verifyPresentation</span>
 									{" }"}{" "}
 									<span className="code-keyword">from</span>{" "}
-									<span className="code-string">&quot;credat&quot;</span>{"\n"}
+									<span className="code-string">&quot;@credat/sdk&quot;</span>{"\n"}
 									{"\n"}
 									<span className="code-comment">{"// 1. Create an agent identity"}</span>{"\n"}
 									<span className="code-keyword">const</span> agent = <span className="code-keyword">await</span> <span className="code-function">createAgent</span>({"{\n"}
