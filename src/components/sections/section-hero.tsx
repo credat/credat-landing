@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Marquee from "react-fast-marquee";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { gsap, SplitText } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 import { HeroFlow } from "@/components/hero-flow";
 
 const MARQUEE_STANDARDS = [
@@ -42,12 +42,9 @@ export function SectionHero() {
 	useEffect(() => {
 		const ctx = gsap.context(() => {
 			if (headlineRef.current) {
-				const split = new SplitText(headlineRef.current, { type: "words,chars" });
-				gsap.from(split.chars, {
+				gsap.from(headlineRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
-					yPercent: 50,
-					stagger: 0.02,
+					yPercent: 30,
 					duration: 0.8,
 					ease: "power2.out",
 					delay: 0.9,
@@ -57,7 +54,6 @@ export function SectionHero() {
 			if (descRef.current) {
 				gsap.from(descRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
 					y: 20,
 					duration: 0.8,
 					ease: "power2.out",
@@ -103,7 +99,7 @@ export function SectionHero() {
 				<div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 lg:gap-12 items-center">
 					{/* Left: Text content */}
 					<div className="relative z-10 flex flex-col gap-6">
-						<div className="pill-badge opacity-blur">
+						<div className="pill-badge opacity-0">
 							<span className="w-2 h-2 rounded-full bg-accent" />
 							<span className="text-xs font-medium text-foreground-secondary">{t("badge")}</span>
 						</div>

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
-import { gsap, SplitText } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 
 export function SectionDx() {
 	const t = useTranslations("Dx");
@@ -20,20 +20,17 @@ export function SectionDx() {
 			if (pillRef.current) {
 				gsap.from(pillRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
+					y: 10,
 					duration: 0.6,
 					scrollTrigger: { trigger: pillRef.current, start: "top 95%" },
 				});
 			}
 
-			// Headline SplitText
+			// Headline
 			if (headlineRef.current) {
-				const split = new SplitText(headlineRef.current, { type: "words" });
-				gsap.from(split.words, {
+				gsap.from(headlineRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
-					yPercent: 50,
-					stagger: 0.05,
+					y: 30,
 					duration: 0.8,
 					ease: "power2.out",
 					scrollTrigger: { trigger: headlineRef.current, start: "top 85%" },
@@ -44,7 +41,6 @@ export function SectionDx() {
 			if (descRef.current) {
 				gsap.from(descRef.current, {
 					opacity: 0,
-					filter: "blur(4px)",
 					y: 20,
 					duration: 0.8,
 					delay: 0.2,

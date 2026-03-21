@@ -123,18 +123,6 @@ export function HeroFlow() {
 					<stop offset="0%" stopColor="#2563EB" stopOpacity="0.2" />
 					<stop offset="100%" stopColor="#059669" stopOpacity="0.2" />
 				</linearGradient>
-				{/* Card shadow */}
-				<filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
-					<feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#000" floodOpacity="0.08" />
-				</filter>
-				{/* Node glow */}
-				<filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
-					<feGaussianBlur stdDeviation="6" result="blur" />
-					<feMerge>
-						<feMergeNode in="blur" />
-						<feMergeNode in="SourceGraphic" />
-					</feMerge>
-				</filter>
 			</defs>
 
 			{/* -- Connection paths -- */}
@@ -211,7 +199,7 @@ export function HeroFlow() {
 			</>)}
 
 			{/* -- Delegation card (between Owner and Agent) -- */}
-			<g className="flow-card" filter="url(#cardShadow)">
+			<g className="flow-card" >
 				<rect x="60" y="155" width="100" height="64" rx="8" fill="white" stroke="#E5E7EB" strokeWidth="1" />
 				<rect x="68" y="163" width="40" height="4" rx="2" fill="#7C3AED" />
 				<rect x="68" y="173" width="60" height="3" rx="1.5" fill="#D1D5DB" />
@@ -223,7 +211,7 @@ export function HeroFlow() {
 			</g>
 
 			{/* -- Owner node -- */}
-			<g className="flow-node" filter="url(#nodeGlow)">
+			<g className="flow-node" >
 				<circle cx="145" cy="80" r="28" fill="#EFF6FF" stroke="#2563EB" strokeWidth="2" />
 				<circle cx="145" cy="80" r="18" fill="#2563EB" opacity="0.1" />
 				{/* Person icon */}
@@ -236,7 +224,7 @@ export function HeroFlow() {
 			<text className="flow-label" x="145" y="138" textAnchor="middle" fontSize="9" fill="#6B7280">{t("ownerDesc")}</text>
 
 			{/* -- Agent node -- */}
-			<g className="flow-node" filter="url(#nodeGlow)">
+			<g className="flow-node" >
 				<circle cx="200" cy="285" r="34" fill="#F5F3FF" stroke="#7C3AED" strokeWidth="2" />
 				<circle cx="200" cy="285" r="22" fill="#7C3AED" opacity="0.1" />
 				{/* Bot/Agent icon */}
@@ -252,7 +240,7 @@ export function HeroFlow() {
 			<text className="flow-label" x="200" y="350" textAnchor="middle" fontSize="9" fill="#6B7280">{t("agentDesc")}</text>
 
 			{/* -- Service node -- */}
-			<g className="flow-node" filter="url(#nodeGlow)">
+			<g className="flow-node" >
 				<circle cx="370" cy="120" r="28" fill="#ECFDF5" stroke="#059669" strokeWidth="2" />
 				<circle cx="370" cy="120" r="18" fill="#059669" opacity="0.1" />
 				{/* Shield/check icon */}

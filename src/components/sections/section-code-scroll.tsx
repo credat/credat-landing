@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { gsap, ScrollTrigger, SplitText } from "@/lib/gsap";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
 
 const CODE_LINES = [
@@ -111,7 +111,7 @@ export function SectionCodeScroll() {
 			if (pillRef.current) {
 				gsap.from(pillRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
+					y: 10,
 					duration: 0.6,
 					scrollTrigger: { trigger: pillRef.current, start: "top 95%" },
 				});
@@ -129,27 +129,6 @@ export function SectionCodeScroll() {
 					setActiveStep(step);
 				},
 			});
-
-			// Animate step description characters on desktop
-			const stepEls = sectionRef.current?.querySelectorAll(".step-text");
-			if (stepEls) {
-				stepEls.forEach((el) => {
-					const descEl = el.querySelector(".step-desc") as HTMLElement;
-					if (!descEl) return;
-					const split = new SplitText(descEl, { type: "chars" });
-					gsap.set(split.chars, { opacity: 0.25 });
-					gsap.to(split.chars, {
-						opacity: 1,
-						stagger: 0.01,
-						scrollTrigger: {
-							trigger: el,
-							start: "top 80%",
-							end: "top 40%",
-							scrub: 1,
-						},
-					});
-				});
-			}
 		}, sectionRef);
 
 		return () => ctx.revert();

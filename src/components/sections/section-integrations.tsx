@@ -46,7 +46,7 @@ export function SectionIntegrations() {
 			if (pillRef.current) {
 				gsap.from(pillRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
+					y: 10,
 					duration: 0.6,
 					scrollTrigger: { trigger: pillRef.current, start: "top 95%" },
 				});
@@ -54,7 +54,6 @@ export function SectionIntegrations() {
 			if (headlineRef.current) {
 				gsap.from(headlineRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
 					y: 30,
 					duration: 0.8,
 					scrollTrigger: { trigger: headlineRef.current, start: "top 85%" },
@@ -63,11 +62,11 @@ export function SectionIntegrations() {
 			if (gridRef.current) {
 				const items = gridRef.current.querySelectorAll(".bento-item");
 				gsap.from(items, {
-					rotationY: 30,
-					scale: 0.6,
+					scale: 0.9,
 					opacity: 0,
-					stagger: 0.15,
-					duration: 1,
+					y: 40,
+					stagger: 0.12,
+					duration: 0.8,
 					ease: "power2.out",
 					scrollTrigger: { trigger: gridRef.current, start: "top 80%" },
 				});
@@ -91,7 +90,7 @@ export function SectionIntegrations() {
 				</div>
 
 				{/* Bento grid */}
-				<div ref={gridRef} className="bento-grid" style={{ perspective: "1000px" }}>
+				<div ref={gridRef} className="bento-grid">
 					{/* Big: Agent Identity */}
 					<div className="bento-item md:row-span-2 flex flex-col">
 						<div className="grid-overlay" />
@@ -149,11 +148,10 @@ export function SectionIntegrations() {
 						<div className="relative z-10">
 							<h3 className="text-sm font-semibold text-foreground mb-3">{t("devTools.title")}</h3>
 							<div className="stacked-cards flex flex-col gap-2.5">
-								{DEV_TOOL_META.map((card, i) => (
+								{DEV_TOOL_META.map((card) => (
 									<div
 										key={card.key}
 										className="stacked-card"
-										style={{ transform: `translateZ(${(2 - i) * 4}px)` }}
 									>
 										<card.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
 										<div>

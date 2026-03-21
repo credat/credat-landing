@@ -16,11 +16,11 @@ export function SectionKpi() {
       if (cardsRef.current) {
         const cards = cardsRef.current.querySelectorAll(".kpi-card");
         gsap.from(cards, {
-          rotationY: 30,
-          scale: 0.6,
+          scale: 0.9,
           opacity: 0,
-          stagger: 0.15,
-          duration: 1,
+          y: 40,
+          stagger: 0.12,
+          duration: 0.8,
           ease: "power2.out",
           scrollTrigger: {
             trigger: cardsRef.current,
@@ -38,7 +38,6 @@ export function SectionKpi() {
       <div
         ref={cardsRef}
         className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-5"
-        style={{ perspective: "1000px" }}
       >
         {KPI_KEYS.map((key) => (
           <div key={key} className="kpi-card glass-card p-8 flex flex-col min-h-[260px]">

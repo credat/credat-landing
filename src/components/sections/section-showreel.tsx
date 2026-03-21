@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { gsap, SplitText } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 import { AlertTriangle, Users, KeyRound, ScanEye } from "lucide-react";
 
 const PROBLEM_META = [
@@ -24,31 +24,27 @@ export function SectionShowreel() {
 			if (pillRef.current) {
 				gsap.from(pillRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
+					y: 10,
 					duration: 0.6,
 					scrollTrigger: { trigger: pillRef.current, start: "top 95%" },
 				});
 			}
 
 			if (headlineRef.current) {
-				const split = new SplitText(headlineRef.current, { type: "words" });
-				gsap.from(split.words, {
+				gsap.from(headlineRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
-					yPercent: 50,
-					stagger: 0.05,
+					y: 30,
 					duration: 0.8,
 					ease: "power2.out",
 					scrollTrigger: { trigger: headlineRef.current, start: "top 85%" },
 				});
 			}
 
-			// Cards stagger blur-in
+			// Cards stagger entrance
 			if (cardsRef.current) {
 				const cards = cardsRef.current.querySelectorAll(".problem-card");
 				gsap.from(cards, {
 					opacity: 0,
-					filter: "blur(8px)",
 					y: 30,
 					stagger: 0.1,
 					duration: 0.8,

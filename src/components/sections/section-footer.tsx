@@ -75,7 +75,6 @@ export function SectionFooter() {
       if (els) {
         gsap.from(els, {
           opacity: 0,
-          filter: "blur(4px)",
           y: 20,
           stagger: 0.06,
           duration: 0.6,

@@ -68,7 +68,7 @@ export function SectionUseCases() {
 			if (pillRef.current) {
 				gsap.from(pillRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
+					y: 10,
 					duration: 0.6,
 					scrollTrigger: { trigger: pillRef.current, start: "top 95%" },
 				});
@@ -76,7 +76,6 @@ export function SectionUseCases() {
 			if (headlineRef.current) {
 				gsap.from(headlineRef.current, {
 					opacity: 0,
-					filter: "blur(8px)",
 					y: 30,
 					duration: 0.8,
 					scrollTrigger: { trigger: headlineRef.current, start: "top 85%" },
